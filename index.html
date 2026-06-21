@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INRYOU — natural balance, made effortless</title>
+  <meta name="description" content="INRYOU — sprankelende, functionele dranken met natuurlijke balans. Geen toegevoegde suikers, wél magnesium, inositol en L-theanine. Made effortless." />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <noscript><style>body{opacity:1!important}</style></noscript>
+</head>
+<body data-page="index.html">
+  <noscript><p style="text-align:center;padding:1rem;background:#1A1A1A;color:#F5F0E7;">INRYOU werkt het best met JavaScript ingeschakeld.</p></noscript>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="kicker hero__kicker" data-i18n="home.heroKicker"></p>
+          <h1 class="display hero__title" data-i18n-html="home.heroTitle"></h1>
+          <p class="lead hero__text" data-i18n="home.heroText"></p>
+          <div class="hero__actions">
+            <a class="btn" href="shop.html" data-i18n="home.heroCta"></a>
+            <a class="link-quiet" href="balance.html" data-i18n="home.heroLink"></a>
+          </div>
+        </div>
+        <div class="hero__visual reveal">
+          <span class="hero__sun"><span class="sun sun--hero" style="--accent:#C8503F" aria-hidden="true"></span></span>
+          <img class="hero__can" src="assets/can-cranberry.png" alt="INRYOU Cranberry blikje" onerror="this.classList.add('is-missing')" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FLAVOUR TEASERS -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker" data-i18n="home.flavorsKicker"></span>
+          <h2 class="h-section" data-i18n-html="home.flavorsTitle"></h2>
+          <p class="muted" data-i18n="home.flavorsText"></p>
+        </div>
+        <div class="flavor-teasers" data-flavor-teasers></div>
+      </div>
+    </section>
+
+    <!-- WHY INRYOU (dark) -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="home.whyKicker"></span>
+          <h2 class="h-section" data-i18n-html="home.whyTitle"></h2>
+          <p class="muted" data-i18n="home.whyText"></p>
+        </div>
+        <div class="why-grid">
+          <div class="why-item reveal"><h3 data-i18n="home.why1Title"></h3><p data-i18n="home.why1Text"></p></div>
+          <div class="why-item reveal"><h3 data-i18n="home.why2Title"></h3><p data-i18n="home.why2Text"></p></div>
+          <div class="why-item reveal"><h3 data-i18n="home.why3Title"></h3><p data-i18n="home.why3Text"></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NATURAL BALANCE TEASER -->
+    <section class="section">
+      <div class="container split">
+        <div class="split__body reveal">
+          <span class="kicker" data-i18n="home.balanceKicker"></span>
+          <h2 class="h-section" data-i18n-html="home.balanceTitle"></h2>
+          <p data-i18n="home.balanceText"></p>
+          <a class="link-quiet" href="balance.html" data-i18n="home.balanceCta"></a>
+        </div>
+        <div class="split__sun reveal">
+          <span class="sun" style="--accent:#9DAE8C;width:clamp(220px,32vw,380px);height:clamp(220px,32vw,380px)" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY STRIP -->
+    <section class="section section--tight">
+      <div class="container split split--reverse">
+        <div class="split__body reveal">
+          <span class="kicker" data-i18n="home.storyKicker"></span>
+          <h2 class="h-section" data-i18n-html="home.storyTitle"></h2>
+          <p data-i18n="home.storyText"></p>
+          <a class="btn btn--ghost" href="story.html" data-i18n="home.storyCta"></a>
+        </div>
+        <div class="split__media reveal">
+          <img src="assets/can-in-hand.jpg" alt="Hand houdt een INRYOU Cranberry blikje tegen een blauwe lucht" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker" data-i18n="home.testiKicker"></span>
+          <h2 class="h-section" data-i18n-html="home.testiTitle"></h2>
+        </div>
+        <div class="testimonials" data-testimonials></div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER (dark) -->
+    <section class="section section--dark">
+      <div class="container--narrow news-band reveal">
+        <h2 class="h-section" data-i18n="home.newsletterTitle"></h2>
+        <p class="muted" data-i18n="home.newsletterText"></p>
+        <form class="news-band__form" data-newsletter novalidate>
+          <input type="email" required class="input" data-i18n-attr="placeholder:footer.emailPlaceholder, aria-label:footer.emailPlaceholder" />
+          <button class="btn btn--dark" type="submit" data-i18n="footer.subscribe"></button>
+          <p class="footer-news__msg" data-news-msg role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

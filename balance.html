@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natural Balance — INRYOU</title>
+  <meta name="description" content="De functionele ingrediënten in INRYOU uitgelegd: magnesium, inositol en L-theanine. Plus een eerlijke vergelijking met gewone frisdrank." />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <noscript><style>body{opacity:1!important}</style></noscript>
+</head>
+<body data-page="balance.html">
+  <noscript><p style="text-align:center;padding:1rem;background:#1A1A1A;color:#F5F0E7;">INRYOU werkt het best met JavaScript ingeschakeld.</p></noscript>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container reveal">
+        <span class="kicker" data-i18n="balance.kicker"></span>
+        <h1 class="display" data-i18n-html="balance.title"></h1>
+        <p class="lead" style="max-width:42rem" data-i18n="balance.lead"></p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="ingredients">
+          <article class="ingredient reveal">
+            <span class="sun sun--mini" style="--accent:#9DAE8C" aria-hidden="true"></span>
+            <h3 data-i18n="balance.magTitle"></h3>
+            <p data-i18n="balance.magText"></p>
+          </article>
+          <article class="ingredient reveal">
+            <span class="sun sun--mini" style="--accent:#E89A3C" aria-hidden="true"></span>
+            <h3 data-i18n="balance.inoTitle"></h3>
+            <p data-i18n="balance.inoText"></p>
+          </article>
+          <article class="ingredient reveal">
+            <span class="sun sun--mini" style="--accent:#C8503F" aria-hidden="true"></span>
+            <h3 data-i18n="balance.theaTitle"></h3>
+            <p data-i18n="balance.theaText"></p>
+          </article>
+        </div>
+        <p class="balance-note" data-i18n="balance.amountsNote"></p>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="balance.compareKicker"></span>
+          <h2 class="h-section" data-i18n-html="balance.compareTitle"></h2>
+          <p class="muted" data-i18n="balance.compareText"></p>
+        </div>
+        <div class="reveal">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="balance.colFeature"></th>
+                <th scope="col" data-i18n="balance.colInryou"></th>
+                <th scope="col" data-i18n="balance.colSoda"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row" data-i18n="balance.rowSugar"></th><td data-i18n="balance.rowSugarIn"></td><td data-i18n="balance.rowSugarSoda"></td></tr>
+              <tr><th scope="row" data-i18n="balance.rowFunc"></th><td data-i18n="balance.rowFuncIn"></td><td data-i18n="balance.rowFuncSoda"></td></tr>
+              <tr><th scope="row" data-i18n="balance.rowSweet"></th><td data-i18n="balance.rowSweetIn"></td><td data-i18n="balance.rowSweetSoda"></td></tr>
+              <tr><th scope="row" data-i18n="balance.rowTaste"></th><td data-i18n="balance.rowTasteIn"></td><td data-i18n="balance.rowTasteSoda"></td></tr>
+              <tr><th scope="row" data-i18n="balance.rowKcal"></th><td data-i18n="balance.rowKcalIn"></td><td data-i18n="balance.rowKcalSoda"></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container center">
+        <a class="btn" href="shop.html" data-i18n="balance.cta"></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
