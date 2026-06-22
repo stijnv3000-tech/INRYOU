@@ -1266,8 +1266,9 @@
   }
 
   function renderProductDetail() {
-    var mount = $("[data-product-detail]");
-    if (!mount) { return; }
+    // Iterates every [data-product-detail] mount — works for one-per-page
+    // (multi-page site) and for all-at-once (single-file preview SPA).
+    $all("[data-product-detail]").forEach(function (mount) {
     var p = getProduct(mount.getAttribute("data-product-detail"));
     if (!p) { return; }
     document.documentElement.style.setProperty("--page-accent", p.accent);
@@ -1318,6 +1319,7 @@
       return '<div class="pdp-func__item">' + sun(p.accent, "sun--mini") +
         '<h3 data-i18n="' + titleKey + '"></h3></div>';
     }
+    });
   }
 
   function renderTestimonials() {
