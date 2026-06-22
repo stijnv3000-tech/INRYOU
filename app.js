@@ -21,6 +21,11 @@
   var SUPPORTED_LANGS = ["nl", "fr", "en"];
   var DEFAULT_LANG = "nl";
 
+  // Premium-motion module state
+  var lenis = null;
+  var pointer = { x: 0, y: 0 };
+  var sunControllers = [];
+
   // PLACEHOLDER PRICES ----------------------------------------------------------
   // Real pricing is unknown, so these are obvious placeholders kept in ONE place.
   // The cart maths are fully functional; swap these numbers for real prices and
@@ -950,8 +955,14 @@
 
   function buildFooter() {
     var footer = el("footer", { "class": "site-footer", "data-footer": "" });
+    var marqueeWords = ["Natural balance", "Made effortless", "No added sugar", "Sparkling", "Functional", "Made in Belgium"];
+    var marqueeItems = "";
+    for (var mi = 0; mi < 2; mi++) {
+      marqueeWords.forEach(function (w) { marqueeItems += '<span class="marquee__item">' + w + "</span>"; });
+    }
     footer.innerHTML = '' +
-      '<div class="footer-cta">' +
+      '<div class="marquee" aria-hidden="true"><div class="marquee__track">' + marqueeItems + "</div></div>" +
+      '<div class="footer-cta" data-theme="dark">' +
         '<div class="container footer-cta__inner">' +
           sun("#E89A3C", "sun--footer") +
           '<h2 class="footer-cta__heading" data-i18n="footer.ctaHeading"></h2>' +
@@ -1335,15 +1346,47 @@
     }).join("");
   }
 
+  // Horizontal product showcase (home) — full-bleed panels, pinned + scrubbed.
+  function renderShowcase() {
+    var track = $("[data-showcase-track]");
+    if (!track) { return; }
+    track.innerHTML = PRODUCTS.map(function (p, i) {
+      var n = ("0" + (i + 1));
+      return '<div class="showcase__panel" style="--accent:' + p.accent + ';--accent-soft:' + p.accentSoft + '">' +
+        '<div class="showcase__bg" aria-hidden="true"><span class="sun" style="--accent:' + p.accent + ';width:120%;height:120%"></span></div>' +
+        '<div class="showcase__content">' +
+          '<span class="showcase__index">' + n + ' / 03</span>' +
+          '<h2 class="showcase__name">' + escapeHtml(t(p.id + ".name")) + "</h2>" +
+          '<p class="showcase__tag">' + escapeHtml(t(p.id + ".long")) + "</p>" +
+          '<a class="btn btn--ghost showcase__cta magnetic" href="' + p.page + '" data-i18n="btn.view"></a>' +
+        "</div>" +
+        '<div class="showcase__media">' +
+          '<img class="showcase__can" src="' + p.image + '" alt="INRYOU ' + escapeHtml(t(p.id + ".name")) +
+            '" onerror="this.classList.add(\'is-missing\')" />' +
+          '<span class="showcase__ph" aria-hidden="true">' + wordmark() + "</span>" +
+        "</div>" +
+      "</div>";
+    }).join("");
+    var dots = $("[data-showcase-dots]");
+    if (dots) {
+      dots.innerHTML = PRODUCTS.map(function (p, i) {
+        return '<span class="showcase__dot ' + (i === 0 ? "is-on" : "") + '"></span>';
+      }).join("");
+    }
+    applyI18n(track);
+  }
+
   // Re-render everything that is built from JS (called on load + language change).
   function renderDynamic() {
     renderShopGrid();
     renderFlavorTeasers();
+    renderShowcase();
     renderProductDetail();
     renderTestimonials();
     renderDrawerContents();
     renderCartPage();
     renderCartCount();
+    if (window.__inryouAfterRender) { window.__inryouAfterRender(); }
   }
 
   /* ---------------------------------------------------------------------------
@@ -1522,6 +1565,348 @@
   }
 
   /* ---------------------------------------------------------------------------
+     10b. PREMIUM MOTION LAYER — GSAP + ScrollTrigger + Lenis (CDN, lazy-loaded)
+        Living canvas sun, custom cursor, magnetic buttons, kinetic type,
+        horizontal pinned showcase, scroll-pinned storytelling, parallax,
+        smart header. All optional: degrades to the static site if libs fail
+        or prefers-reduced-motion is set.
+     ------------------------------------------------------------------------- */
+  var GSAP_CDN = "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js";
+  var ST_CDN = "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js";
+  var LENIS_CDN = "https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js";
+
+  function prefersReduced() {
+    return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+  function loadScript(src) {
+    return new Promise(function (res, rej) {
+      var s = document.createElement("script");
+      s.src = src; s.async = false; s.onload = res; s.onerror = rej;
+      document.head.appendChild(s);
+    });
+  }
+  function loadLibs() {
+    return loadScript(GSAP_CDN)
+      .then(function () { return loadScript(ST_CDN); })
+      .then(function () { return loadScript(LENIS_CDN).catch(function () {}); }); // Lenis optional
+  }
+
+  /* ---- Living canvas sun --------------------------------------------------
+     Glowing accent disc + baked, dissolving grain that drifts and reacts to
+     the pointer. Pauses when offscreen. Static single frame if reduced. */
+  function hexToRgb(hex) {
+    hex = (hex || "#C8503F").trim().replace("#", "");
+    if (hex.length === 3) { hex = hex.split("").map(function (c) { return c + c; }).join(""); }
+    var n = parseInt(hex, 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  }
+  function buildCanvasSun(container) {
+    var canvas = document.createElement("canvas");
+    container.appendChild(canvas);
+    var ctx = canvas.getContext("2d");
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W = 0, H = 0, grain = null, raf = null, t = 0, tx = 0, ty = 0, visible = true;
+    var reduce = prefersReduced();
+    var biasX = container.classList.contains("hero__canvas") ? 0.62 : 0.5;
+    var col = hexToRgb(getComputedStyle(container).getPropertyValue("--accent") || "#C8503F");
+
+    function bake() {
+      var g = document.createElement("canvas"); g.width = W; g.height = H;
+      var gx = g.getContext("2d"); var img = gx.createImageData(W, H); var d = img.data;
+      for (var y = 0; y < H; y++) {
+        var fy = y / H;
+        var dens = Math.max(0, Math.min(1, (fy - 0.42) / 0.18)) * Math.max(0, 1 - (fy - 0.52) / 0.46);
+        for (var x = 0; x < W; x++) {
+          var i = (y * W + x) * 4;
+          var on = Math.random() < dens * 0.55;
+          d[i] = col[0]; d[i + 1] = col[1]; d[i + 2] = col[2];
+          d[i + 3] = on ? Math.random() * 255 * Math.min(1, dens * 1.5) : 0;
+        }
+      }
+      gx.putImageData(img, 0, 0); grain = g;
+    }
+    function resize() {
+      var r = container.getBoundingClientRect();
+      W = Math.max(1, Math.round(r.width)); H = Math.max(1, Math.round(r.height));
+      canvas.width = W * dpr; canvas.height = H * dpr;
+      canvas.style.width = W + "px"; canvas.style.height = H + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      bake();
+    }
+    function frame() {
+      t += 0.016;
+      tx += ((reduce ? 0 : pointer.x) - tx) * 0.05;
+      ty += ((reduce ? 0 : pointer.y) - ty) * 0.05;
+      ctx.clearRect(0, 0, W, H);
+      var cx = W * biasX + tx * 20, cy = H * 0.46 + ty * 10;
+      var pulse = reduce ? 0 : Math.sin(t * 0.7) * 0.035;
+      var rad = Math.min(W, H) * (biasX === 0.5 ? 0.46 : 0.5) * (1 + pulse);
+      var grd = ctx.createRadialGradient(cx, cy - rad * 0.12, rad * 0.08, cx, cy, rad);
+      grd.addColorStop(0, "rgba(" + col[0] + "," + col[1] + "," + col[2] + ",0.92)");
+      grd.addColorStop(0.5, "rgba(" + col[0] + "," + col[1] + "," + col[2] + ",0.7)");
+      grd.addColorStop(1, "rgba(" + col[0] + "," + col[1] + "," + col[2] + ",0)");
+      ctx.fillStyle = grd;
+      ctx.beginPath(); ctx.arc(cx, cy, rad, 0, Math.PI * 2); ctx.fill();
+      if (grain) {
+        ctx.globalAlpha = 0.85;
+        ctx.drawImage(grain, tx * 12, (reduce ? 0 : Math.sin(t * 0.5) * 5) + ty * 8, W, H);
+        ctx.globalAlpha = 1;
+      }
+      if (!reduce && visible) { raf = requestAnimationFrame(frame); } else { raf = null; }
+    }
+    function play() { if (!raf && !reduce) { raf = requestAnimationFrame(frame); } }
+    function stop() { if (raf) { cancelAnimationFrame(raf); raf = null; } }
+
+    resize();
+    frame();
+    // Pause when offscreen.
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (e) {
+        visible = e[0].isIntersecting;
+        if (visible) { play(); } else { stop(); }
+      }, { threshold: 0 }).observe(container);
+    }
+    var ctrl = {
+      resize: resize, play: play, stop: stop,
+      setAccent: function (hex) { col = hexToRgb(hex); bake(); if (reduce) { frame(); } }
+    };
+    container.__sunCtrl = ctrl;
+    return ctrl;
+  }
+  function mountCanvasSuns() {
+    $all("[data-sun-canvas]").forEach(function (elm) {
+      if (elm.__sunCtrl) { return; }
+      sunControllers.push(buildCanvasSun(elm));
+    });
+    var to;
+    window.addEventListener("resize", function () {
+      clearTimeout(to);
+      to = setTimeout(function () { sunControllers.forEach(function (c) { c.resize(); }); }, 200);
+    });
+  }
+
+  /* ---- Smooth scroll (Lenis) ---- */
+  function initLenis() {
+    if (!window.Lenis) { return; }
+    lenis = new window.Lenis({ lerp: 0.1, wheelMultiplier: 1, smoothWheel: true });
+    lenis.on("scroll", window.ScrollTrigger.update);
+    window.gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
+    window.gsap.ticker.lagSmoothing(0);
+  }
+
+  /* ---- Custom cursor ---- */
+  function setupCursor() {
+    if (!window.matchMedia || !window.matchMedia("(pointer: fine)").matches) { return; }
+    document.documentElement.classList.add("has-cursor");
+    var ring = el("div", { "class": "cursor", "aria-hidden": "true" });
+    var dot = el("div", { "class": "cursor__dot", "aria-hidden": "true" });
+    document.body.appendChild(ring); document.body.appendChild(dot);
+    var g = window.gsap;
+    g.set([ring, dot], { xPercent: -50, yPercent: -50 });
+    var rx = g.quickTo(ring, "x", { duration: 0.35, ease: "power3" });
+    var ry = g.quickTo(ring, "y", { duration: 0.35, ease: "power3" });
+    var dx = g.quickTo(dot, "x", { duration: 0.08 });
+    var dy = g.quickTo(dot, "y", { duration: 0.08 });
+    window.addEventListener("mousemove", function (e) {
+      rx(e.clientX); ry(e.clientY); dx(e.clientX); dy(e.clientY);
+    }, { passive: true });
+    var hot = "a, button, input, textarea, .magnetic, [data-magnetic], .accordion__trigger, .stepper, .lang-switch";
+    document.addEventListener("mouseover", function (e) { if (e.target.closest(hot)) { ring.classList.add("is-hover"); } });
+    document.addEventListener("mouseout", function (e) { if (e.target.closest(hot)) { ring.classList.remove("is-hover"); } });
+    document.addEventListener("mousedown", function () { ring.classList.add("is-down"); });
+    document.addEventListener("mouseup", function () { ring.classList.remove("is-down"); });
+    document.documentElement.addEventListener("mouseleave", function () { ring.classList.add("is-hidden"); });
+    document.documentElement.addEventListener("mouseenter", function () { ring.classList.remove("is-hidden"); });
+  }
+
+  /* ---- Magnetic buttons (idempotent) ---- */
+  function magnetize(elm) {
+    if (elm.dataset.mag) { return; }
+    elm.dataset.mag = "1";
+    var g = window.gsap;
+    var xTo = g.quickTo(elm, "x", { duration: 0.5, ease: "power3" });
+    var yTo = g.quickTo(elm, "y", { duration: 0.5, ease: "power3" });
+    var strength = elm.classList.contains("icon-btn") ? 0.35 : 0.45;
+    elm.addEventListener("mousemove", function (e) {
+      var r = elm.getBoundingClientRect();
+      xTo((e.clientX - (r.left + r.width / 2)) * strength);
+      yTo((e.clientY - (r.top + r.height / 2)) * strength);
+    });
+    elm.addEventListener("mouseleave", function () { xTo(0); yTo(0); });
+  }
+  function scanMagnetic() {
+    if (!window.gsap || prefersReduced()) { return; }
+    if (!window.matchMedia || !window.matchMedia("(pointer: fine)").matches) { return; }
+    $all(".btn, .icon-btn, [data-magnetic]").forEach(magnetize);
+  }
+
+  /* ---- Kinetic hero headline (word-mask reveal) ---- */
+  function splitKinetic(elm) {
+    var nodes = Array.prototype.slice.call(elm.childNodes);
+    elm.innerHTML = "";
+    var inners = [];
+    nodes.forEach(function (node) {
+      var cls = node.nodeType === 1 ? node.className : "";
+      var text = node.textContent;
+      text.split(/(\s+)/).forEach(function (part) {
+        if (part === "") { return; }
+        if (/^\s+$/.test(part)) { elm.appendChild(document.createTextNode(" ")); return; }
+        var w = el("span", { "class": "kinetic-word" });
+        var inner = el("span"); inner.textContent = part;
+        if (cls) { inner.className = cls; }
+        w.appendChild(inner); elm.appendChild(w); inners.push(inner);
+      });
+    });
+    return inners;
+  }
+  function setupKineticHero() {
+    if (!window.gsap || prefersReduced()) { return; }
+    var title = $("[data-kinetic]");
+    if (!title) { return; }
+    var inners = splitKinetic(title);
+    window.gsap.fromTo(inners, { yPercent: 115 }, {
+      yPercent: 0, duration: 1, ease: "expo.out", stagger: 0.07, delay: 0.15
+    });
+  }
+
+  /* ---- Header: shrink, hide-on-scroll-down, theme over dark sections ---- */
+  function setupHeaderScroll() {
+    var header = $("[data-header]");
+    if (!header) { return; }
+    var lastY = 0;
+    function onScroll(y) {
+      header.classList.toggle("is-scrolled", y > 20);
+      var blocked = document.body.classList.contains("drawer-open") || header.classList.contains("nav-open");
+      header.classList.toggle("is-hidden", y > lastY && y > 260 && !blocked);
+      lastY = y;
+    }
+    if (lenis) { lenis.on("scroll", function (e) { onScroll(e.scroll); }); }
+    else { window.addEventListener("scroll", function () { onScroll(window.scrollY); }, { passive: true }); }
+
+    var darkSet = new Set();
+    $all('[data-theme="dark"]').forEach(function (sec) {
+      window.ScrollTrigger.create({
+        trigger: sec, start: "top 58px", end: "bottom 58px",
+        onToggle: function (self) {
+          if (self.isActive) { darkSet.add(sec); } else { darkSet.delete(sec); }
+          header.classList.toggle("is-on-dark", darkSet.size > 0);
+        }
+      });
+    });
+  }
+
+  /* ---- Parallax ---- */
+  function setupParallax() {
+    if (!window.gsap || prefersReduced()) { return; }
+    $all("[data-parallax-speed]").forEach(function (elm) {
+      var speed = parseFloat(elm.getAttribute("data-parallax-speed")) || -10;
+      window.gsap.to(elm, {
+        yPercent: speed, ease: "none",
+        scrollTrigger: { trigger: elm, start: "top bottom", end: "bottom top", scrub: true }
+      });
+    });
+  }
+
+  /* ---- Horizontal pinned product showcase ---- */
+  function setupShowcase() {
+    if (!window.gsap || prefersReduced()) { return; }
+    var sec = $("[data-showcase]");
+    if (!sec) { return; }
+    var track = $(".showcase__track", sec);
+    var panels = $all(".showcase__panel", sec);
+    var dots = $all(".showcase__dot", sec);
+    if (panels.length < 2) { return; }
+    function dist() { return track.scrollWidth - window.innerWidth; }
+    window.gsap.to(track, {
+      x: function () { return -dist(); }, ease: "none",
+      scrollTrigger: {
+        trigger: sec, start: "top top", end: function () { return "+=" + dist(); },
+        scrub: 1, pin: true, anticipatePin: 1, invalidateOnRefresh: true,
+        onUpdate: function (self) {
+          var idx = Math.round(self.progress * (panels.length - 1));
+          dots.forEach(function (d, i) { d.classList.toggle("is-on", i === idx); });
+        }
+      }
+    });
+  }
+
+  /* ---- Scroll-pinned ingredients storytelling ---- */
+  function setupBalanceStory() {
+    if (!window.gsap) { return; }
+    var sec = $("[data-balance-story]");
+    if (!sec) { return; }
+    var steps = $all(".balance-step", sec);
+    var visual = $("[data-sun-canvas]", sec);
+    var accents = ["#9DAE8C", "#E89A3C", "#C8503F"];
+    steps.forEach(function (step, i) {
+      window.ScrollTrigger.create({
+        trigger: step, start: "top 60%", end: "bottom 60%",
+        onToggle: function (self) {
+          if (!self.isActive) { return; }
+          steps.forEach(function (s) { s.classList.remove("is-active"); });
+          step.classList.add("is-active");
+          if (visual && visual.__sunCtrl) { visual.__sunCtrl.setAccent(accents[i] || accents[0]); }
+        }
+      });
+    });
+  }
+
+  /* ---- Intro loader (once per session) ---- */
+  function playIntro() {
+    if (prefersReduced() || !window.gsap) { return; }
+    var seen = false;
+    try { seen = sessionStorage.getItem("inryou.intro") === "1"; } catch (e) {}
+    if (seen) { return; }
+    try { sessionStorage.setItem("inryou.intro", "1"); } catch (e) {}
+    var intro = el("div", { "class": "intro", "aria-hidden": "true" });
+    intro.innerHTML = '<div class="intro__mark"><span>INRYOU</span></div><div class="intro__bar"><i></i></div>';
+    document.body.appendChild(intro);
+    document.body.style.overflow = "hidden";
+    var g = window.gsap;
+    g.timeline()
+      .to(intro.querySelector(".intro__mark span"), { y: 0, duration: 0.8, ease: "expo.out" })
+      .fromTo(intro.querySelector(".intro__bar i"), { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: "power2.inOut" }, "-=0.3")
+      .to(intro, { yPercent: -100, duration: 0.8, ease: "expo.inOut" }, "+=0.05")
+      .add(function () { intro.remove(); document.body.style.overflow = ""; if (window.ScrollTrigger) { window.ScrollTrigger.refresh(); } });
+  }
+
+  function initPremium() {
+    var reduce = prefersReduced();
+    document.documentElement.classList.toggle("reduce-motion", reduce);
+    if (!$(".film-grain")) { document.body.appendChild(el("div", { "class": "film-grain", "aria-hidden": "true" })); }
+    mountCanvasSuns();                 // works (static) even when reduced
+    if (reduce) { return; }
+
+    window.addEventListener("mousemove", function (e) {
+      pointer.x = (e.clientX / window.innerWidth) * 2 - 1;
+      pointer.y = (e.clientY / window.innerHeight) * 2 - 1;
+    }, { passive: true });
+
+    loadLibs().then(function () {
+      if (!window.gsap || !window.ScrollTrigger) { return; }
+      document.documentElement.classList.add("has-motion");
+      window.gsap.registerPlugin(window.ScrollTrigger);
+      initLenis();
+      playIntro();
+      setupCursor();
+      setupHeaderScroll();
+      setupParallax();
+      setupKineticHero();
+      setupShowcase();
+      setupBalanceStory();
+      scanMagnetic();
+      // Re-apply per-render enhancements (after language switch etc.)
+      window.__inryouAfterRender = function () {
+        setupKineticHero();
+        scanMagnetic();
+        if (window.ScrollTrigger) { window.ScrollTrigger.refresh(); }
+      };
+      window.addEventListener("load", function () { window.ScrollTrigger.refresh(); });
+      window.ScrollTrigger.refresh();
+    }).catch(function () { /* offline: static site remains fully functional */ });
+  }
+
+  /* ---------------------------------------------------------------------------
      11. Boot
      ------------------------------------------------------------------------- */
   function init() {
@@ -1544,6 +1929,9 @@
 
     // Mark body ready (enables CSS entrance transitions).
     document.body.classList.add("is-ready");
+
+    // Premium motion layer (lazy-loads GSAP/Lenis; no-ops if reduced/offline).
+    initPremium();
   }
 
   if (document.readyState === "loading") {

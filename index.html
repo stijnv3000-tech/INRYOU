@@ -17,39 +17,43 @@
 
   <main id="main">
 
-    <!-- HERO -->
-    <section class="hero">
+    <!-- HERO (cinematic, living canvas sun) -->
+    <section class="hero hero--cine">
+      <div class="hero__canvas sun-canvas" data-sun-canvas style="--accent:#C8503F" aria-hidden="true"></div>
       <div class="container hero__grid">
-        <div class="hero__content reveal">
-          <p class="kicker hero__kicker" data-i18n="home.heroKicker"></p>
-          <h1 class="display hero__title" data-i18n-html="home.heroTitle"></h1>
-          <p class="lead hero__text" data-i18n="home.heroText"></p>
-          <div class="hero__actions">
-            <a class="btn" href="shop.html" data-i18n="home.heroCta"></a>
+        <div class="hero__content">
+          <p class="kicker hero__kicker reveal" data-i18n="home.heroKicker"></p>
+          <h1 class="display hero__title" data-kinetic data-i18n-html="home.heroTitle"></h1>
+          <p class="lead hero__text reveal" data-i18n="home.heroText"></p>
+          <div class="hero__actions reveal">
+            <a class="btn magnetic" href="shop.html" data-i18n="home.heroCta"></a>
             <a class="link-quiet" href="balance.html" data-i18n="home.heroLink"></a>
           </div>
         </div>
-        <div class="hero__visual reveal">
-          <span class="hero__sun"><span class="sun sun--hero" style="--accent:#C8503F" aria-hidden="true"></span></span>
-          <img class="hero__can" src="assets/can-cranberry.png" alt="INRYOU Cranberry blikje" onerror="this.classList.add('is-missing')" />
+        <div class="hero__visual">
+          <img class="hero__can hero__can--float parallax" data-parallax-speed="-14" src="assets/can-cranberry.png" alt="INRYOU Cranberry blikje" onerror="this.classList.add('is-missing')" />
         </div>
       </div>
+      <div class="hero__scroll-cue" aria-hidden="true"><span></span><em data-i18n="home.scroll"></em></div>
     </section>
 
-    <!-- FLAVOUR TEASERS -->
-    <section class="section section--tight">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="kicker" data-i18n="home.flavorsKicker"></span>
-          <h2 class="h-section" data-i18n-html="home.flavorsTitle"></h2>
-          <p class="muted" data-i18n="home.flavorsText"></p>
-        </div>
-        <div class="flavor-teasers" data-flavor-teasers></div>
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item">Natural balance</span><span class="marquee__item">Made effortless</span><span class="marquee__item">Geen toegevoegde suikers</span><span class="marquee__item">Sparkling</span><span class="marquee__item">Functioneel</span><span class="marquee__item">Made in Belgium</span><span class="marquee__item">Natural balance</span><span class="marquee__item">Made effortless</span><span class="marquee__item">Geen toegevoegde suikers</span><span class="marquee__item">Sparkling</span><span class="marquee__item">Functioneel</span><span class="marquee__item">Made in Belgium</span>
       </div>
+    </div>
+
+    <!-- HORIZONTAL PRODUCT SHOWCASE (pinned, dark) -->
+    <section class="showcase" data-showcase data-theme="dark" aria-label="Flavours">
+      <div class="showcase__viewport">
+        <div class="showcase__track" data-showcase-track></div>
+      </div>
+      <div class="showcase__progress" data-showcase-dots aria-hidden="true"></div>
     </section>
 
     <!-- WHY INRYOU (dark) -->
-    <section class="section section--dark">
+    <section class="section section--dark" data-theme="dark">
       <div class="container">
         <div class="section-head reveal">
           <span class="kicker" data-i18n="home.whyKicker"></span>
@@ -64,32 +68,50 @@
       </div>
     </section>
 
-    <!-- NATURAL BALANCE TEASER -->
-    <section class="section">
-      <div class="container split">
-        <div class="split__body reveal">
+    <!-- NATURAL BALANCE — scroll-pinned storytelling (dark) -->
+    <section class="section balance-story" data-balance-story data-theme="dark">
+      <div class="container">
+        <div class="section-head reveal" style="max-width:46rem">
           <span class="kicker" data-i18n="home.balanceKicker"></span>
           <h2 class="h-section" data-i18n-html="home.balanceTitle"></h2>
-          <p data-i18n="home.balanceText"></p>
-          <a class="link-quiet" href="balance.html" data-i18n="home.balanceCta"></a>
         </div>
-        <div class="split__sun reveal">
-          <span class="sun" style="--accent:#9DAE8C;width:clamp(220px,32vw,380px);height:clamp(220px,32vw,380px)" aria-hidden="true"></span>
+        <div class="balance-story__grid">
+          <div class="balance-story__sticky">
+            <div class="balance-story__visual sun-canvas" data-sun-canvas style="--accent:#9DAE8C" aria-hidden="true"></div>
+          </div>
+          <div class="balance-story__steps">
+            <div class="balance-step is-active">
+              <span class="balance-step__num">01</span>
+              <h3 data-i18n="balance.magTitle"></h3>
+              <p data-i18n="balance.magText"></p>
+            </div>
+            <div class="balance-step">
+              <span class="balance-step__num">02</span>
+              <h3 data-i18n="balance.inoTitle"></h3>
+              <p data-i18n="balance.inoText"></p>
+            </div>
+            <div class="balance-step">
+              <span class="balance-step__num">03</span>
+              <h3 data-i18n="balance.theaTitle"></h3>
+              <p data-i18n="balance.theaText"></p>
+            </div>
+            <a class="btn btn--dark magnetic" href="balance.html" data-i18n="home.balanceCta" style="margin-top:1.5rem"></a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- STORY STRIP -->
+    <!-- STORY STRIP (warm, parallax) -->
     <section class="section section--tight">
       <div class="container split split--reverse">
         <div class="split__body reveal">
           <span class="kicker" data-i18n="home.storyKicker"></span>
           <h2 class="h-section" data-i18n-html="home.storyTitle"></h2>
           <p data-i18n="home.storyText"></p>
-          <a class="btn btn--ghost" href="story.html" data-i18n="home.storyCta"></a>
+          <a class="btn btn--ghost magnetic" href="story.html" data-i18n="home.storyCta"></a>
         </div>
         <div class="split__media reveal">
-          <img src="assets/can-in-hand.jpg" alt="Hand houdt een INRYOU Cranberry blikje tegen een blauwe lucht" loading="lazy" />
+          <img class="parallax" data-parallax-speed="-10" style="height:118%" src="assets/can-in-hand.jpg" alt="Hand houdt een INRYOU Cranberry blikje tegen een blauwe lucht" loading="lazy" />
         </div>
       </div>
     </section>
@@ -106,13 +128,13 @@
     </section>
 
     <!-- NEWSLETTER (dark) -->
-    <section class="section section--dark">
+    <section class="section section--dark" data-theme="dark">
       <div class="container--narrow news-band reveal">
         <h2 class="h-section" data-i18n="home.newsletterTitle"></h2>
         <p class="muted" data-i18n="home.newsletterText"></p>
         <form class="news-band__form" data-newsletter novalidate>
           <input type="email" required class="input" data-i18n-attr="placeholder:footer.emailPlaceholder, aria-label:footer.emailPlaceholder" />
-          <button class="btn btn--dark" type="submit" data-i18n="footer.subscribe"></button>
+          <button class="btn btn--dark magnetic" type="submit" data-i18n="footer.subscribe"></button>
           <p class="footer-news__msg" data-news-msg role="status" aria-live="polite"></p>
         </form>
       </div>

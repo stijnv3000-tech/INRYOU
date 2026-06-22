@@ -85,6 +85,8 @@ const router = `
     // re-run scroll-reveal for the now-visible route
     if (window.__inryouObserveReveal) { window.__inryouObserveReveal(); }
     window.scrollTo(0, 0);
+    // recalc pinned/scrubbed sections for the freshly-shown route
+    if (window.ScrollTrigger) { setTimeout(function () { window.ScrollTrigger.refresh(); }, 60); }
   }
   // Intercept internal links (capture phase, before app.js handlers).
   document.addEventListener('click', function (e) {
