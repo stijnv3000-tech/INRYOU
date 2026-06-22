@@ -240,6 +240,45 @@ const translations = {
     footer_news_title: 'Blijf in balans', footer_news_sub: 'Nieuwe smaken, drops en rituelen. Geen spam.',
     footer_news_ph: 'jij@email.com', footer_news_btn: 'Inschrijven', footer_news_done: 'Welkom — je bent erbij. ☀',
     legal_privacy: 'Privacy', legal_terms: 'Voorwaarden', legal_cookies: 'Cookies',
+
+    // ---- vintage editorial home (Ghia-style layout) ----
+    hero_eyebrow: 'Maak kennis met INRYOU',
+    hero_h1: 'Een natuurlijke bruisende',
+    hero_h2: 'drank voor wie',
+    hero_h3: 'balans zoekt',
+    hero_btn: 'Ontdek meer',
+    orbit_text: 'natural balance · made effortless · ',
+    intro_pre: 'Geboren uit liefde voor',
+    intro_tag: 'ritueel',
+    intro_body: 'INRYOU ontstond uit een simpel idee: een goede dagelijkse drank heeft geen suiker of onzin nodig. Geïnspireerd door de rust van een goed ritueel maken we natuurlijke, functionele bruisdranken voor bewuste, gebalanceerde momenten.',
+    process_pre: 'Van oorsprong tot',
+    process_tag: 'slok',
+    process_c1_t: 'Herkomst', process_c1_l: 'Natuurlijke ingrediënten|Echte vruchtenextracten|Geen kunstmatige kleuren|Zorgvuldig geselecteerd',
+    process_c2_t: 'INRYOU maken', process_c2_l: 'Functionele mineralen|Gebalanceerde recepten|Zorg in kleine batches|Smaakpanel-controle',
+    process_c3_t: 'Ons proces', process_c3_l: 'Minder suiker|Koel & bruisend|Zacht gecarboneerd|Klaar om te genieten',
+    process_c4_t: 'Smaakverhaal', process_c4_l: 'Licht zuur|Heldere citrus|Rustig & helder|Bewuste momenten',
+    process_c5_t: 'Belgisch vakmanschap', process_c5_l: 'Lokaal gebrouwen|Milieubewust|Recycleerbare blikjes|Met zorg gemaakt',
+    purpose_pre: 'Geworteld in',
+    purpose_tag: 'betekenis',
+    purpose_sub: 'Met intentie gemaakt — beter voor jou en de planeet.',
+    badge_1_t: 'Natuurlijk', badge_1_d: 'Echte ingrediënten',
+    badge_2_t: 'Minder suiker', badge_2_d: '[suikergehalte]',
+    badge_3_t: 'Functioneel', badge_3_d: 'Mineralenbalans',
+    badge_4_t: 'Recycleerbaar', badge_4_d: 'Volledig recycleerbaar blik',
+    badge_5_t: 'Belgisch', badge_5_d: 'Lokaal gebrouwen',
+    badge_6_t: 'Geen onzin', badge_6_d: 'Niets kunstmatigs',
+    human_pre: 'Menselijke',
+    human_tag: 'toets',
+    human_sub: 'Geproefd en geliefd door een groeiende community in België en daarbuiten.',
+    tst_role_1: 'Smaakpanel', tst_role_2: 'Community', tst_role_3: 'Community', tst_role_4: 'Smaakpanel',
+    tst_4: 'De kweepeer & vanille is de smaak waar ik op wacht — maar ginger & citrus heeft me nu al overtuigd.',
+    tst_4_by: 'Noah — Leuven',
+    pour_1: 'Schenk zonder spijt',
+    pour_2: 'Drink met',
+    pour_tag: 'intentie',
+    pour_btn: 'Probeer INRYOU vandaag',
+    footer_circle_title: 'Word lid van de INRYOU circle',
+    footer_circle_sub: 'Als eerste iets nieuws proeven. Doordachte updates, geen rommel.',
   },
 
   /* =================== FRENCH =================== */
@@ -395,6 +434,45 @@ const translations = {
     footer_news_title: 'Restez en équilibre', footer_news_sub: 'Nouvelles saveurs, drops et rituels. Pas de spam.',
     footer_news_ph: 'vous@email.com', footer_news_btn: 'S’inscrire', footer_news_done: 'Bienvenue — vous êtes des nôtres. ☀',
     legal_privacy: 'Confidentialité', legal_terms: 'Conditions', legal_cookies: 'Cookies',
+
+    // ---- vintage editorial home (Ghia-style layout) ----
+    hero_eyebrow: 'Découvrez INRYOU',
+    hero_h1: 'Une boisson pétillante',
+    hero_h2: 'naturelle pour celles',
+    hero_h3: 'et ceux qui cherchent l’équilibre',
+    hero_btn: 'En savoir plus',
+    orbit_text: 'natural balance · made effortless · ',
+    intro_pre: 'Née d’un amour du',
+    intro_tag: 'rituel',
+    intro_body: 'INRYOU est née d’une idée simple : une bonne boisson du quotidien n’a besoin ni de sucre ni de superflu. Inspirées par le calme d’un beau rituel, nous créons des boissons pétillantes naturelles et fonctionnelles pour des moments conscients et équilibrés.',
+    process_pre: 'De la source à la',
+    process_tag: 'gorgée',
+    process_c1_t: 'Sourcing', process_c1_l: 'Ingrédients naturels|Vrais extraits de fruits|Sans colorants artificiels|Sélectionnés avec soin',
+    process_c2_t: 'Faire INRYOU', process_c2_l: 'Minéraux fonctionnels|Recettes équilibrées|Soin en petits lots|Contrôle du panel',
+    process_c3_t: 'Notre process', process_c3_l: 'Moins de sucre|Frais & pétillant|Doucement gazéifié|Prêt à déguster',
+    process_c4_t: 'Histoire de goût', process_c4_l: 'Légèrement acidulé|Agrumes éclatants|Calme & net|Moments conscients',
+    process_c5_t: 'Savoir-faire belge', process_c5_l: 'Brassé localement|Éco-responsable|Canettes recyclables|Fait avec soin',
+    purpose_pre: 'Ancré dans le',
+    purpose_tag: 'sens',
+    purpose_sub: 'Conçu avec intention — meilleur pour vous et la planète.',
+    badge_1_t: 'Naturel', badge_1_d: 'Vrais ingrédients',
+    badge_2_t: 'Moins de sucre', badge_2_d: '[teneur en sucre]',
+    badge_3_t: 'Fonctionnel', badge_3_d: 'Équilibre minéral',
+    badge_4_t: 'Recyclable', badge_4_d: 'Canette recyclable',
+    badge_5_t: 'Belge', badge_5_d: 'Brassé localement',
+    badge_6_t: 'Sans superflu', badge_6_d: 'Rien d’artificiel',
+    human_pre: 'Touche',
+    human_tag: 'humaine',
+    human_sub: 'Goûté et adopté par une communauté grandissante en Belgique et au-delà.',
+    tst_role_1: 'Panel', tst_role_2: 'Communauté', tst_role_3: 'Communauté', tst_role_4: 'Panel',
+    tst_4: 'Le coing & vanille est celui que j’attends — mais ginger & citrus m’a déjà conquis.',
+    tst_4_by: 'Noah — Louvain',
+    pour_1: 'Versez sans regret',
+    pour_2: 'Savourez avec',
+    pour_tag: 'intention',
+    pour_btn: 'Essayez INRYOU',
+    footer_circle_title: 'Rejoignez le cercle INRYOU',
+    footer_circle_sub: 'Soyez les premiers à goûter la nouveauté. Des nouvelles utiles, sans encombrement.',
   },
 
   /* =================== ENGLISH =================== */
@@ -550,6 +628,45 @@ const translations = {
     footer_news_title: 'Stay in balance', footer_news_sub: 'New flavors, drops and rituals. No spam.',
     footer_news_ph: 'you@email.com', footer_news_btn: 'Sign up', footer_news_done: 'Welcome — you’re in. ☀',
     legal_privacy: 'Privacy', legal_terms: 'Terms', legal_cookies: 'Cookies',
+
+    // ---- vintage editorial home (Ghia-style layout) ----
+    hero_eyebrow: 'Meet INRYOU',
+    hero_h1: 'A natural sparkling',
+    hero_h2: 'drink for those',
+    hero_h3: 'who crave balance',
+    hero_btn: 'View more',
+    orbit_text: 'natural balance · made effortless · ',
+    intro_pre: 'Born from a love of',
+    intro_tag: 'ritual',
+    intro_body: 'INRYOU was born from a simple idea: great everyday drinks don’t need sugar or nonsense. Inspired by the calm of a good ritual, we craft natural, functional sparkling drinks for mindful, balanced moments.',
+    process_pre: 'From source to',
+    process_tag: 'sip',
+    process_c1_t: 'Sourcing', process_c1_l: 'Natural ingredients|Real fruit extracts|No artificial colors|Carefully selected',
+    process_c2_t: 'Making INRYOU', process_c2_l: 'Functional minerals|Balanced recipes|Small-batch care|Taste-panel checks',
+    process_c3_t: 'Our process', process_c3_l: 'Less sugar|Cold sparkling|Gently carbonated|Ready to enjoy',
+    process_c4_t: 'Flavor story', process_c4_l: 'Lightly tart|Bright citrus|Calm & clear|Mindful moments',
+    process_c5_t: 'Belgian craft', process_c5_l: 'Locally brewed|Eco-minded|Recyclable cans|Made with care',
+    purpose_pre: 'Rooted in',
+    purpose_tag: 'purpose',
+    purpose_sub: 'Crafted with intention — better for you and the planet.',
+    badge_1_t: 'Natural', badge_1_d: 'Real ingredients',
+    badge_2_t: 'Less sugar', badge_2_d: '[sugar content]',
+    badge_3_t: 'Functional', badge_3_d: 'Mineral balance',
+    badge_4_t: 'Recyclable', badge_4_d: 'Fully recyclable can',
+    badge_5_t: 'Belgian', badge_5_d: 'Brewed locally',
+    badge_6_t: 'No nonsense', badge_6_d: 'Nothing artificial',
+    human_pre: 'Human',
+    human_tag: 'touch',
+    human_sub: 'Tasted and loved by a growing community across Belgium and beyond.',
+    tst_role_1: 'Taste panel', tst_role_2: 'Community', tst_role_3: 'Community', tst_role_4: 'Taste panel',
+    tst_4: 'Quince & vanilla is the one I’m waiting for — but ginger & citrus already won me over.',
+    tst_4_by: 'Noah — Leuven',
+    pour_1: 'Pour without regret',
+    pour_2: 'Sip with',
+    pour_tag: 'intention',
+    pour_btn: 'Try INRYOU today',
+    footer_circle_title: 'Join the INRYOU circle',
+    footer_circle_sub: 'Be the first to sip something new. Thoughtful updates, no clutter.',
   },
 };
 
@@ -672,6 +789,46 @@ function lighten(hex, amt) {
 // a sun-motif block (div wrapper around the svg) sized via CSS
 function sunBlock(accent, cls) {
   return `<div class="sun ${cls || ''}" style="--accent:${accent}">${sunSvg(accent)}</div>`;
+}
+
+// boxed "sticker" tag wrapping a key word (vintage editorial motif)
+function tag(text, variant) {
+  return `<span class="tag${variant ? ' tag--' + variant : ''}">${esc(text)}</span>`;
+}
+
+// wavy section divider; `color` fills the bottom (the next section's color)
+function wave(color) {
+  return `<div class="wave" style="color:${color}" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+      <path fill="currentColor" d="M0,38 C180,90 360,4 540,34 C720,64 900,92 1080,58 C1260,28 1380,52 1440,42 L1440,90 L0,90 Z"/>
+    </svg></div>`;
+}
+
+// a can wrapped in rotating circular text (hero flank)
+function orbitCan(id, side) {
+  const p = PRODUCTS[id];
+  const uid = 'orb' + (_sunUid++);
+  const ring = (t('orbit_text') + t('orbit_text')).toUpperCase();
+  return `<div class="orbit orbit--${side}" style="--accent:${p.accent}">
+    <svg class="orbit-text" viewBox="0 0 240 240">
+      <defs><path id="${uid}" d="M120,120 m-94,0 a94,94 0 1,1 188,0 a94,94 0 1,1 -188,0"/></defs>
+      <text><textPath href="#${uid}" xlink:href="#${uid}">${esc(ring)}</textPath></text>
+    </svg>
+    ${productImg(id, 'orbit-can')}
+  </div>`;
+}
+
+// small line-icons for the vintage purpose badges
+function badgeIcon(i) {
+  const I = {
+    1: '<path d="M12 21c5-3 8-6.5 8-11a4 4 0 0 0-8-1 4 4 0 0 0-8 1c0 4.5 3 8 8 11Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>',
+    2: '<path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+    3: '<circle cx="12" cy="12" r="7.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 5v7l4 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>',
+    4: '<path d="M7 8l-3 5 3 2M17 8l3 5-3 2M12 4l2 4-4 8 2 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>',
+    5: '<circle cx="12" cy="12" r="7.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 12h15M12 4.5c2.4 2.4 2.4 12.6 0 15M12 4.5c-2.4 2.4-2.4 12.6 0 15" fill="none" stroke="currentColor" stroke-width="1.3"/>',
+    6: '<path d="M12 3l2.2 5.6L20 9l-4.4 3.8L17 19l-5-3.2L7 19l1.4-6.2L4 9l5.8-.4L12 3Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+  };
+  return `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">${I[i] || ''}</svg>`;
 }
 
 // product image with graceful accent placeholder fallback
@@ -878,74 +1035,117 @@ function productCard(id) {
 
 function viewHome() {
   const cards = PRODUCT_ORDER.map(productCard).join('');
+  const MAROON = '#3E1419';
+  const CREAM = '#F5EBD8';
+
+  // vintage purpose badge
+  const pbadge = (i, variant) => `
+    <div class="badge badge--${variant}">
+      <span class="badge-ic">${badgeIcon(i)}</span>
+      <div><span class="badge-t">${esc(t('badge_' + i + '_t'))}</span><span class="badge-d">${esc(t('badge_' + i + '_d'))}</span></div>
+    </div>`;
+
+  // tilted process card
+  const pcard = (n, variant) => {
+    const items = t('process_c' + n + '_l').split('|')
+      .map((x) => `<li>${esc(x)}</li>`).join('');
+    return `<div class="pcard pcard--${variant} reveal">
+        <h3>${esc(t('process_c' + n + '_t'))}</h3>
+        <ul>${items}</ul>
+      </div>`;
+  };
+
+  // community portrait card (built from testimonials)
+  const human = (n, accent) => {
+    const by = t('tst_' + n + '_by');
+    const initial = by.trim().charAt(0).toUpperCase();
+    return `<div class="human-card reveal" style="--accent:${accent}">
+        <div class="human-photo"><span class="human-monogram">${esc(initial)}</span></div>
+        <div class="human-stars" aria-label="5/5">★★★★★</div>
+        <p class="human-quote">${esc(t('tst_' + n))}</p>
+        <p class="human-name">${esc(by)}</p>
+        <p class="human-role">${esc(t('tst_role_' + n))}</p>
+      </div>`;
+  };
+
   return `
   <!-- HERO -->
   <section class="hero" style="--accent:${PRODUCTS.cranberry.accent}">
-    <div class="hero-bg">${sunBlock(PRODUCTS.cranberry.accent, 'sun--hero')}</div>
+    ${sunBlock(PRODUCTS.cranberry.accent, 'sun--hero')}
+    <div class="hero-orbits">
+      ${orbitCan('cranberry', 'l')}
+      ${orbitCan('ginger-citrus', 'r')}
+    </div>
     <div class="container hero-inner">
-      <div class="hero-copy">
-        <p class="kicker reveal">${esc(t('hero_kicker'))}</p>
-        <h1 class="hero-title reveal">
-          <span>${esc(t('hero_title_1'))}</span>
-          <em>${esc(t('hero_title_2'))}</em>
-        </h1>
-        <p class="hero-sub reveal">${esc(t('hero_sub'))}</p>
-        <div class="hero-cta reveal">
-          <a href="#/shop" class="btn btn--primary">${esc(t('cta_shop'))}</a>
-          <a href="#/balance" class="btn btn--ghost">${esc(t('cta_discover'))}</a>
-        </div>
-        <ul class="hero-badges reveal">
-          <li>${esc(t('hero_badge_1'))}</li>
-          <li>${esc(t('hero_badge_2'))}</li>
-          <li>${esc(t('hero_badge_3'))}</li>
-        </ul>
+      <p class="hero-eyebrow reveal">${esc(t('hero_eyebrow'))}</p>
+      <h1 class="hero-display reveal">
+        <span class="line">${esc(t('hero_h1'))}</span>
+        <span class="line">${tag(t('hero_h2'), 'ginger')}</span>
+        <span class="line">${esc(t('hero_h3'))}</span>
+      </h1>
+      <p class="hero-sub reveal">${esc(t('hero_sub'))}</p>
+      <div class="hero-cta reveal">
+        <a href="#/shop" class="btn btn--cream">${esc(t('cta_shop'))}</a>
+        <a href="#/balance" class="btn btn--outline">${esc(t('hero_btn'))}</a>
       </div>
-      <div class="hero-visual reveal">
-        <img src="images/can-in-hand.jpg" alt="${esc(t('prod_cranberry_name'))} INRYOU in de hand"
-          class="hero-hand" onerror="this.style.display='none'">
-        <img src="images/can-cranberry.png" alt="" class="hero-can hero-can--1" style="--accent:${PRODUCTS.cranberry.accent}" onerror="this.classList.add('img-missing');this.removeAttribute('src')">
-      </div>
+    </div>
+    ${wave(CREAM)}
+  </section>
+
+  <!-- INTRO (born from a love of ritual) -->
+  <section class="intro">
+    ${sunBlock(PRODUCTS.cranberry.accent, 'sun--intro')}
+    <div class="container intro-inner">
+      <h2 class="disp-title intro-title reveal">${esc(t('intro_pre'))} ${tag(t('intro_tag'), 'ginger')}</h2>
+      <p class="intro-body reveal">${esc(t('intro_body'))}</p>
     </div>
   </section>
 
-  <!-- TRUST ROW -->
-  <section class="trust container">
-    ${[1, 2, 3, 4].map((i) => `
-      <div class="trust-item reveal">
-        <span class="trust-icon">${trustIcon(i)}</span>
-        <div><h3>${esc(t('trust_' + i))}</h3><p>${esc(t('trust_' + i + '_sub'))}</p></div>
-      </div>`).join('')}
-  </section>
-
-  <!-- FEATURED -->
-  <section class="feature" style="--accent:${PRODUCTS.cranberry.accent}">
-    <div class="container feature-inner">
-      <div class="feature-visual reveal">
-        ${sunBlock(PRODUCTS.cranberry.accent, 'sun--feature')}
-        ${productImg('cranberry', 'feature-can')}
+  <!-- PROCESS (tilted cards) -->
+  <section class="process">
+    <div class="container">
+      <div class="process-head reveal">
+        <h2 class="disp-title">${esc(t('process_pre'))} ${tag(t('process_tag'))}</h2>
       </div>
-      <div class="feature-copy">
-        <p class="kicker reveal">${esc(t('feat_kicker'))}</p>
-        <h2 class="reveal">${esc(t('feat_title'))} <em>${esc(t('feat_title_em'))}</em></h2>
-        <p class="feature-text reveal">${esc(t('feat_text'))}</p>
-        <ul class="feature-points reveal">
-          <li>${esc(t('feat_point_1'))}</li>
-          <li>${esc(t('feat_point_2'))}</li>
-          <li>${esc(t('feat_point_3'))}</li>
-        </ul>
-        <div class="feature-cta reveal">
-          <button type="button" class="btn btn--primary" data-add="cranberry">${esc(t('add_to_cart'))}</button>
-          <a href="#/product/cranberry" class="btn btn--ghost">${esc(t('prod_cranberry_name'))} →</a>
-        </div>
+      <div class="process-cards">
+        ${pcard(1, 'cream')}
+        ${pcard(2, 'sage')}
+        ${pcard(3, 'terra')}
+        ${pcard(4, 'cream')}
+        ${pcard(5, 'ginger')}
       </div>
     </div>
+    ${wave(MAROON)}
+  </section>
+
+  <!-- PURPOSE (badges, maroon) -->
+  <section class="purpose">
+    <div class="container">
+      <div class="purpose-head reveal">
+        <h2 class="disp-title">${esc(t('purpose_pre'))} ${tag(t('purpose_tag'), 'ginger')}</h2>
+      </div>
+      <div class="purpose-stage reveal">
+        <div class="purpose-col purpose-col--l">
+          ${pbadge(1, 'sage')}${pbadge(2, 'ginger')}${pbadge(3, 'terra')}
+        </div>
+        <div class="purpose-can">
+          ${sunBlock(PRODUCTS.cranberry.accent, 'sun--purpose')}
+          ${productImg('cranberry', 'purpose-can-img')}
+        </div>
+        <div class="purpose-col purpose-col--r">
+          ${pbadge(4, 'mustard')}${pbadge(5, 'cream')}${pbadge(6, 'ginger')}
+        </div>
+      </div>
+      <p class="purpose-sub reveal">${esc(t('purpose_sub'))}</p>
+    </div>
+    ${wave(CREAM)}
   </section>
 
   <!-- MINERALS -->
   <section class="minerals container">
     <div class="section-head reveal">
       <p class="kicker">${esc(t('min_kicker'))}</p>
-      <h2>${esc(t('min_title'))} <em>${esc(t('min_title_em'))}</em></h2>
+      <h2 class="disp-title">${esc(t('min_title'))} <em>${esc(t('min_title_em'))}</em></h2>
       <p class="section-sub">${esc(t('min_sub'))}</p>
     </div>
     <div class="mineral-grid">
@@ -959,12 +1159,25 @@ function viewHome() {
     <p class="fineprint reveal">${esc(t('min_foot'))}</p>
   </section>
 
-  <!-- COMPARE (dark) -->
+  <!-- SHOP TEASER -->
+  <section class="shop-teaser">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">${esc(t('shop_kicker'))}</p>
+        <h2 class="disp-title">${esc(t('shop_title'))} <em>${esc(t('shop_title_em'))}</em></h2>
+        <p class="section-sub">${esc(t('shop_sub'))}</p>
+      </div>
+      <div class="prod-grid">${cards}</div>
+    </div>
+    ${wave(MAROON)}
+  </section>
+
+  <!-- COMPARE (maroon) -->
   <section class="compare">
     <div class="container">
       <div class="section-head section-head--light reveal">
-        <p class="kicker">${esc(t('cmp_kicker'))}</p>
-        <h2>${esc(t('cmp_title'))} <em>${esc(t('cmp_title_em'))}</em></h2>
+        <p class="kicker" style="color:var(--ginger)">${esc(t('cmp_kicker'))}</p>
+        <h2 class="disp-title">${esc(t('cmp_title'))} <em>${esc(t('cmp_title_em'))}</em></h2>
       </div>
       <div class="compare-table reveal">
         <div class="compare-row compare-row--head">
@@ -980,51 +1193,47 @@ function viewHome() {
           </div>`).join('')}
       </div>
     </div>
+    ${wave(CREAM)}
   </section>
 
-  <!-- SHOP TEASER -->
-  <section class="shop-teaser container">
-    <div class="section-head reveal">
-      <p class="kicker">${esc(t('shop_kicker'))}</p>
-      <h2>${esc(t('shop_title'))} <em>${esc(t('shop_title_em'))}</em></h2>
-      <p class="section-sub">${esc(t('shop_sub'))}</p>
-    </div>
-    <div class="prod-grid">${cards}</div>
-  </section>
-
-  <!-- LIFESTYLE -->
-  <section class="lifestyle container">
-    <div class="section-head reveal">
-      <p class="kicker">${esc(t('life_kicker'))}</p>
-      <h2>${esc(t('life_title'))} <em>${esc(t('life_title_em'))}</em></h2>
-      <p class="section-sub">${esc(t('life_sub'))}</p>
-    </div>
-    <div class="lifestyle-grid">
-      ${['life_tag_1', 'life_tag_2', 'life_tag_3', 'life_tag_4'].map((k, idx) => `
-        <div class="lifestyle-card reveal" style="--accent:${[PRODUCTS.cranberry.accent, PRODUCTS['ginger-citrus'].accent, PRODUCTS.vanille.accent, PRODUCTS.cranberry.accent][idx]}">
-          ${sunBlock([PRODUCTS.cranberry.accent, PRODUCTS['ginger-citrus'].accent, PRODUCTS.vanille.accent, PRODUCTS.cranberry.accent][idx], 'sun--tile')}
-          <span class="lifestyle-tag">${esc(t(k))}</span>
-        </div>`).join('')}
+  <!-- HUMAN TOUCH (community) -->
+  <section class="human">
+    <div class="container">
+      <div class="human-head reveal">
+        <h2 class="disp-title">${esc(t('human_pre'))} ${tag(t('human_tag'))}</h2>
+        <p class="section-sub" style="max-width:560px;margin:16px auto 0">${esc(t('human_sub'))}</p>
+      </div>
+      <div class="human-grid">
+        ${human(1, PRODUCTS.cranberry.accent)}
+        ${human(2, PRODUCTS['ginger-citrus'].accent)}
+        ${human(3, PRODUCTS.sage ? PRODUCTS.sage.accent : PRODUCTS.vanille.accent)}
+        ${human(4, PRODUCTS.cranberry.accent)}
+      </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="tst container">
-    <div class="section-head reveal">
-      <p class="kicker">${esc(t('tst_kicker'))}</p>
-      <h2>${esc(t('tst_title'))} <em>${esc(t('tst_title_em'))}</em></h2>
+  <!-- POUR banner -->
+  <section class="pour">
+    <div class="container">
+      <div class="pour-inner reveal">
+        <div class="pour-copy">
+          <h2 class="disp-title">
+            <span class="pour-line">${esc(t('pour_1'))}</span>
+            <span class="pour-line">${esc(t('pour_2'))} ${tag(t('pour_tag'), 'cream')}</span>
+          </h2>
+          <div class="pour-btn-wrap"><a href="#/shop" class="btn btn--cream">${esc(t('pour_btn'))}</a></div>
+        </div>
+        <div class="pour-media">
+          <img class="pour-photo" src="images/can-in-hand.jpg" alt="" onerror="this.style.display='none'">
+          ${productImg('cranberry', 'pour-can pour-can--1')}
+          ${productImg('ginger-citrus', 'pour-can pour-can--2')}
+        </div>
+      </div>
     </div>
-    <div class="tst-grid">
-      ${[1, 2, 3].map((i) => `
-        <figure class="tst-card reveal">
-          <div class="stars" aria-label="5/5">★★★★★</div>
-          <blockquote>${esc(t('tst_' + i))}</blockquote>
-          <figcaption>${esc(t('tst_' + i + '_by'))}</figcaption>
-        </figure>`).join('')}
-    </div>
+    ${wave(MAROON)}
   </section>
 
-  <!-- NEWSLETTER (dark) -->
+  <!-- NEWSLETTER (maroon) -->
   <section class="news">
     <div class="container news-inner reveal">
       <div class="news-copy">
@@ -1040,16 +1249,6 @@ function viewHome() {
   </section>`;
 }
 
-function trustIcon(i) {
-  const icons = {
-    1: '<svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21c5-3 8-6.5 8-11a4 4 0 0 0-8-1 4 4 0 0 0-8 1c0 4.5 3 8 8 11Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 8c0 4-3 6-3 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
-    2: '<svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 4v8l5 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
-    3: '<svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-    4: '<svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 12h16M12 4c2.5 2.5 2.5 13 0 16M12 4c-2.5 2.5-2.5 13 0 16" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>',
-  };
-  return icons[i] || '';
-}
-
 function viewShop() {
   const cards = PRODUCT_ORDER.map(productCard).join('');
   return `
@@ -1060,6 +1259,7 @@ function viewShop() {
       <h1 class="reveal">${esc(t('shop_view_title'))}</h1>
       <p class="page-lead reveal">${esc(t('shop_view_sub'))}</p>
     </div>
+    ${wave('#F5EBD8')}
   </section>
   <section class="container shop-page">
     <div class="prod-grid">${cards}</div>
@@ -1153,6 +1353,7 @@ function viewStory() {
       <h1 class="reveal">${esc(t('story_title'))} <em>${esc(t('story_title_em'))}</em></h1>
       <p class="page-lead reveal">${esc(t('story_lead'))}</p>
     </div>
+    ${wave('#F5EBD8')}
   </section>
 
   <section class="container story-body">
