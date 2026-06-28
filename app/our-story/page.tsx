@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { ArrowRight, Leaf, Drop, Heart, Sparkle } from "@/components/ui/icons";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Our story",
@@ -73,7 +74,7 @@ export default function OurStoryPage() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal as="div" className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
             <Image
-              src="/images/can-in-hand.jpg"
+              src={asset("/images/can-in-hand.jpg")}
               alt="An INRYOU Cranberry can held against the sky"
               fill
               sizes="(min-width:1024px) 50vw, 100vw"

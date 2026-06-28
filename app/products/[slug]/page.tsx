@@ -11,6 +11,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { productSchema } from "@/lib/seo";
 import { Check, Leaf, Drop, Sparkle } from "@/components/ui/icons";
 import { getProduct, products } from "@/lib/products";
+import { asset } from "@/lib/asset";
 import { reviews } from "@/lib/reviews";
 
 export function generateStaticParams() {
@@ -104,7 +105,7 @@ export default async function ProductPage({
                 style={{ background: product.accent, opacity: 0.18 }}
               />
               <Image
-                src={product.image}
+                src={asset(product.image)}
                 alt={`INRYOU ${product.name} can`}
                 width={420}
                 height={760}

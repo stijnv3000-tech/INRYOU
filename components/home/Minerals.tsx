@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Reveal } from "@/components/ui/Reveal";
+import { asset } from "@/lib/asset";
 
 const left = [
   {
@@ -65,7 +66,7 @@ export function Minerals() {
               }}
             />
             <Image
-              src="/images/can-ginger-citrus.png"
+              src={asset("/images/can-ginger-citrus.png")}
               alt="INRYOU can detail"
               width={240}
               height={520}

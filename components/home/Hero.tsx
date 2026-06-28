@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ButtonLink } from "@/components/ui/Button";
 import { Stars } from "@/components/ui/Stars";
 import { ArrowRight } from "@/components/ui/icons";
+import { asset } from "@/lib/asset";
 
 const fade = {
   hidden: { opacity: 0, y: 28 },
@@ -118,7 +119,7 @@ export function Hero() {
           >
             <div className="animate-float-slower relative z-0 -mr-10 mb-6">
               <Image
-                src="/images/can-ginger-citrus.png"
+                src={asset("/images/can-ginger-citrus.png")}
                 alt="INRYOU Ginger & Citrus sparkling drink"
                 width={260}
                 height={560}
@@ -128,7 +129,7 @@ export function Hero() {
             </div>
             <div className="animate-float-slow relative z-10">
               <Image
-                src="/images/can-cranberry.png"
+                src={asset("/images/can-cranberry.png")}
                 alt="INRYOU Cranberry sparkling drink"
                 width={300}
                 height={640}

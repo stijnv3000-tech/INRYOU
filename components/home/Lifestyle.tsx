@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { ArrowRight } from "@/components/ui/icons";
+import { asset } from "@/lib/asset";
 
 export function Lifestyle() {
   return (
@@ -29,7 +30,7 @@ export function Lifestyle() {
         {/* Feature photo */}
         <Reveal as="div" className="relative col-span-2 row-span-2 overflow-hidden rounded-[1.75rem]">
           <Image
-            src="/images/can-in-hand.jpg"
+            src={asset("/images/can-in-hand.jpg")}
             alt="Holding an INRYOU Cranberry can against a clear sky"
             fill
             sizes="(min-width:1024px) 50vw, 100vw"

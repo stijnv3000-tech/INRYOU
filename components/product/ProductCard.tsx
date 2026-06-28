@@ -7,6 +7,7 @@ import { useCart } from "@/components/cart/CartProvider";
 import { Stars } from "@/components/ui/Stars";
 import { Plus } from "@/components/ui/icons";
 import { pricePerCan, type Product } from "@/lib/products";
+import { asset } from "@/lib/asset";
 
 export function ProductCard({ product }: { product: Product }) {
   const { add } = useCart();
@@ -30,7 +31,7 @@ export function ProductCard({ product }: { product: Product }) {
           </span>
         )}
         <Image
-          src={product.image}
+          src={asset(product.image)}
           alt={`INRYOU ${product.name} can`}
           width={320}
           height={420}

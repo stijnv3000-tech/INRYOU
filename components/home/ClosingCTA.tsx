@@ -3,6 +3,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { NewsletterForm } from "@/components/ui/NewsletterForm";
 import { ArrowRight, Truck, Recycle, Heart } from "@/components/ui/icons";
+import { asset } from "@/lib/asset";
 
 const perks = [
   { icon: Truck, label: "Free delivery over €35" },
@@ -74,7 +75,7 @@ export function ClosingCTA() {
               <div className="mb-6 flex items-center gap-4">
                 <div className="relative h-24 w-20 shrink-0 overflow-hidden rounded-2xl bg-cream/10">
                   <Image
-                    src="/images/can-cranberry.png"
+                    src={asset("/images/can-cranberry.png")}
                     alt="INRYOU can"
                     fill
                     sizes="80px"

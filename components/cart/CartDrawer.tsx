@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { useCart } from "./CartProvider";
 import { Close, Minus, Plus, Truck, Check } from "@/components/ui/icons";
+import { asset } from "@/lib/asset";
 
 const FREE_SHIPPING = 35;
 
@@ -104,7 +105,7 @@ export function CartDrawer() {
                         style={{ backgroundColor: item.accentSoft }}
                       >
                         <Image
-                          src={item.image}
+                          src={asset(item.image)}
                           alt={item.name}
                           fill
                           sizes="80px"

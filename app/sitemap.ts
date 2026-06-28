@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { products } from "@/lib/products";
 import { posts } from "@/lib/blog";
 
+export const dynamic = "force-static";
+
 const base = "https://inryou.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {

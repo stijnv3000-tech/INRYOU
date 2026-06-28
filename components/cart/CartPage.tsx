@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useCart } from "./CartProvider";
 import { Minus, Plus, Truck, Check, Recycle, Heart } from "@/components/ui/icons";
+import { asset } from "@/lib/asset";
 
 const FREE_SHIPPING = 35;
 
@@ -72,7 +73,7 @@ export function CartPage() {
                   style={{ backgroundColor: item.accentSoft }}
                 >
                   <Image
-                    src={item.image}
+                    src={asset(item.image)}
                     alt={item.name}
                     fill
                     sizes="96px"

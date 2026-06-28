@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useCart } from "@/components/cart/CartProvider";
 import { Check } from "@/components/ui/icons";
 import { bundle } from "@/lib/products";
+import { asset } from "@/lib/asset";
 
 const includes = ["4 × Cranberry", "4 × Ginger & Citrus", "4 × Quince & Vanilla"];
 
@@ -18,21 +19,21 @@ export function BundleCard() {
       <div className="relative flex min-h-[280px] items-center justify-center overflow-hidden bg-gradient-to-br from-cranberry/30 via-orange/20 to-sage/20 p-8">
         <div className="flex items-end gap-2">
           <Image
-            src="/images/can-cranberry.png"
+            src={asset("/images/can-cranberry.png")}
             alt="Cranberry"
             width={120}
             height={260}
             className="h-48 w-auto rotate-[-6deg] object-contain drop-shadow-2xl sm:h-60"
           />
           <Image
-            src="/images/can-ginger-citrus.png"
+            src={asset("/images/can-ginger-citrus.png")}
             alt="Ginger & Citrus"
             width={130}
             height={280}
             className="z-10 h-56 w-auto object-contain drop-shadow-2xl sm:h-72"
           />
           <Image
-            src="/images/can-cranberry.png"
+            src={asset("/images/can-cranberry.png")}
             alt="Quince & Vanilla"
             width={120}
             height={260}
