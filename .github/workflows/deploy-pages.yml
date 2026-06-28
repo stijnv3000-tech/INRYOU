@@ -3,6 +3,7 @@ name: Deploy preview to GitHub Pages
 on:
   push:
     branches:
+      - main
       - claude/quirky-darwin-9mx863
   workflow_dispatch:
 
