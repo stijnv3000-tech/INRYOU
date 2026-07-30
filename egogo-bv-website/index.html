@@ -92,7 +92,7 @@
   .hero{position:relative;color:#fff;overflow:hidden;padding:0;background:var(--blue-900)}
   .hero-bg{position:absolute;inset:-6%;background-size:cover;background-position:center;animation:kenburns 24s ease-in-out infinite alternate;will-change:transform}
   @keyframes kenburns{from{transform:scale(1) translateY(0)}to{transform:scale(1.12) translateY(-1.5%)}}
-  .hero-overlay{position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,43,99,.94) 0%,rgba(11,60,140,.82) 45%,rgba(8,43,99,.45) 100%)}
+  .hero-overlay{position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,43,99,.96) 0%,rgba(11,60,140,.86) 42%,rgba(8,43,99,.28) 78%,rgba(8,43,99,.15) 100%)}
   .hero-glow{position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,138,30,.4),transparent 70%);animation:pulse 7s ease-in-out infinite}
   @keyframes pulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
   .hero-inner{position:relative;z-index:2;padding:120px 0 150px;max-width:720px}
@@ -119,7 +119,7 @@
 
   /* Stats */
   .stats{background:#fff;padding:0}
-  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:-52px;position:relative;z-index:5;box-shadow:var(--shadow)}
+  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:56px 0 8px;position:relative;box-shadow:var(--shadow)}
   .stat{background:#fff;padding:30px 22px;text-align:center}
   .stat b{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:2rem;font-weight:800;color:var(--blue-800);font-variant-numeric:tabular-nums}
   .stat b span{color:var(--orange-500)}
@@ -180,6 +180,14 @@
   .plan li{display:flex;gap:11px;font-size:.9rem;align-items:flex-start}
   .plan li svg{width:18px;height:18px;fill:var(--blue-600);flex-shrink:0;margin-top:3px}
 
+  /* Gallery — shows only photos that actually exist in images/ */
+  .gallery{background:#fff;padding-top:0}
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+  .gallery-grid figure{position:relative;border-radius:var(--radius);overflow:hidden;height:280px;box-shadow:0 6px 20px rgba(8,43,99,.12);cursor:pointer}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .gallery-grid figure:hover img{transform:scale(1.07)}
+  .gallery-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:36px 18px 16px;background:linear-gradient(transparent,rgba(8,43,99,.85));color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.9rem}
+
   /* Reviews */
   .reviews{background:var(--bg-soft)}
   .review-score{display:inline-flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 24px;margin-top:26px;box-shadow:0 4px 14px rgba(8,43,99,.06)}
@@ -198,8 +206,11 @@
 
   /* CTA band */
   .cta-band{padding:0}
-  .cta-inner{background:linear-gradient(120deg,var(--orange-600),var(--orange-500));border-radius:22px;padding:52px 56px;display:flex;justify-content:space-between;align-items:center;gap:32px;color:#fff;flex-wrap:wrap;box-shadow:0 20px 50px rgba(239,125,0,.35);position:relative;overflow:hidden}
-  .cta-inner::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.14)}
+  .cta-inner{background:linear-gradient(120deg,var(--orange-600),var(--orange-500));border-radius:22px;padding:60px 56px;display:flex;justify-content:space-between;align-items:center;gap:32px;color:#fff;flex-wrap:wrap;box-shadow:0 20px 50px rgba(239,125,0,.35);position:relative;overflow:hidden}
+  .cta-bg{position:absolute;inset:0;background-size:cover;background-position:center 40%}
+  .cta-inner::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(239,125,0,.96) 0%,rgba(255,138,30,.88) 45%,rgba(239,125,0,.55) 100%)}
+  .cta-inner::after{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.14)}
+  .cta-inner>div{position:relative;z-index:2}
   .cta-inner h2{font-size:clamp(1.5rem,2.8vw,2.1rem);margin-bottom:8px;position:relative}
   .cta-inner p{position:relative;opacity:.95}
   .cta-actions{display:flex;gap:14px;flex-wrap:wrap;position:relative}
@@ -273,7 +284,7 @@
   @media(max-width:1000px){
     .hero-inner{padding:88px 0 120px}
     .services-grid,.plans-grid,.reviews-grid{grid-template-columns:1fr 1fr}
-    .process-grid{grid-template-columns:1fr 1fr}
+    .process-grid,.gallery-grid{grid-template-columns:1fr 1fr}
     .stats-inner{grid-template-columns:1fr 1fr}
     .about-grid,.contact-grid{grid-template-columns:1fr}
     .about-media .main-img{height:380px}
@@ -282,7 +293,8 @@
   }
   @media(max-width:640px){
     section{padding:64px 0}
-    .services-grid,.plans-grid,.reviews-grid,.process-grid{grid-template-columns:1fr}
+    .services-grid,.plans-grid,.reviews-grid,.process-grid,.gallery-grid{grid-template-columns:1fr}
+    .gallery-grid figure{height:230px}
     .form-row{grid-template-columns:1fr}
     .nav-links{position:fixed;inset:0;top:0;background:var(--blue-900);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:.35s;z-index:200}
     .nav-links.open{transform:none}
@@ -499,6 +511,23 @@
   </div>
 </section>
 
+<!-- ══════════ GALLERY (auto-hides until photos exist in images/) ══════════ -->
+<section class="gallery" id="realisaties" hidden>
+  <div class="container">
+    <div class="center reveal">
+      <span class="kicker" data-i18n="gal_kick">Ons werk</span>
+      <h2 class="section-title" data-i18n="gal_title">Recente realisaties</h2>
+      <p class="section-sub" style="margin:0 auto" data-i18n="gal_sub">Een greep uit onze eigen projecten in en rond Leuven.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <figure><img src="images/zonnepanelen.jpg" alt="SmartFlower zonnepaneel-installatie" loading="lazy"><figcaption data-i18n="gal_1">Zonnepanelen — SmartFlower</figcaption></figure>
+      <figure><img src="images/laadpalen.jpg" alt="Laadpalen op bedrijfsparking" loading="lazy"><figcaption data-i18n="gal_2">Laadpalen op bedrijfsparking</figcaption></figure>
+      <figure><img src="images/elektriciteitswerken.jpg" alt="Verdeelbord met automaten" loading="lazy"><figcaption data-i18n="gal_3">Verdeelbord, netjes bedraad</figcaption></figure>
+      <figure><img src="images/warmtepomp.jpg" alt="Buitenunit op plat dak" loading="lazy"><figcaption data-i18n="gal_4">Installatie op plat dak</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════ ABOUT ══════════ -->
 <section id="over-ons">
   <div class="container about-grid">
@@ -625,6 +654,7 @@
 <section class="cta-band">
   <div class="container">
     <div class="cta-inner reveal">
+      <div class="cta-bg" id="ctaBg" aria-hidden="true"></div>
       <div>
         <h2 data-i18n="cta_title">Klaar om uw woning toekomstbestendig te maken?</h2>
         <p data-i18n="cta_sub">Gratis advies, gratis plaatsbezoek, duidelijke offerte — start vandaag.</p>
@@ -792,6 +822,36 @@
     })(0);
   })();
 
+  // ── Gallery: only real project photos — hide broken ones, hide the
+  //    whole section while none of the images/ files exist yet ──
+  (function(){
+    var section=document.getElementById('realisaties');
+    var figs=section.querySelectorAll('figure');
+    var pending=figs.length;
+    figs.forEach(function(fig){
+      var img=fig.querySelector('img');
+      img.addEventListener('load',function(){section.hidden=false;});
+      img.addEventListener('error',function(){
+        fig.remove();
+        if(--pending===0)section.hidden=true;
+      });
+      if(img.complete&&img.naturalWidth>0)section.hidden=false;
+    });
+  })();
+
+  // ── CTA band background: project photo first, stock fallback ──
+  (function(){
+    var el=document.getElementById('ctaBg');
+    var sources=['images/laadpalen.jpg','https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1400&q=60'];
+    (function tryNext(i){
+      if(i>=sources.length)return;
+      var img=new Image();
+      img.onload=function(){el.style.backgroundImage='url("'+sources[i]+'")';};
+      img.onerror=function(){tryNext(i+1);};
+      img.src=sources[i];
+    })(0);
+  })();
+
   // ── Ticker: duplicate content for a seamless loop ──
   var track=document.getElementById('tickerTrack');
   track.innerHTML+=track.innerHTML;
@@ -871,6 +931,8 @@
     s4_t:"EV Charging Stations",s4_d:"Smart charging at home or at work. We install and configure charging stations with load balancing and solar integration, ready for every electric car.",
     s5_t:"Plumbing",s5_d:"Sanitary installations, water supply, drainage and repairs — carried out by the same trusted team, perfectly coordinated with your electrical works.",
     s6_t:"Inspection & Certification",s6_d:"We prepare your installation for the official inspection and fix any non-conformities, so you pass with confidence — for sales, rentals or new builds.",
+    gal_kick:"Our work",gal_title:"Recent projects",gal_sub:"A selection of our own projects in and around Leuven.",
+    gal_1:"Solar — SmartFlower",gal_2:"EV chargers on company car park",gal_3:"Switchboard, neatly wired",gal_4:"Installation on flat roof",
     about_card:"services, one partner",about_kick:"About egogobv",
     about_title:"Your local electro & energy specialist in Leuven",
     about_sub:"egogobv is a Leuven-based installation company with years of experience in building and renovation projects. We combine electrotechnical expertise with modern energy solutions — making your home safer, smarter and more energy-efficient in one go.",
