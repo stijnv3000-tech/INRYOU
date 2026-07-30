@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EGOGO BV — Electrician, Solar, EV Chargers &amp; Plumbing in Leuven</title>
+<meta name="description" content="EGOGO BV is your certified partner in Leuven for electrical installations, solar panels, home batteries, EV chargers, plumbing and inspections (keuring). Request your free quote today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b3c8c'/%3E%3Cpath d='M36 10 20 36h10l-4 18 18-28H33l3-16z' fill='%23ff8a1e'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --blue-900:#082b63;
+    --blue-800:#0b3c8c;
+    --blue-700:#0e4aad;
+    --blue-600:#1560d8;
+    --blue-50:#eef4fe;
+    --orange-600:#ef7d00;
+    --orange-500:#ff8a1e;
+    --orange-100:#fff1e2;
+    --ink:#13233f;
+    --muted:#5b6b85;
+    --line:#e3e9f4;
+    --bg:#ffffff;
+    --bg-soft:#f6f9fe;
+    --radius:16px;
+    --shadow:0 10px 30px rgba(8,43,99,.10);
+    --shadow-lg:0 24px 60px rgba(8,43,99,.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.15;font-weight:800}
+  img{max-width:100%;display:block}
+  a{text-decoration:none;color:inherit}
+  ul{list-style:none}
+  .container{width:min(1180px,92%);margin:0 auto}
+  section{padding:88px 0}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-600);background:var(--orange-100);padding:8px 16px;border-radius:999px;margin-bottom:18px}
+  .kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange-500)}
+  .section-title{font-size:clamp(1.7rem,3.4vw,2.6rem);margin-bottom:16px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:1.05rem}
+  .center{text-align:center}
+  .center .section-sub{margin:0 auto}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem;padding:14px 28px;border-radius:12px;border:0;cursor:pointer;transition:.25s}
+  .btn-orange{background:linear-gradient(135deg,var(--orange-500),var(--orange-600));color:#fff;box-shadow:0 10px 24px rgba(239,125,0,.35)}
+  .btn-orange:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(239,125,0,.45)}
+  .btn-blue{background:var(--blue-800);color:#fff}
+  .btn-blue:hover{background:var(--blue-700);transform:translateY(-2px)}
+  .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.35);backdrop-filter:blur(4px)}
+  .btn-ghost:hover{background:rgba(255,255,255,.22)}
+
+  /* Top bar */
+  .topbar{background:var(--blue-900);color:#cfe0ff;font-size:.82rem}
+  .topbar-inner{display:flex;justify-content:space-between;align-items:center;padding:9px 0;gap:16px;flex-wrap:wrap}
+  .topbar a{color:#fff;font-weight:600}
+  .topbar-item{display:inline-flex;align-items:center;gap:7px}
+  .topbar-item svg{width:14px;height:14px;fill:var(--orange-500)}
+  .topbar-right{display:flex;gap:22px;flex-wrap:wrap}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 14px rgba(8,43,99,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo-mark{width:46px;height:46px;border-radius:12px;background:var(--blue-800);display:grid;place-items:center;flex-shrink:0}
+  .logo-mark svg{width:26px;height:26px}
+  .logo-text{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:-.01em}
+  .logo-text span{color:var(--orange-600)}
+  .logo-tag{display:block;font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-weight:600;font-size:.93rem;color:var(--ink);position:relative;padding:6px 0}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2.5px;background:var(--orange-500);border-radius:2px;transition:.25s}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .nav-phone{display:flex;align-items:center;gap:10px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
+  .nav-phone .ic{width:40px;height:40px;border-radius:50%;background:var(--blue-50);display:grid;place-items:center}
+  .nav-phone .ic svg{width:18px;height:18px;fill:var(--blue-800)}
+  .nav-phone small{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--muted)}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+  .hamburger span{display:block;width:26px;height:3px;background:var(--blue-900);margin:5px 0;border-radius:3px;transition:.3s}
+
+  /* Hero */
+  .hero{position:relative;background:linear-gradient(120deg,var(--blue-900) 0%,var(--blue-800) 55%,var(--blue-700) 100%);color:#fff;overflow:hidden;padding:0}
+  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.16}
+  .hero::after{content:"";position:absolute;right:-180px;top:-180px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,138,30,.35),transparent 70%)}
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:96px 0 110px}
+  .hero-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:8px 18px;border-radius:999px;font-size:.82rem;font-weight:600;margin-bottom:24px}
+  .hero-badge .dot{width:9px;height:9px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.25)}
+  .hero h1{font-size:clamp(2.2rem,4.6vw,3.5rem);letter-spacing:-.02em;margin-bottom:22px}
+  .hero h1 em{font-style:normal;color:var(--orange-500)}
+  .hero p.lead{color:#d7e4fb;font-size:1.1rem;max-width:540px;margin-bottom:34px}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:42px}
+  .hero-points{display:flex;gap:26px;flex-wrap:wrap}
+  .hero-point{display:flex;align-items:center;gap:9px;font-size:.88rem;color:#d7e4fb}
+  .hero-point svg{width:18px;height:18px;fill:var(--orange-500);flex-shrink:0}
+
+  /* Quote card */
+  .quote-card{background:#fff;color:var(--ink);border-radius:20px;box-shadow:var(--shadow-lg);padding:34px;max-width:430px;justify-self:end;width:100%}
+  .quote-card h3{font-size:1.35rem;margin-bottom:6px}
+  .quote-card .qc-sub{font-size:.88rem;color:var(--muted);margin-bottom:22px}
+  .quote-card label{display:block;font-size:.8rem;font-weight:600;margin:0 0 6px}
+  .quote-card input,.quote-card select,.quote-card textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:.9rem;margin-bottom:14px;background:var(--bg-soft);transition:.2s}
+  .quote-card input:focus,.quote-card select:focus,.quote-card textarea:focus{outline:none;border-color:var(--blue-600);background:#fff}
+  .quote-card .btn{width:100%}
+  .qc-note{font-size:.75rem;color:var(--muted);text-align:center;margin-top:12px}
+
+  /* Trust strip / stats */
+  .stats{background:#fff;padding:0}
+  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:-56px;position:relative;z-index:5;box-shadow:var(--shadow)}
+  .stat{background:#fff;padding:30px 22px;text-align:center}
+  .stat b{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:2rem;font-weight:800;color:var(--blue-800)}
+  .stat b span{color:var(--orange-500)}
+  .stat small{color:var(--muted);font-size:.85rem;font-weight:500}
+
+  /* Services */
+  .services{background:var(--bg-soft)}
+  .services-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:48px;flex-wrap:wrap}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .service-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 18px rgba(8,43,99,.07);transition:.3s;display:flex;flex-direction:column}
+  .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+  .service-img{height:190px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--blue-800),var(--blue-600))}
+  .service-img img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .service-card:hover .service-img img{transform:scale(1.06)}
+  .service-icon{position:absolute;left:22px;bottom:-24px;width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--orange-500),var(--orange-600));display:grid;place-items:center;box-shadow:0 8px 20px rgba(239,125,0,.4);z-index:3}
+  .service-icon svg{width:28px;height:28px;fill:#fff}
+  .service-body{padding:38px 24px 26px;flex:1;display:flex;flex-direction:column}
+  .service-body h3{font-size:1.18rem;margin-bottom:10px}
+  .service-body p{font-size:.9rem;color:var(--muted);flex:1}
+  .service-link{margin-top:18px;font-weight:700;font-size:.86rem;color:var(--blue-800);display:inline-flex;align-items:center;gap:7px;font-family:'Plus Jakarta Sans',sans-serif}
+  .service-link svg{width:15px;height:15px;fill:var(--orange-500);transition:.25s}
+  .service-card:hover .service-link svg{transform:translateX(4px)}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .about-media{position:relative}
+  .about-media .main-img{border-radius:20px;box-shadow:var(--shadow-lg);width:100%;height:460px;object-fit:cover;background:linear-gradient(135deg,var(--blue-800),var(--blue-600))}
+  .about-card{position:absolute;bottom:-28px;right:-18px;background:linear-gradient(135deg,var(--orange-500),var(--orange-600));color:#fff;border-radius:16px;padding:22px 26px;box-shadow:0 14px 34px rgba(239,125,0,.4);text-align:center}
+  .about-card b{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:2rem}
+  .about-card small{font-size:.8rem;opacity:.95}
+  .about-list{margin:26px 0 34px;display:grid;gap:14px}
+  .about-list li{display:flex;gap:13px;align-items:flex-start;font-size:.95rem}
+  .about-list svg{width:21px;height:21px;fill:var(--orange-500);flex-shrink:0;margin-top:2px}
+  .about-list b{font-family:'Plus Jakarta Sans',sans-serif}
+
+  /* Process */
+  .process{background:linear-gradient(120deg,var(--blue-900),var(--blue-800));color:#fff}
+  .process .section-sub{color:#c6d8f7}
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:54px}
+  .step{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:30px 24px;position:relative;transition:.3s}
+  .step:hover{background:rgba(255,255,255,.12);transform:translateY(-4px)}
+  .step-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.6rem;font-weight:800;color:var(--orange-500);opacity:.9;line-height:1;margin-bottom:16px}
+  .step h3{font-size:1.05rem;margin-bottom:9px}
+  .step p{font-size:.86rem;color:#c6d8f7}
+
+  /* Plans */
+  .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:54px}
+  .plan{border:1.5px solid var(--line);border-radius:var(--radius);padding:36px 30px;background:#fff;transition:.3s;position:relative;display:flex;flex-direction:column}
+  .plan:hover{box-shadow:var(--shadow-lg);transform:translateY(-5px)}
+  .plan.featured{border-color:var(--orange-500);box-shadow:var(--shadow)}
+  .plan-flag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--orange-500),var(--orange-600));color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:999px;font-family:'Plus Jakarta Sans',sans-serif}
+  .plan h3{font-size:1.25rem;margin-bottom:8px}
+  .plan .plan-sub{font-size:.87rem;color:var(--muted);margin-bottom:24px}
+  .plan ul{display:grid;gap:12px;margin-bottom:30px;flex:1}
+  .plan li{display:flex;gap:11px;font-size:.9rem;align-items:flex-start}
+  .plan li svg{width:18px;height:18px;fill:var(--blue-600);flex-shrink:0;margin-top:3px}
+
+  /* Reviews */
+  .reviews{background:var(--bg-soft)}
+  .review-score{display:inline-flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 24px;margin-top:26px;box-shadow:0 4px 14px rgba(8,43,99,.06)}
+  .review-score b{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.9rem;color:var(--blue-800)}
+  .review-score .rs-stars{color:var(--orange-500);font-size:1.05rem;letter-spacing:2px}
+  .review-score small{color:var(--muted);font-size:.8rem}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px}
+  .review{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:0 4px 18px rgba(8,43,99,.07);display:flex;flex-direction:column;gap:16px}
+  .review .rv-stars{color:var(--orange-500);letter-spacing:3px}
+  .review p{font-size:.92rem;color:var(--ink);flex:1}
+  .review-author{display:flex;align-items:center;gap:13px}
+  .review-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue-600),var(--blue-800));color:#fff;display:grid;place-items:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem}
+  .review-author b{display:block;font-size:.9rem;font-family:'Plus Jakarta Sans',sans-serif}
+  .review-author small{color:var(--muted);font-size:.78rem}
+
+  /* CTA band */
+  .cta-band{padding:0}
+  .cta-inner{background:linear-gradient(120deg,var(--orange-600),var(--orange-500));border-radius:22px;padding:52px 56px;display:flex;justify-content:space-between;align-items:center;gap:32px;color:#fff;flex-wrap:wrap;box-shadow:0 20px 50px rgba(239,125,0,.35);position:relative;overflow:hidden}
+  .cta-inner::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.14)}
+  .cta-inner h2{font-size:clamp(1.5rem,2.8vw,2.1rem);margin-bottom:8px;position:relative}
+  .cta-inner p{position:relative;opacity:.95}
+  .cta-actions{display:flex;gap:14px;flex-wrap:wrap;position:relative}
+  .btn-white{background:#fff;color:var(--orange-600)}
+  .btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.18)}
+  .btn-dark{background:var(--blue-900);color:#fff}
+  .btn-dark:hover{background:var(--blue-800);transform:translateY(-2px)}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;margin-top:54px}
+  .contact-info{display:grid;gap:18px;align-content:start}
+  .ci-item{display:flex;gap:18px;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .ci-icon{width:50px;height:50px;border-radius:12px;background:var(--blue-800);display:grid;place-items:center;flex-shrink:0}
+  .ci-icon svg{width:23px;height:23px;fill:#fff}
+  .ci-item b{font-family:'Plus Jakarta Sans',sans-serif;display:block;margin-bottom:3px}
+  .ci-item p,.ci-item a{font-size:.92rem;color:var(--muted)}
+  .ci-item a:hover{color:var(--blue-800)}
+  .contact-map{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);min-height:420px}
+  .contact-map iframe{width:100%;height:100%;border:0;min-height:420px}
+
+  /* Footer */
+  footer{background:var(--blue-900);color:#b9cdf2}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:46px;padding:70px 0 50px}
+  .footer-grid h4{color:#fff;font-size:1rem;margin-bottom:20px}
+  .footer-grid ul{display:grid;gap:11px}
+  .footer-grid a{font-size:.9rem;transition:.2s}
+  .footer-grid a:hover{color:var(--orange-500)}
+  .footer-about p{font-size:.9rem;margin:18px 0 22px;max-width:300px}
+  .footer-logo{display:flex;align-items:center;gap:11px}
+  .footer-logo .logo-text{color:#fff}
+  .wa-btn{display:inline-flex;align-items:center;gap:9px;background:#25d366;color:#fff;font-weight:700;font-size:.86rem;padding:11px 20px;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;transition:.25s}
+  .wa-btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(37,211,102,.4)}
+  .wa-btn svg{width:18px;height:18px;fill:#fff}
+  .footer-contact li{display:flex;gap:11px;align-items:flex-start;font-size:.9rem}
+  .footer-contact svg{width:17px;height:17px;fill:var(--orange-500);flex-shrink:0;margin-top:4px}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem}
+
+  /* Floating WhatsApp */
+  .wa-float{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,211,102,.45);z-index:90;transition:.25s}
+  .wa-float:hover{transform:scale(1.08)}
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+
+  /* Reveal animation */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.visible{opacity:1;transform:none}
+
+  @media(max-width:1000px){
+    .hero-inner{grid-template-columns:1fr;padding:72px 0 96px}
+    .quote-card{justify-self:start;max-width:520px}
+    .services-grid,.plans-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .process-grid{grid-template-columns:1fr 1fr}
+    .stats-inner{grid-template-columns:1fr 1fr}
+    .about-grid,.contact-grid{grid-template-columns:1fr}
+    .about-media .main-img{height:380px}
+    .footer-grid{grid-template-columns:1fr 1fr}
+    .nav-phone{display:none}
+  }
+  @media(max-width:640px){
+    section{padding:64px 0}
+    .services-grid,.plans-grid,.reviews-grid,.process-grid{grid-template-columns:1fr}
+    .nav-links{position:fixed;inset:0;top:0;background:var(--blue-900);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:.35s;z-index:200}
+    .nav-links.open{transform:none}
+    .nav-links a{color:#fff;font-size:1.2rem}
+    .hamburger{display:block;z-index:300}
+    .hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+    .hamburger.open span{background:#fff}
+    .topbar-right{display:none}
+    .cta-inner{padding:40px 30px}
+    .about-card{right:6px;bottom:-20px;padding:16px 20px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════ TOP BAR ══════════ -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-item">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+      <span>Oaselaan 6, 3000 Leuven — serving Leuven &amp; Vlaams-Brabant</span>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-item">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <a href="tel:+32456340466">+32 456 34 04 66</a>
+      </div>
+      <div class="topbar-item">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <a href="mailto:info@egogobv.com">info@egogobv.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ HEADER ══════════ -->
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 64 64"><path d="M36 10 20 36h10l-4 18 18-28H33l3-16z" fill="#ff8a1e"/></svg>
+      </div>
+      <div>
+        <div class="logo-text">EGOGO<span> BV</span></div>
+        <span class="logo-tag">Electro &amp; Energy Solutions</span>
+      </div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#plans">Packages</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+32456340466">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></span>
+        <span><small>Call or WhatsApp</small>+32 456 34 04 66</span>
+      </a>
+      <a href="#contact" class="btn btn-orange">Free Quote</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="container hero-inner">
+    <div>
+      <div class="hero-badge"><span class="dot"></span> Certified installer — Leuven, Belgium</div>
+      <h1>Power your home with <em>one trusted partner</em> for electro &amp; energy</h1>
+      <p class="lead">From complete electrical installations to solar panels, home batteries, EV chargers and plumbing — EGOGO BV delivers safe, certified and future-proof solutions for homes and businesses.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-orange">Request a Free Quote
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.4 1.4L16.2 11H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost">Explore Our Services</a>
+      </div>
+      <div class="hero-points">
+        <div class="hero-point"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V5l-8-3zm-1.4 15L7 13.4l1.4-1.4 2.2 2.2 5-5L17 10.6 10.6 17z"/></svg>Certified &amp; insured</div>
+        <div class="hero-point"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 11h-5v-2h3V6h2v7z"/></svg>Fast response</div>
+        <div class="hero-point"><svg viewBox="0 0 24 24"><path d="M12 17.3 6.2 21l1.6-6.6L2.5 9.9l6.8-.6L12 3l2.7 6.3 6.8.6-5.3 4.5L17.8 21z"/></svg>8.9/10 on Trustlocal</div>
+      </div>
+    </div>
+
+    <!-- Quote form card -->
+    <form class="quote-card" id="quoteForm">
+      <h3>Get your free quote</h3>
+      <p class="qc-sub">Tell us what you need — we reply within one working day.</p>
+      <label for="qName">Full name</label>
+      <input id="qName" name="name" type="text" placeholder="Jan Peeters" required>
+      <label for="qPhone">Phone</label>
+      <input id="qPhone" name="phone" type="tel" placeholder="+32 4xx xx xx xx" required>
+      <label for="qService">Service needed</label>
+      <select id="qService" name="service" required>
+        <option value="" disabled selected>Choose a service…</option>
+        <option>Electrical installation</option>
+        <option>Solar panels</option>
+        <option>Home battery</option>
+        <option>EV charging station</option>
+        <option>Plumbing</option>
+        <option>Inspection (keuring)</option>
+        <option>Other</option>
+      </select>
+      <label for="qMsg">Your message</label>
+      <textarea id="qMsg" name="message" rows="3" placeholder="Briefly describe your project…"></textarea>
+      <button type="submit" class="btn btn-orange">Send Request</button>
+      <p class="qc-note">No obligations — free advice &amp; site visit.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════ STATS ══════════ -->
+<div class="stats">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat"><b>8.9<span>/10</span></b><small>Trustlocal customer score</small></div>
+      <div class="stat"><b>Top&nbsp;<span>10</span></b><small>Electricians in Leuven</small></div>
+      <div class="stat"><b>6<span>-in-1</span></b><small>Services under one roof</small></div>
+      <div class="stat"><b>100<span>%</span></b><small>Certified installations</small></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ SERVICES ══════════ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-head reveal">
+      <div>
+        <span class="kicker">What we do</span>
+        <h2 class="section-title">Complete solutions,<br>from meter box to rooftop</h2>
+      </div>
+      <p class="section-sub">One certified team for all your electrical, energy and sanitary work — no juggling between contractors, no gaps in responsibility.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=70" alt="Electrician working on an installation" loading="lazy" onerror="this.remove()">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-2 8 9-12h-6l2-8z"/></svg></div>
+        </div>
+        <div class="service-body">
+          <h3>Electrical Installations</h3>
+          <p>New installations, renovations and troubleshooting for homes and businesses — wiring, switchboards, lighting and domotics, always up to AREI standards.</p>
+          <a href="#contact" class="service-link">Request a quote <svg viewBox="0 0 24 24"><path d="M12 4l-1.4 1.4L16.2 11H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=70" alt="Solar panels in the sun" loading="lazy" onerror="this.remove()">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5h0l1 3h-2l1-3zm0 20 1-3h-2l1 3zM2 12l3-1v2l-3-1zm20 0-3 1v-2l3 1zM4.9 4.9l2.8 1.4-1.4 1.4L4.9 4.9zm14.2 14.2-2.8-1.4 1.4-1.4 1.4 2.8zM4.9 19.1l1.4-2.8 1.4 1.4-2.8 1.4zM19.1 4.9l-1.4 2.8-1.4-1.4 2.8-1.4z"/></svg></div>
+        </div>
+        <div class="service-body">
+          <h3>Solar Panels</h3>
+          <p>High-yield solar installations tailored to your roof and consumption. We handle design, installation, inverter setup and grid registration from A to Z.</p>
+          <a href="#contact" class="service-link">Request a quote <svg viewBox="0 0 24 24"><path d="M12 4l-1.4 1.4L16.2 11H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=70" alt="Home with solar energy system" loading="lazy" onerror="this.remove()">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M16 4h-2V2h-4v2H8a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-3 14h-2v-3H9l4-6v4h2l-4 5h2z"/></svg></div>
+        </div>
+        <div class="service-body">
+          <h3>Home Batteries</h3>
+          <p>Store your own solar energy and use it when you need it. We size and install home batteries that maximise self-consumption and cut your energy bill.</p>
+          <a href="#contact" class="service-link">Request a quote <svg viewBox="0 0 24 24"><path d="M12 4l-1.4 1.4L16.2 11H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=70" alt="Electric car charging" loading="lazy" onerror="this.remove()">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M18.9 6.4 17 4.5V3h-2v1h-1.5L12 5.5V3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-7h1.5v5a2.5 2.5 0 0 0 5 0V8.5c0-.8-.2-1.5-.6-2.1zM10 18H6l3-4H7l3.5-5H12l-2 4h2l-2 5z"/></svg></div>
+        </div>
+        <div class="service-body">
+          <h3>EV Charging Stations</h3>
+          <p>Smart charging at home or at work. We install and configure charging stations with load balancing and solar integration, ready for every electric car.</p>
+          <a href="#contact" class="service-link">Request a quote <svg viewBox="0 0 24 24"><path d="M12 4l-1.4 1.4L16.2 11H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=70" alt="Plumber at work" loading="lazy" onerror="this.remove()">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21.6 18.2 13 9.6c.5-1.3.2-2.9-.8-4C11 4.4 9.2 4.1 7.8 4.7l2.7 2.7-2 2L5.7 6.7c-.6 1.4-.3 3.2.9 4.4 1.1 1 2.7 1.3 4 .8l8.6 8.6c.4.4 1 .4 1.4 0l1-1c.4-.4.4-1 0-1.3z"/></svg></div>
+        </div>
+        <div class="service-body">
+          <h3>Plumbing</h3>
+          <p>Sanitary installations, water supply, drainage and repairs — carried out by the same trusted team, perfectly coordinated with your electrical works.</p>
+          <a href="#contact" class="service-link">Request a quote <svg viewBox="0 0 24 24"><path d="M12 4l-1.4 1.4L16.2 11H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=70" alt="Technical inspection" loading="lazy" onerror="this.remove()">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V5l-8-3zm-1.4 15L7 13.4l1.4-1.4 2.2 2.2 5-5L17 10.6 10.6 17z"/></svg></div>
+        </div>
+        <div class="service-body">
+          <h3>Inspection &amp; Keuring</h3>
+          <p>We prepare your installation for official inspection (keuring) and fix any non-conformities, so you pass with confidence — for sales, rentals or new builds.</p>
+          <a href="#contact" class="service-link">Request a quote <svg viewBox="0 0 24 24"><path d="M12 4l-1.4 1.4L16.2 11H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-media reveal">
+      <img class="main-img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=70" alt="EGOGO technician at work" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#0b3c8c,#1560d8)';this.src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='">
+      <div class="about-card"><b>6-in-1</b><small>services, one partner</small></div>
+    </div>
+    <div class="reveal">
+      <span class="kicker">About EGOGO BV</span>
+      <h2 class="section-title">Your local electro &amp; energy specialist in Leuven</h2>
+      <p class="section-sub">EGOGO BV is a Leuven-based installation company with years of experience in building and renovation projects. We combine electrical expertise with modern energy solutions — so your home gets safer, smarter and more energy-efficient in one go.</p>
+      <ul class="about-list">
+        <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.5 14.5L6 12l1.4-1.4 3.1 3.1 6.1-6.1L18 9z"/></svg><span><b>Certified craftsmanship.</b> Every installation complies with Belgian standards and is delivered inspection-ready.</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.5 14.5L6 12l1.4-1.4 3.1 3.1 6.1-6.1L18 9z"/></svg><span><b>One point of contact.</b> Electricity, solar, battery, EV charger and plumbing — coordinated by one team.</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.5 14.5L6 12l1.4-1.4 3.1 3.1 6.1-6.1L18 9z"/></svg><span><b>Honest, clear pricing.</b> Free site visit and a transparent quote before we start — no surprises afterwards.</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.5 14.5L6 12l1.4-1.4 3.1 3.1 6.1-6.1L18 9z"/></svg><span><b>Trusted locally.</b> Rated 8.9/10 by customers on Trustlocal and ranked among the top 10 electricians in Leuven.</span></li>
+      </ul>
+      <a href="#contact" class="btn btn-blue">Get to know us
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.4 1.4L16.2 11H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROCESS ══════════ -->
+<section class="process">
+  <div class="container">
+    <div class="center reveal">
+      <span class="kicker">How it works</span>
+      <h2 class="section-title">From first call to final inspection</h2>
+      <p class="section-sub" style="margin:0 auto">A clear, structured process — you always know what happens next.</p>
+    </div>
+    <div class="process-grid">
+      <div class="step reveal"><div class="step-num">01</div><h3>Contact &amp; advice</h3><p>Call, WhatsApp or send the form. We listen to your needs and give honest, free advice.</p></div>
+      <div class="step reveal"><div class="step-num">02</div><h3>Site visit &amp; quote</h3><p>We visit your home or business, measure everything up and send a clear, itemised quote.</p></div>
+      <div class="step reveal"><div class="step-num">03</div><h3>Professional installation</h3><p>Our certified team executes the works neatly and on schedule, with respect for your home.</p></div>
+      <div class="step reveal"><div class="step-num">04</div><h3>Inspection &amp; aftercare</h3><p>We deliver your installation inspection-ready and stay available for service and questions.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PACKAGES ══════════ -->
+<section id="plans">
+  <div class="container">
+    <div class="center reveal">
+      <span class="kicker">Popular combinations</span>
+      <h2 class="section-title">Energy packages that pay for themselves</h2>
+      <p class="section-sub" style="margin:0 auto">Combine services and save on installation costs. Every package is tailored to your home — prices always follow a free site visit.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan reveal">
+        <h3>Solar Start</h3>
+        <p class="plan-sub">The smart first step towards lower energy bills.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Solar panel installation sized to your roof</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Quality inverter, installed &amp; configured</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Grid registration handled for you</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Inspection-ready delivery</li>
+        </ul>
+        <a href="#contact" class="btn btn-blue">Request package quote</a>
+      </div>
+      <div class="plan featured reveal">
+        <div class="plan-flag">Most chosen</div>
+        <h3>Solar + Battery</h3>
+        <p class="plan-sub">Generate, store and use your own energy — day and night.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Everything in Solar Start</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Home battery sized to your consumption</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Maximised self-consumption</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Smart monitoring of yield &amp; storage</li>
+        </ul>
+        <a href="#contact" class="btn btn-orange">Request package quote</a>
+      </div>
+      <div class="plan reveal">
+        <h3>Full Energy Home</h3>
+        <p class="plan-sub">The complete future-proof upgrade for your home.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Everything in Solar + Battery</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>EV charging station with load balancing</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Switchboard upgrade where needed</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>One coordinated installation team</li>
+        </ul>
+        <a href="#contact" class="btn btn-blue">Request package quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ REVIEWS ══════════ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="center reveal">
+      <span class="kicker">Customer reviews</span>
+      <h2 class="section-title">Trusted by homeowners across Leuven</h2>
+      <div class="review-score">
+        <b>8.9</b>
+        <div>
+          <div class="rs-stars">★★★★★</div>
+          <small>Customer score on Trustlocal — Top 10 electrician in Leuven</small>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review reveal">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Fast, clean work on our full electrical renovation. Everything was explained clearly and the installation passed inspection without a single remark."</p>
+        <div class="review-author"><div class="review-avatar">L</div><div><b>Homeowner, Leuven</b><small>Electrical renovation</small></div></div>
+      </div>
+      <div class="review reveal">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Solar panels and a home battery installed in one smooth project. Great communication and a very correct price. Highly recommended."</p>
+        <div class="review-author"><div class="review-avatar">H</div><div><b>Homeowner, Heverlee</b><small>Solar + battery</small></div></div>
+      </div>
+      <div class="review reveal">
+        <div class="rv-stars">★★★★★</div>
+        <p>"They installed our EV charger and updated the switchboard the same day. Professional, friendly and reachable — even by WhatsApp."</p>
+        <div class="review-author"><div class="review-avatar">K</div><div><b>Homeowner, Kessel-Lo</b><small>EV charging station</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA BAND ══════════ -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div>
+        <h2>Ready to make your home future-proof?</h2>
+        <p>Free advice, free site visit, clear quote — get started today.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="tel:+32456340466" class="btn btn-white">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          +32 456 34 04 66
+        </a>
+        <a href="#contact" class="btn btn-dark">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="center reveal">
+      <span class="kicker">Contact us</span>
+      <h2 class="section-title">Let's talk about your project</h2>
+      <p class="section-sub" style="margin:0 auto">Reach us by phone, WhatsApp or e-mail — or drop by our base in Leuven.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="ci-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></div>
+          <div><b>Address</b><p>Oaselaan 6, 3000 Leuven, Belgium<br>Serving Leuven &amp; Vlaams-Brabant</p></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></div>
+          <div><b>Phone &amp; WhatsApp</b><p><a href="tel:+32456340466">+32 456 34 04 66</a></p></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div><b>E-mail</b><p><a href="mailto:info@egogobv.com">info@egogobv.com</a></p></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg></div>
+          <div><b>Company details</b><p>EGOGO BV — BTW BE 0715.731.623</p></div>
+        </div>
+      </div>
+      <div class="contact-map reveal">
+        <iframe title="EGOGO BV location" src="https://maps.google.com/maps?q=Oaselaan%206%2C%203000%20Leuven%2C%20Belgium&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="#home" class="footer-logo">
+          <div class="logo-mark"><svg viewBox="0 0 64 64"><path d="M36 10 20 36h10l-4 18 18-28H33l3-16z" fill="#ff8a1e"/></svg></div>
+          <div><div class="logo-text">EGOGO<span> BV</span></div></div>
+        </a>
+        <p>Certified electrician and energy installer in Leuven. Electrical installations, solar panels, home batteries, EV chargers, plumbing and inspections — all under one roof.</p>
+        <a class="wa-btn" href="https://wa.me/32456340466" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.7-.4 1 .5.9 1.2 1.7 2 2.3.7.5 1.2.7 1.5.8.2.1.4.1.5-.1s.6-.7.8-1c.2-.3.4-.2.6-.1s1.6.8 1.9.9c.3.2.5.2.5.4 0 .1 0 .7-.2 1.2z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Electrical installations</a></li>
+          <li><a href="#services">Solar panels</a></li>
+          <li><a href="#services">Home batteries</a></li>
+          <li><a href="#services">EV charging stations</a></li>
+          <li><a href="#services">Plumbing</a></li>
+          <li><a href="#services">Inspection &amp; keuring</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#plans">Energy packages</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Free quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Oaselaan 6, 3000 Leuven, Belgium</li>
+          <li><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><a href="tel:+32456340466">+32 456 34 04 66</a></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:info@egogobv.com">info@egogobv.com</a></li>
+          <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg>BTW BE 0715.731.623</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> EGOGO BV — All rights reserved.</span>
+      <span>Electrician · Solar · Battery · EV Charger · Plumbing · Keuring — Leuven, Belgium</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="wa-float" href="https://wa.me/32456340466" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.7-.4 1 .5.9 1.2 1.7 2 2.3.7.5 1.2.7 1.5.8.2.1.4.1.5-.1s.6-.7.8-1c.2-.3.4-.2.6-.1s1.6.8 1.9.9c.3.2.5.2.5.4 0 .1 0 .7-.2 1.2z"/></svg>
+</a>
+
+<script>
+  // Hero background image (with graceful fallback to the gradient)
+  (function(){
+    var url='https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=60';
+    var img=new Image();
+    img.onload=function(){document.getElementById('heroBg').style.backgroundImage='url('+url+')';};
+    img.src=url;
+  })();
+
+  // Mobile menu
+  var burger=document.getElementById('hamburger'),links=document.getElementById('navLinks');
+  burger.addEventListener('click',function(){burger.classList.toggle('open');links.classList.toggle('open');});
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');links.classList.remove('open');});});
+
+  // Quote form → opens a pre-filled e-mail to the company
+  document.getElementById('quoteForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target;
+    var body='Name: '+f.name.value+'%0D%0APhone: '+f.phone.value+'%0D%0AService: '+f.service.value+'%0D%0A%0D%0A'+encodeURIComponent(f.message.value);
+    window.location.href='mailto:info@egogobv.com?subject='+encodeURIComponent('Quote request — '+f.service.value)+'&body='+body;
+  });
+
+  // Reveal on scroll
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // Year
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
