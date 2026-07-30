@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elektriciteitswerken Hansen | Erkend elektricien regio Antwerpen</title>
+  <meta name="description" content="Elektriciteitswerken Hansen: uw erkend elektricien voor nieuwbouw, renovatie, verlichting, domotica, laadpalen en depannage. Vraag vandaag nog uw gratis offerte aan.">
+  <style>
+    :root {
+      --navy: #10233f;
+      --navy-dark: #0a1830;
+      --amber: #f5a623;
+      --amber-dark: #d98e0b;
+      --text: #2b3646;
+      --muted: #6b7686;
+      --light: #f4f6f9;
+      --white: #ffffff;
+      --radius: 10px;
+      --shadow: 0 10px 30px rgba(16, 35, 63, .12);
+      --transition: all .3s ease;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      background: var(--white);
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { width: min(1140px, 92%); margin: 0 auto; }
+    section { padding: 90px 0; }
+
+    /* ── Topbar ─────────────────────────────── */
+    .topbar {
+      background: var(--navy-dark);
+      color: #c9d4e4;
+      font-size: .85rem;
+      padding: 8px 0;
+    }
+    .topbar .container {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+    .topbar a { color: #fff; }
+    .topbar a:hover { color: var(--amber); }
+    .topbar-contact { display: flex; gap: 22px; flex-wrap: wrap; }
+    .topbar-note { color: var(--amber); font-weight: 600; }
+
+    /* ── Header / nav ───────────────────────── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white);
+      box-shadow: 0 2px 14px rgba(16, 35, 63, .08);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 1.3rem; color: var(--navy); }
+    .logo-mark {
+      width: 44px; height: 44px; border-radius: 9px;
+      background: var(--navy);
+      display: grid; place-items: center;
+      color: var(--amber); font-size: 1.5rem;
+    }
+    .logo small { display: block; font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 30px; font-weight: 600; font-size: .95rem; }
+    .nav-links a { color: var(--navy); position: relative; padding: 6px 0; }
+    .nav-links a::after {
+      content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 0;
+      background: var(--amber); transition: var(--transition);
+    }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .btn {
+      display: inline-block; padding: 13px 28px; border-radius: 50px;
+      background: var(--amber); color: var(--navy-dark); font-weight: 700;
+      border: 2px solid var(--amber); cursor: pointer; font-size: .95rem;
+      transition: var(--transition);
+    }
+    .btn:hover { background: var(--amber-dark); border-color: var(--amber-dark); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: #fff; border-color: #fff; }
+    .btn-outline:hover { background: #fff; color: var(--navy); border-color: #fff; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .hamburger span { display: block; width: 26px; height: 3px; background: var(--navy); margin: 5px 0; border-radius: 2px; transition: var(--transition); }
+    .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* ── Hero ───────────────────────────────── */
+    .hero {
+      min-height: 88vh;
+      display: grid; place-items: center; text-align: center;
+      color: #fff; padding: 120px 0;
+      background:
+        linear-gradient(rgba(10, 24, 48, .72), rgba(10, 24, 48, .72)),
+        url("https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1920&q=80")
+        center / cover no-repeat fixed;
+    }
+    .hero h1 { font-size: clamp(2.1rem, 5vw, 3.6rem); line-height: 1.15; margin-bottom: 18px; }
+    .hero h1 span { color: var(--amber); }
+    .hero p { max-width: 640px; margin: 0 auto 34px; font-size: 1.15rem; color: #dde5f0; }
+    .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── USP strip ──────────────────────────── */
+    .usp { background: var(--navy); color: #fff; padding: 34px 0; }
+    .usp .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+    .usp-item { display: flex; align-items: center; gap: 14px; justify-content: center; }
+    .usp-item .icon { font-size: 1.7rem; color: var(--amber); }
+    .usp-item strong { display: block; font-size: 1rem; }
+    .usp-item small { color: #aebacd; }
+
+    /* ── Section headings ───────────────────── */
+    .section-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+    .section-head .kicker {
+      display: inline-block; color: var(--amber-dark); font-weight: 700;
+      text-transform: uppercase; letter-spacing: .18em; font-size: .78rem; margin-bottom: 10px;
+    }
+    .section-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); color: var(--navy); margin-bottom: 14px; }
+    .section-head p { color: var(--muted); }
+
+    /* ── Over ons ───────────────────────────── */
+    .about { background: var(--light); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-img { position: relative; }
+    .about-img img { border-radius: var(--radius); box-shadow: var(--shadow); aspect-ratio: 4/5; object-fit: cover; }
+    .about-badge {
+      position: absolute; bottom: -22px; right: -18px;
+      background: var(--amber); color: var(--navy-dark);
+      border-radius: var(--radius); padding: 18px 24px; text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .about-badge strong { display: block; font-size: 1.9rem; line-height: 1.1; }
+    .about-badge small { font-weight: 700; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
+    .about-text .kicker { color: var(--amber-dark); font-weight: 700; text-transform: uppercase; letter-spacing: .18em; font-size: .78rem; }
+    .about-text h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); color: var(--navy); margin: 10px 0 18px; }
+    .about-text p { color: var(--muted); margin-bottom: 16px; }
+    .about-list { margin: 22px 0 30px; display: grid; gap: 12px; }
+    .about-list li { display: flex; gap: 12px; align-items: baseline; font-weight: 600; color: var(--navy); }
+    .about-list li::before { content: "✔"; color: var(--amber-dark); font-weight: 900; }
+
+    /* ── Diensten ───────────────────────────── */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+    .service-card {
+      background: var(--white); border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow); transition: var(--transition);
+      display: flex; flex-direction: column;
+    }
+    .service-card:hover { transform: translateY(-6px); }
+    .service-card img { height: 210px; width: 100%; object-fit: cover; }
+    .service-body { padding: 26px; flex: 1; display: flex; flex-direction: column; }
+    .service-body h3 { color: var(--navy); font-size: 1.15rem; margin-bottom: 10px; }
+    .service-body p { color: var(--muted); font-size: .95rem; flex: 1; }
+    .service-body a { margin-top: 16px; font-weight: 700; color: var(--amber-dark); font-size: .9rem; }
+    .service-body a:hover { text-decoration: underline; }
+
+    /* ── CTA band ───────────────────────────── */
+    .cta-band {
+      padding: 70px 0; text-align: center; color: #fff;
+      background:
+        linear-gradient(rgba(16, 35, 63, .85), rgba(16, 35, 63, .85)),
+        url("https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=1920&q=80")
+        center / cover no-repeat fixed;
+    }
+    .cta-band h2 { font-size: clamp(1.6rem, 3.2vw, 2.3rem); margin-bottom: 12px; }
+    .cta-band p { color: #ccd6e4; margin-bottom: 28px; }
+
+    /* ── Realisaties ────────────────────────── */
+    .gallery { background: var(--light); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .gallery-item {
+      position: relative; border-radius: var(--radius); overflow: hidden;
+      cursor: pointer; aspect-ratio: 4/3; box-shadow: var(--shadow);
+    }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .gallery-item:hover img { transform: scale(1.07); }
+    .gallery-item .overlay {
+      position: absolute; inset: 0; display: grid; place-items: end start;
+      padding: 18px; color: #fff; font-weight: 700; font-size: .95rem;
+      background: linear-gradient(180deg, transparent 45%, rgba(10, 24, 48, .85));
+      opacity: 0; transition: var(--transition);
+    }
+    .gallery-item:hover .overlay { opacity: 1; }
+    .lightbox {
+      position: fixed; inset: 0; background: rgba(6, 14, 28, .92); z-index: 300;
+      display: none; place-items: center; padding: 4vh 4vw;
+    }
+    .lightbox.open { display: grid; }
+    .lightbox img { max-height: 86vh; max-width: 100%; border-radius: var(--radius); }
+    .lightbox-close {
+      position: absolute; top: 22px; right: 30px; font-size: 2.2rem; color: #fff;
+      background: none; border: none; cursor: pointer; line-height: 1;
+    }
+
+    /* ── Testimonials ───────────────────────── */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 28px; }
+    .testimonial {
+      background: var(--white); border-radius: var(--radius); padding: 30px;
+      box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 18px;
+    }
+    .stars { color: var(--amber); letter-spacing: 3px; }
+    .testimonial p { color: var(--muted); font-style: italic; flex: 1; }
+    .testimonial-author { display: flex; align-items: center; gap: 14px; }
+    .testimonial-author img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+    .testimonial-author strong { display: block; color: var(--navy); font-size: .95rem; }
+    .testimonial-author small { color: var(--muted); }
+
+    /* ── Contact ────────────────────────────── */
+    .contact { background: var(--light); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: start; }
+    .contact-info h3 { color: var(--navy); margin-bottom: 18px; font-size: 1.3rem; }
+    .contact-info p { color: var(--muted); margin-bottom: 26px; }
+    .contact-item { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+    .contact-item .icon {
+      width: 46px; height: 46px; border-radius: 9px; flex-shrink: 0;
+      background: var(--navy); color: var(--amber); display: grid; place-items: center; font-size: 1.2rem;
+    }
+    .contact-item strong { display: block; color: var(--navy); font-size: .95rem; }
+    .contact-item span, .contact-item a { color: var(--muted); font-size: .95rem; }
+    .contact-item a:hover { color: var(--amber-dark); }
+    .hours { background: var(--white); border-radius: var(--radius); padding: 22px 26px; box-shadow: var(--shadow); margin-top: 8px; }
+    .hours h4 { color: var(--navy); margin-bottom: 12px; }
+    .hours li { display: flex; justify-content: space-between; font-size: .92rem; color: var(--muted); padding: 4px 0; }
+    .hours li strong { color: var(--navy); }
+    .contact-form {
+      background: var(--white); border-radius: var(--radius); padding: 36px;
+      box-shadow: var(--shadow);
+    }
+    .contact-form h3 { color: var(--navy); margin-bottom: 6px; font-size: 1.3rem; }
+    .contact-form > p { color: var(--muted); font-size: .92rem; margin-bottom: 24px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-weight: 600; font-size: .85rem; color: var(--navy); margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 14px; border: 1.5px solid #d8dfe9; border-radius: 8px;
+      font: inherit; color: var(--text); background: #fbfcfe; transition: var(--transition);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--amber); background: #fff;
+    }
+    .form-success {
+      display: none; background: #e8f7ee; border: 1.5px solid #35a45f; color: #1e6a3c;
+      border-radius: 8px; padding: 14px 16px; margin-top: 16px; font-weight: 600; font-size: .92rem;
+    }
+    .form-success.show { display: block; }
+
+    /* ── Footer ─────────────────────────────── */
+    footer { background: var(--navy-dark); color: #aebacd; padding: 70px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px; padding-bottom: 50px; }
+    .footer-grid h4 { color: #fff; margin-bottom: 18px; font-size: 1rem; }
+    .footer-grid p, .footer-grid a, .footer-grid li { font-size: .92rem; color: #aebacd; }
+    .footer-grid li { margin-bottom: 10px; }
+    .footer-grid a:hover { color: var(--amber); }
+    .footer-logo { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 1.2rem; color: #fff; margin-bottom: 16px; }
+    .socials { display: flex; gap: 12px; margin-top: 18px; }
+    .socials a {
+      width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+      background: rgba(255, 255, 255, .08); color: #fff; font-weight: 700; font-size: .85rem;
+      transition: var(--transition);
+    }
+    .socials a:hover { background: var(--amber); color: var(--navy-dark); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .1); padding: 20px 0;
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: .85rem;
+    }
+
+    /* ── Back to top ────────────────────────── */
+    .to-top {
+      position: fixed; bottom: 26px; right: 26px; z-index: 90;
+      width: 48px; height: 48px; border-radius: 50%; border: none; cursor: pointer;
+      background: var(--amber); color: var(--navy-dark); font-size: 1.2rem; font-weight: 900;
+      box-shadow: var(--shadow); opacity: 0; pointer-events: none; transition: var(--transition);
+    }
+    .to-top.show { opacity: 1; pointer-events: auto; }
+
+    /* ── Reveal animation ───────────────────── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── Responsive ─────────────────────────── */
+    @media (max-width: 900px) {
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .about-badge { right: 10px; }
+    }
+    @media (max-width: 760px) {
+      .hamburger { display: block; }
+      .nav-links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--white); flex-direction: column; gap: 0;
+        max-height: 0; overflow: hidden; transition: max-height .35s ease;
+        box-shadow: 0 14px 20px rgba(16, 35, 63, .12);
+      }
+      .nav-links.open { max-height: 420px; }
+      .nav-links a { padding: 15px 6%; width: 100%; border-top: 1px solid #eef1f6; }
+      .nav-links .btn { margin: 14px 6% 20px; width: auto; text-align: center; }
+      .topbar-contact { gap: 12px; }
+      .topbar-note { display: none; }
+      .hero { background-attachment: scroll; }
+      .cta-band { background-attachment: scroll; }
+      section { padding: 64px 0; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-contact">
+        <a href="tel:+32470123456">📞 +32 470 12 34 56</a>
+        <a href="mailto:info@elektrohansen.be">✉️ info@elektrohansen.be</a>
+      </div>
+      <div class="topbar-note">Depannage 7/7 — snel ter plaatse</div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a href="#home" class="logo">
+        <span class="logo-mark">⚡</span>
+        <span>Hansen<small>Elektriciteitswerken</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#over-ons">Over ons</a>
+        <a href="#diensten">Diensten</a>
+        <a href="#realisaties">Realisaties</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn">Offerte aanvragen</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Uw erkend elektricien voor<br><span>elke elektriciteitsklus</span></h1>
+      <p>Elektriciteitswerken Hansen staat garant voor vakwerk in nieuwbouw, renovatie, verlichting, domotica en laadpalen. Snel, betrouwbaar en volgens de laatste normen — in Antwerpen en omstreken.</p>
+      <div class="hero-buttons">
+        <a href="#diensten" class="btn">Ontdek onze diensten</a>
+        <a href="#contact" class="btn btn-outline">Gratis offerte</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP strip -->
+  <div class="usp">
+    <div class="container">
+      <div class="usp-item">
+        <span class="icon">🛡️</span>
+        <div><strong>Erkend &amp; verzekerd</strong><small>Conform AREI-keuring</small></div>
+      </div>
+      <div class="usp-item">
+        <span class="icon">⚡</span>
+        <div><strong>Snelle service</strong><small>Depannage 7 dagen op 7</small></div>
+      </div>
+      <div class="usp-item">
+        <span class="icon">📋</span>
+        <div><strong>Gratis offerte</strong><small>Vrijblijvend &amp; op maat</small></div>
+      </div>
+      <div class="usp-item">
+        <span class="icon">🤝</span>
+        <div><strong>15+ jaar ervaring</strong><small>Vakmanschap met garantie</small></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Over ons -->
+  <section class="about" id="over-ons">
+    <div class="container about-grid">
+      <div class="about-img reveal">
+        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80" alt="Elektricien Hansen aan het werk">
+        <div class="about-badge"><strong>15+</strong><small>jaar ervaring</small></div>
+      </div>
+      <div class="about-text reveal">
+        <span class="kicker">Over ons</span>
+        <h2>Vakmanschap en betrouwbaarheid, van meterkast tot stopcontact</h2>
+        <p>Elektriciteitswerken Hansen is een jong en dynamisch bedrijf met een groeiende expertise, sterke motivatie en modern materieel. Zaakvoerder Jan Hansen en zijn team voeren elke opdracht tot in de puntjes uit — van een kleine herstelling tot de volledige elektrische installatie van uw nieuwbouw.</p>
+        <p>Wij werken steeds volgens de geldende AREI-normen en leveren al onze installaties keuringsklaar op. Duidelijke afspraken, correcte prijzen en een propere werf zijn bij ons vanzelfsprekend.</p>
+        <ul class="about-list">
+          <li>Erkend en verzekerd elektricien</li>
+          <li>Persoonlijke aanpak en duidelijke communicatie</li>
+          <li>Kwaliteitsmaterialen van A-merken</li>
+          <li>Werken conform AREI, keuringsklaar opgeleverd</li>
+        </ul>
+        <a href="#contact" class="btn">Maak kennis met ons</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diensten -->
+  <section id="diensten">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Onze diensten</span>
+        <h2>Wat kunnen wij voor u doen?</h2>
+        <p>Van volledige installaties tot dringende herstellingen: Hansen is uw partner voor alle elektriciteitswerken, zowel voor particulieren als bedrijven.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80" alt="Algemene elektriciteitswerken">
+          <div class="service-body">
+            <h3>Algemene elektriciteitswerken</h3>
+            <p>Volledige elektrische installaties, uitbreiding van bestaande installaties, plaatsing van zekeringkasten, bekabeling en aansluitingen — alles volgens de AREI-normen.</p>
+            <a href="#contact">Vraag een offerte →</a>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Nieuwbouw en renovatie">
+          <div class="service-body">
+            <h3>Nieuwbouw &amp; renovatie</h3>
+            <p>Van ruwbouw tot afwerking: wij verzorgen de complete elektrische installatie van uw nieuwbouwwoning of brengen uw oude installatie weer helemaal in orde.</p>
+            <a href="#contact">Vraag een offerte →</a>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=800&q=80" alt="Binnen- en buitenverlichting">
+          <div class="service-body">
+            <h3>Verlichting binnen &amp; buiten</h3>
+            <p>Sfeervolle led-verlichting, spots, tuin- en gevelverlichting: wij adviseren, leveren en plaatsen een verlichtingsplan dat uw woning perfect tot haar recht laat komen.</p>
+            <a href="#contact">Vraag een offerte →</a>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80" alt="Domotica en smart home">
+          <div class="service-body">
+            <h3>Domotica &amp; smart home</h3>
+            <p>Bedien verlichting, verwarming, rolluiken en toegang vanop uw smartphone. Wij installeren slimme systemen die comfort en energiebesparing combineren.</p>
+            <a href="#contact">Vraag een offerte →</a>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80" alt="Laadpalen voor elektrische wagens">
+          <div class="service-body">
+            <h3>Laadpalen</h3>
+            <p>Thuis of op het werk uw elektrische wagen laden? Wij plaatsen laadpalen en laadboxen, inclusief keuring, lastenbalancering en aanvraag van premies.</p>
+            <a href="#contact">Vraag een offerte →</a>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Depannage en herstellingen">
+          <div class="service-body">
+            <h3>Depannage &amp; herstellingen</h3>
+            <p>Stroompanne, defecte zekering of installatie afgekeurd? Wij sporen de fout snel op en herstellen ze vakkundig — 7 dagen op 7 bereikbaar voor dringende interventies.</p>
+            <a href="#contact">Vraag een offerte →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <div class="cta-band">
+    <div class="container reveal">
+      <h2>Plannen voor een nieuw project?</h2>
+      <p>Vraag vandaag nog uw gratis en vrijblijvende offerte aan. Wij komen graag langs om uw wensen te bespreken.</p>
+      <a href="#contact" class="btn">Offerte aanvragen</a>
+    </div>
+  </div>
+
+  <!-- Realisaties -->
+  <section class="gallery" id="realisaties">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Realisaties</span>
+        <h2>Een greep uit onze projecten</h2>
+        <p>Bekijk enkele van onze recente realisaties. Klik op een foto om ze te vergroten.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Nieuwbouwwoning met volledige elektrische installatie">
+          <div class="overlay">Nieuwbouw — volledige installatie</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Sfeerverlichting in moderne leefruimte">
+          <div class="overlay">Ledverlichting leefruimte</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Buitenverlichting bij gerenoveerde woning">
+          <div class="overlay">Gevel- en tuinverlichting</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80" alt="Renovatie appartement met nieuwe installatie">
+          <div class="overlay">Renovatie appartement</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=900&q=80" alt="Smart home installatie met domotica">
+          <div class="overlay">Domotica-installatie</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80" alt="Laadpaal aan woning">
+          <div class="overlay">Plaatsing laadpaal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="referenties">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Referenties</span>
+        <h2>Wat onze klanten zeggen</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Hansen vernieuwde de volledige elektriciteit in onze rijwoning. Correcte prijs, propere afwerking en de installatie was in één keer goedgekeurd bij de keuring. Een absolute aanrader!"</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Sofie D.">
+            <div><strong>Sofie D.</strong><small>Renovatie — Antwerpen</small></div>
+          </div>
+        </div>
+        <div class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Snel een afspraak, duidelijke offerte en de laadpaal hing er binnen de week. Jan legde alles rustig uit en hielp zelfs met de premie-aanvraag. Top service."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Karim B.">
+            <div><strong>Karim B.</strong><small>Laadpaal — Schoten</small></div>
+          </div>
+        </div>
+        <div class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Op zondagavond een stroompanne, maandagochtend stond Hansen al voor de deur. Probleem gevonden en opgelost binnen het uur. Zo'n betrouwbaarheid vind je nog zelden."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Peter V.">
+            <div><strong>Peter V.</strong><small>Depannage — Brasschaat</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Contact</span>
+        <h2>Vraag uw gratis offerte aan</h2>
+        <p>Heeft u een vraag of wenst u een vrijblijvende offerte? Bel ons gerust of vul het formulier in — wij nemen zo snel mogelijk contact met u op.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Contactgegevens</h3>
+          <p>U kan ons elke werkdag bereiken. Voor dringende depannages zijn we 7 dagen op 7 beschikbaar.</p>
+          <div class="contact-item">
+            <span class="icon">📞</span>
+            <div><strong>Telefoon</strong><a href="tel:+32470123456">+32 470 12 34 56</a></div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">✉️</span>
+            <div><strong>E-mail</strong><a href="mailto:info@elektrohansen.be">info@elektrohansen.be</a></div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📍</span>
+            <div><strong>Adres</strong><span>Veldstraat 12, 2000 Antwerpen</span></div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">🌍</span>
+            <div><strong>Werkgebied</strong><span>Antwerpen en omstreken (± 40 km)</span></div>
+          </div>
+          <div class="hours">
+            <h4>Openingsuren</h4>
+            <ul>
+              <li><strong>Ma – Vr</strong><span>07u30 – 17u30</span></li>
+              <li><strong>Zaterdag</strong><span>Op afspraak</span></li>
+              <li><strong>Zondag</strong><span>Enkel depannage</span></li>
+            </ul>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <h3>Stuur ons een bericht</h3>
+          <p>Velden met * zijn verplicht.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="naam">Naam *</label>
+              <input type="text" id="naam" name="naam" required placeholder="Uw naam">
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" required placeholder="uw@email.be">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telefoon">Telefoon</label>
+              <input type="tel" id="telefoon" name="telefoon" placeholder="+32 ...">
+            </div>
+            <div class="form-group">
+              <label for="onderwerp">Onderwerp</label>
+              <select id="onderwerp" name="onderwerp">
+                <option>Offerte aanvragen</option>
+                <option>Nieuwbouw / renovatie</option>
+                <option>Verlichting</option>
+                <option>Domotica</option>
+                <option>Laadpaal</option>
+                <option>Depannage</option>
+                <option>Andere vraag</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="bericht">Uw bericht *</label>
+            <textarea id="bericht" name="bericht" rows="5" required placeholder="Omschrijf kort uw project of vraag..."></textarea>
+          </div>
+          <button type="submit" class="btn">Verstuur bericht</button>
+          <div class="form-success" id="formSuccess">✔ Bedankt voor uw bericht! Wij nemen zo snel mogelijk contact met u op.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><span class="logo-mark">⚡</span> Hansen</div>
+          <p>Elektriciteitswerken Hansen is uw erkend elektricien voor nieuwbouw, renovatie, verlichting, domotica, laadpalen en depannage in Antwerpen en omstreken.</p>
+          <div class="socials">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigatie</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#over-ons">Over ons</a></li>
+            <li><a href="#diensten">Diensten</a></li>
+            <li><a href="#realisaties">Realisaties</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Diensten</h4>
+          <ul>
+            <li><a href="#diensten">Elektriciteitswerken</a></li>
+            <li><a href="#diensten">Nieuwbouw &amp; renovatie</a></li>
+            <li><a href="#diensten">Verlichting</a></li>
+            <li><a href="#diensten">Domotica</a></li>
+            <li><a href="#diensten">Laadpalen</a></li>
+            <li><a href="#diensten">Depannage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>📍 Veldstraat 12, 2000 Antwerpen</li>
+            <li>📞 <a href="tel:+32470123456">+32 470 12 34 56</a></li>
+            <li>✉️ <a href="mailto:info@elektrohansen.be">info@elektrohansen.be</a></li>
+            <li>BTW BE 0123.456.789</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Elektriciteitswerken Hansen — Alle rechten voorbehouden</span>
+        <span><a href="#">Privacybeleid</a> · <a href="#">Algemene voorwaarden</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Sluiten">×</button>
+    <img src="" alt="Vergrote foto" id="lightboxImg">
+  </div>
+
+  <button class="to-top" id="toTop" aria-label="Terug naar boven">↑</button>
+
+  <script>
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    }));
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id], .hero');
+    const menuAnchors = navLinks.querySelectorAll('a[href^="#"]:not(.btn)');
+    window.addEventListener('scroll', () => {
+      let current = 'home';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 140) current = s.id;
+      });
+      menuAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+      document.getElementById('toTop').classList.toggle('show', window.scrollY > 500);
+    });
+
+    document.getElementById('toTop').addEventListener('click', () =>
+      window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Gallery lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.parentElement.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('open');
+      });
+    });
+    const closeLightbox = () => lightbox.classList.remove('open');
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // Contact form (demo: shows confirmation, no backend yet)
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('formSuccess').classList.add('show');
+      e.target.querySelectorAll('input, textarea').forEach(el => el.value = '');
+    });
+  </script>
+</body>
+</html>
