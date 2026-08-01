@@ -6,31 +6,31 @@ import { ArrowRight, Leaf, Drop, Heart, Sparkle } from "@/components/ui/icons";
 import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
-  title: "Our story",
+  title: "Ons verhaal",
   description:
-    "INRYOU was born from a simple belief: wellbeing should be the easy choice. Meet the brand behind natural balance, made effortless.",
+    "INRYOU ontstond uit een simpel geloof: welzijn zou de makkelijke keuze moeten zijn. Maak kennis met het merk achter natuurlijke balans, moeiteloos.",
 };
 
 const values = [
   {
     icon: Heart,
-    title: "Balance over extremes",
-    text: "We don't believe in deprivation or hard rules. Sustainable wellbeing is about choosing a little better, a little more often.",
+    title: "Balans boven extremen",
+    text: "Wij geloven niet in verzaken of strenge regels. Duurzaam welzijn draait om een beetje beter kiezen, een beetje vaker.",
   },
   {
     icon: Leaf,
-    title: "Honesty, always",
-    text: "Short ingredient lists, real doses, and labels you can actually trust. No fine print, no marketing minerals.",
+    title: "Altijd eerlijk",
+    text: "Korte ingrediëntenlijsten, echte doseringen en etiketten die je echt kunt vertrouwen. Geen kleine lettertjes, geen marketingmineralen.",
   },
   {
     icon: Sparkle,
-    title: "Beauty as standard",
-    text: "Something you reach for every day should be a pleasure to hold and to drink. Design is not a luxury here — it's the point.",
+    title: "Schoonheid als standaard",
+    text: "Iets waar je elke dag naar grijpt, moet een plezier zijn om vast te houden en te drinken. Design is hier geen luxe — het is de essentie.",
   },
   {
     icon: Drop,
-    title: "Genuinely functional",
-    text: "Every can earns its place: real fruit, functional minerals, and a recipe that tastes good enough to drink daily.",
+    title: "Echt functioneel",
+    text: "Elk blikje verdient zijn plaats: echt fruit, functionele mineralen en een recept dat lekker genoeg is om dagelijks te drinken.",
   },
 ];
 
@@ -51,19 +51,19 @@ export default function OurStoryPage() {
         </div>
         <div className="container-px mx-auto max-w-3xl py-20 text-center lg:py-28">
           <Reveal>
-            <p className="eyebrow">Our story</p>
+            <p className="eyebrow">Ons verhaal</p>
           </Reveal>
           <Reveal delay={1}>
             <h1 className="mt-4 text-balance text-5xl leading-[1.02] sm:text-6xl">
-              Wellbeing should be the{" "}
-              <span className="italic text-orange-deep">easy choice.</span>
+              Welzijn zou de{" "}
+              <span className="italic text-orange-deep">makkelijke keuze moeten zijn.</span>
             </h1>
           </Reveal>
           <Reveal delay={2}>
             <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-ink">
-              INRYOU began with a small, daily frustration — and a belief that
-              the better option should also be the most beautiful, most natural
-              one to reach for.
+              INRYOU begon met een kleine, dagelijkse frustratie — en met het
+              geloof dat de betere optie ook de mooiste, meest natuurlijke keuze
+              zou moeten zijn om naar te grijpen.
             </p>
           </Reveal>
         </div>
@@ -75,7 +75,7 @@ export default function OurStoryPage() {
           <Reveal as="div" className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
             <Image
               src={asset("/images/can-in-hand.jpg")}
-              alt="An INRYOU Cranberry can held against the sky"
+              alt="Een blikje INRYOU Cranberry tegen de lucht gehouden"
               fill
               sizes="(min-width:1024px) 50vw, 100vw"
               className="object-cover"
@@ -83,37 +83,36 @@ export default function OurStoryPage() {
           </Reveal>
           <div className="max-w-lg">
             <Reveal>
-              <h2 className="text-3xl sm:text-4xl">It started in the fridge</h2>
+              <h2 className="text-3xl sm:text-4xl">Het begon in de koelkast</h2>
             </Reveal>
             <Reveal delay={1}>
               <div className="mt-6 space-y-4 text-pretty text-lg leading-relaxed text-ink">
                 <p>
-                  Every drink that was good for us seemed to shout about it. And
-                  every drink that actually tasted good seemed to quietly work
-                  against us — too much sugar, too many additives, a sugar crash
-                  waiting on the other side.
+                  Elke drank die goed voor ons was, leek dat luidkeels te
+                  verkondigen. En elke drank die écht lekker smaakte, leek stiekem
+                  tegen ons te werken — te veel suiker, te veel additieven, met een
+                  suikerdip die verderop op de loer lag.
                 </p>
                 <p>
-                  We wanted something in between. A drink with the lift and the
-                  ritual of a great soda, but the clean conscience of a glass of
-                  water. Calm, beautiful, and genuinely good for you.
+                  Wij wilden iets ertussenin. Een drank met de pit en het ritueel
+                  van een geweldige frisdrank, maar met het zuivere geweten van een
+                  glas water. Kalm, mooi en echt goed voor je.
                 </p>
                 <p>
-                  So we made it ourselves — pressing real fruit, adding
-                  functional minerals at honest doses, and sweetening gently with
-                  stevia leaf. The result is INRYOU: natural balance, made
-                  effortless.
+                  Dus maakten we hem zelf — met geperst echt fruit, functionele
+                  mineralen in eerlijke doseringen en zacht gezoet met steviablad.
+                  Het resultaat is INRYOU: natuurlijke balans, moeiteloos.
                 </p>
               </div>
             </Reveal>
             <Reveal delay={2}>
               <div className="mt-8 border-l-2 border-orange pl-5">
                 <p className="font-display text-xl italic text-charcoal">
-                  "We're not here to fix you. You're not broken. We just make the
-                  better choice a little easier to reach."
+                  "We zijn er niet om jou te repareren. Jij bent niet stuk. We
+                  maken de betere keuze gewoon iets makkelijker binnen handbereik."
                 </p>
                 <p className="mt-3 text-sm text-muted">
-                  Sofie Vermeer · Founder
+                  Sofie Vermeer · Oprichter
                 </p>
               </div>
             </Reveal>
@@ -125,9 +124,9 @@ export default function OurStoryPage() {
       <section className="bg-charcoal text-cream">
         <div className="container-px mx-auto max-w-7xl py-20 lg:py-28">
           <Reveal>
-            <p className="eyebrow text-orange">What we believe</p>
+            <p className="eyebrow text-orange">Waar we in geloven</p>
             <h2 className="mt-4 max-w-2xl text-balance text-4xl leading-[1.05] text-cream sm:text-5xl">
-              Four principles, in every can.
+              Vier principes, in elk blikje.
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2">
@@ -150,18 +149,18 @@ export default function OurStoryPage() {
       <section className="container-px mx-auto max-w-3xl py-20 text-center lg:py-28">
         <Reveal>
           <h2 className="text-balance text-4xl leading-[1.05] sm:text-5xl">
-            Find your balance.
+            Vind jouw balans.
           </h2>
         </Reveal>
         <Reveal delay={1}>
           <p className="mx-auto mt-5 max-w-md text-pretty text-lg text-ink">
-            Three flavours, one philosophy. Start with whichever calls to you.
+            Drie smaken, één filosofie. Begin met wat jou het meest aanspreekt.
           </p>
         </Reveal>
         <Reveal delay={2}>
           <div className="mt-8 flex justify-center">
             <ButtonLink href="/shop" size="lg">
-              Shop the range
+              Ontdek het assortiment
               <ArrowRight className="h-5 w-5" />
             </ButtonLink>
           </div>

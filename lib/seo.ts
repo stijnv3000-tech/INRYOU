@@ -7,9 +7,9 @@ export const organizationSchema = {
   "@type": "Organization",
   name: "INRYOU",
   url: siteUrl,
-  slogan: "Natural balance, made effortless.",
+  slogan: "Natuurlijke balans, moeiteloos.",
   description:
-    "INRYOU is a premium functional sparkling beverage brand — real fruit, functional minerals and almost no sugar.",
+    "INRYOU is een premium merk van functionele bruisende dranken — echte vruchten, functionele mineralen en amper suiker.",
   brand: "INRYOU",
 };
 

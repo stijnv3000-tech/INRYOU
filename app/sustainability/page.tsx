@@ -2,46 +2,46 @@ import type { Metadata } from "next";
 import { ProsePage } from "@/components/ui/ProsePage";
 
 export const metadata: Metadata = {
-  title: "Sustainability",
+  title: "Duurzaamheid",
   description:
-    "How INRYOU keeps its footprint light — recyclable aluminium, carbon-neutral delivery, responsible sourcing and honest progress.",
+    "Hoe INRYOU zijn voetafdruk licht houdt — recycleerbaar aluminium, CO₂-neutrale levering, verantwoorde herkomst en eerlijke vooruitgang.",
 };
 
 export default function SustainabilityPage() {
   return (
     <ProsePage
-      eyebrow="Sustainability"
-      title="Light on the planet, by design."
-      intro="Balance means thinking about more than what's in the can. We try to tread lightly at every step — and to be honest about where we're still improving."
+      eyebrow="Duurzaamheid"
+      title="Licht voor de planeet, met opzet."
+      intro="Balans betekent verder denken dan wat er in het blikje zit. We proberen bij elke stap licht te wegen — en eerlijk te zijn over waar we nog beter kunnen."
       sections={[
         {
-          heading: "Endlessly recyclable aluminium",
+          heading: "Eindeloos recycleerbaar aluminium",
           paragraphs: [
-            "Our cans are made from aluminium, one of the most recyclable materials on earth. Around 75% of all aluminium ever produced is still in use today, and a can can be recycled and back on a shelf in as little as 60 days.",
+            "Onze blikjes zijn gemaakt van aluminium, een van de best recycleerbare materialen ter wereld. Ongeveer 75% van al het ooit geproduceerde aluminium is vandaag nog in gebruik, en een blikje kan in amper 60 dagen gerecycleerd en terug in het rek staan.",
           ],
         },
         {
-          heading: "Carbon-neutral delivery",
+          heading: "CO₂-neutrale levering",
           paragraphs: [
-            "Every order ships carbon-neutral. We measure the emissions of our logistics and offset them through verified climate projects, while continually working to reduce them at source.",
+            "Elke bestelling wordt CO₂-neutraal verzonden. We meten de uitstoot van onze logistiek en compenseren die via geverifieerde klimaatprojecten, terwijl we blijven werken om ze bij de bron te verminderen.",
           ],
         },
         {
-          heading: "Responsible ingredients",
+          heading: "Verantwoorde ingrediënten",
           paragraphs: [
-            "We source real fruit and natural ingredients from suppliers who share our standards, and formulate without artificial colours, sweeteners or preservatives — better for you, and gentler on the systems that grow our food.",
+            "We halen echt fruit en natuurlijke ingrediënten bij leveranciers die onze standaarden delen, en werken zonder kunstmatige kleurstoffen, zoetstoffen of bewaarmiddelen — beter voor jou, en zachter voor de systemen die ons voedsel voortbrengen.",
           ],
         },
         {
-          heading: "Honest about the journey",
+          heading: "Eerlijk over de weg ernaartoe",
           list: [
-            "Minimal, recyclable secondary packaging",
-            "Production partners powered by increasing shares of renewable energy",
-            "A commitment to publish our progress, including where we fall short",
+            "Minimale, recycleerbare secundaire verpakking",
+            "Productiepartners die steeds meer op hernieuwbare energie draaien",
+            "Een engagement om onze vooruitgang te publiceren, ook waar we tekortschieten",
           ],
         },
       ]}
-      footnote="Sustainability is a direction, not a destination. We'd rather make steady, honest progress than overstate it."
+      footnote="Duurzaamheid is een richting, geen bestemming. We maken liever gestage, eerlijke vooruitgang dan ze te overdrijven."
     />
   );
 }

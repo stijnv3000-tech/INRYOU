@@ -6,15 +6,15 @@ import { ArrowRight, Truck, Recycle, Heart } from "@/components/ui/icons";
 import { asset } from "@/lib/asset";
 
 const perks = [
-  { icon: Truck, label: "Free delivery over €35" },
-  { icon: Recycle, label: "Carbon-neutral & recyclable" },
-  { icon: Heart, label: "Subscribe & save 15%" },
+  { icon: Truck, label: "Gratis levering vanaf €35" },
+  { icon: Recycle, label: "CO₂-neutraal & recycleerbaar" },
+  { icon: Heart, label: "Abonneer & bespaar 15%" },
 ];
 
 export function ClosingCTA() {
   return (
     <section className="container-px mx-auto max-w-7xl py-20 lg:py-28">
-      <div className="relative overflow-hidden rounded-[2.5rem] bg-charcoal px-6 py-16 text-cream sm:px-12 lg:px-16 lg:py-20">
+      <div className="relative overflow-hidden rounded-[2.5rem] bg-wine px-6 py-16 text-cream sm:px-12 lg:px-16 lg:py-20">
         <div
           className="pointer-events-none absolute -right-20 -top-20 h-[420px] w-[420px] rounded-full opacity-40 blur-[10px]"
           style={{
@@ -25,24 +25,23 @@ export function ClosingCTA() {
         <div className="relative grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <Reveal>
-              <p className="eyebrow text-orange">Your daily balance</p>
+              <p className="eyebrow text-orange">Jouw dagelijkse balans</p>
             </Reveal>
             <Reveal delay={1}>
               <h2 className="mt-4 text-balance text-4xl leading-[1.02] text-cream sm:text-5xl lg:text-6xl">
-                Drink your{" "}
-                <span className="italic text-orange">balance.</span>
+                Drink je <span className="italic text-orange">balans.</span>
               </h2>
             </Reveal>
             <Reveal delay={2}>
               <p className="mt-5 max-w-md text-pretty text-lg text-cream/70">
-                Start with a Discovery Pack and find your flavour, or subscribe
-                and save 15% — pause, skip or cancel anytime.
+                Begin met een Proefpakket en vind je smaak, of abonneer je en
+                bespaar 15% — pauzeer, sla over of annuleer wanneer je wil.
               </p>
             </Reveal>
             <Reveal delay={3}>
               <div className="mt-8 flex flex-wrap gap-3">
                 <ButtonLink href="/shop" size="lg">
-                  Shop the range
+                  Ontdek het assortiment
                   <ArrowRight className="h-5 w-5" />
                 </ButtonLink>
                 <ButtonLink
@@ -51,7 +50,7 @@ export function ClosingCTA() {
                   size="lg"
                   className="bg-cream/10 text-cream ring-1 ring-cream/20 hover:bg-cream/15"
                 >
-                  Try the Discovery Pack
+                  Probeer het Proefpakket
                 </ButtonLink>
               </div>
             </Reveal>
@@ -76,7 +75,7 @@ export function ClosingCTA() {
                 <div className="relative h-24 w-20 shrink-0 overflow-hidden rounded-2xl bg-cream/10">
                   <Image
                     src={asset("/images/can-cranberry.png")}
-                    alt="INRYOU can"
+                    alt="INRYOU blik"
                     fill
                     sizes="80px"
                     className="object-contain p-2"
@@ -84,16 +83,16 @@ export function ClosingCTA() {
                 </div>
                 <div>
                   <p className="font-display text-xl text-cream">
-                    Never miss a deal
+                    Mis nooit een aanbieding
                   </p>
                   <p className="text-sm text-cream/65">
-                    15% off your first order when you join.
+                    15% korting op je eerste bestelling.
                   </p>
                 </div>
               </div>
               <NewsletterForm variant="dark" />
               <p className="mt-3 text-xs text-cream/45">
-                Calm inbox energy only. Unsubscribe whenever you like.
+                Alleen rustige inbox-energie. Uitschrijven wanneer je wil.
               </p>
             </div>
           </Reveal>

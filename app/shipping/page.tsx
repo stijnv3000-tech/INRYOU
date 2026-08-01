@@ -2,44 +2,44 @@ import type { Metadata } from "next";
 import { ProsePage } from "@/components/ui/ProsePage";
 
 export const metadata: Metadata = {
-  title: "Shipping & returns",
+  title: "Verzending & retour",
   description:
-    "INRYOU shipping and returns: free delivery over €35, carbon-neutral shipping, and a 30-day happiness guarantee.",
+    "Verzending en retour bij INRYOU: gratis levering vanaf €35, CO₂-neutrale verzending en een 30 dagen tevredenheidsgarantie.",
 };
 
 export default function ShippingPage() {
   return (
     <ProsePage
       eyebrow="Help"
-      title="Shipping & returns"
-      intro="Getting your balance to you should be as effortless as drinking it. Here's how delivery and returns work."
+      title="Verzending & retour"
+      intro="Je balans bij je krijgen zou net zo moeiteloos moeten zijn als ze drinken. Zo werken levering en retour."
       sections={[
         {
-          heading: "Delivery",
+          heading: "Levering",
           list: [
-            "Flat-rate delivery of €3.95 across mainland Europe",
-            "Free delivery on all orders over €35",
-            "Free delivery on every subscription order",
-            "Most orders arrive within 2–4 working days",
-            "All shipments are carbon-neutral",
+            "Vast leveringstarief van €3,95 in continentaal Europa",
+            "Gratis levering vanaf €35",
+            "Gratis levering bij elke abonnementsbestelling",
+            "De meeste bestellingen komen binnen 2–4 werkdagen aan",
+            "Alle verzendingen zijn CO₂-neutraal",
           ],
         },
         {
-          heading: "Tracking your order",
+          heading: "Je bestelling volgen",
           paragraphs: [
-            "As soon as your cans leave us, you'll receive an email with tracking so you can follow your order to the door.",
+            "Zodra je blikjes bij ons vertrekken, ontvang je een e-mail met track & trace zodat je je bestelling tot aan de deur kan volgen.",
           ],
         },
         {
-          heading: "30-day happiness guarantee",
+          heading: "30 dagen tevredenheidsgarantie",
           paragraphs: [
-            "If you're not delighted with your INRYOU, let us know within 30 days and we'll make it right — a replacement or a full refund, whichever you prefer. No need to return the cans.",
+            "Ben je niet tevreden met je INRYOU, laat het ons dan binnen 30 dagen weten en we lossen het op — een vervanging of een volledige terugbetaling, wat je maar verkiest. Je hoeft de blikjes niet terug te sturen.",
           ],
         },
         {
-          heading: "Need a hand?",
+          heading: "Hulp nodig?",
           paragraphs: [
-            "Email hello@inryou.com and a real human will reply within one working day.",
+            "Mail naar hello@inryou.com en een echte medewerker antwoordt binnen één werkdag.",
           ],
         },
       ]}

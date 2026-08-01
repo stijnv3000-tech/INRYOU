@@ -25,33 +25,33 @@ const siteUrl = "https://inryou.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "INRYOU — Natural balance, made effortless",
+    default: "INRYOU — Natuurlijke balans, moeiteloos",
     template: "%s · INRYOU",
   },
   description:
-    "INRYOU is a premium functional sparkling beverage — real fruit, functional minerals and almost no sugar. A calmer, healthier alternative to soda. Natural balance, made effortless.",
+    "INRYOU is een premium functionele bruisende drank — echte vruchten, functionele mineralen en amper suiker. Een rustiger, gezonder alternatief voor frisdrank. Natuurlijke balans, moeiteloos.",
   keywords: [
-    "functional beverage",
-    "healthy soda alternative",
-    "sparkling water with minerals",
-    "low sugar drink",
-    "magnesium drink",
+    "functionele drank",
+    "gezond alternatief voor frisdrank",
+    "bruisend water met mineralen",
+    "drank weinig suiker",
+    "magnesiumdrank",
     "INRYOU",
   ],
   openGraph: {
-    title: "INRYOU — Natural balance, made effortless",
+    title: "INRYOU — Natuurlijke balans, moeiteloos",
     description:
-      "A premium functional sparkling beverage. Real fruit, functional minerals, almost no sugar.",
+      "Een premium functionele bruisende drank. Echte vruchten, functionele mineralen, amper suiker.",
     url: siteUrl,
     siteName: "INRYOU",
     type: "website",
-    locale: "en_GB",
+    locale: "nl_BE",
   },
   twitter: {
     card: "summary_large_image",
-    title: "INRYOU — Natural balance, made effortless",
+    title: "INRYOU — Natuurlijke balans, moeiteloos",
     description:
-      "A premium functional sparkling beverage. Real fruit, functional minerals, almost no sugar.",
+      "Een premium functionele bruisende drank. Echte vruchten, functionele mineralen, amper suiker.",
   },
   robots: { index: true, follow: true },
 };
@@ -62,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="nl" className={`${fraunces.variable} ${inter.variable}`}>
       <body className="min-h-screen antialiased">
         <CartProvider>
           <AnnouncementBar />

@@ -8,16 +8,16 @@ import { Truck, Recycle, Heart, Leaf } from "@/components/ui/icons";
 import { products } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Shop the range",
+  title: "Shop",
   description:
-    "Shop INRYOU functional sparkling beverages — Cranberry, Ginger & Citrus and Quince & Vanilla. Real fruit, functional minerals, under 2g sugar. Free delivery over €35.",
+    "Shop de INRYOU functionele bruisende dranken — Cranberry, Ginger & Citrus en Kweepeer & Vanille. Echte vruchten, functionele mineralen, minder dan 2g suiker. Gratis levering vanaf €35.",
 };
 
 const perks = [
-  { icon: Truck, label: "Free delivery over €35" },
-  { icon: Heart, label: "Subscribe & save 15%" },
-  { icon: Leaf, label: "No artificial anything" },
-  { icon: Recycle, label: "Recyclable aluminium" },
+  { icon: Truck, label: "Gratis levering vanaf €35" },
+  { icon: Heart, label: "Abonneer & bespaar 15%" },
+  { icon: Leaf, label: "Niets kunstmatigs" },
+  { icon: Recycle, label: "Recycleerbaar aluminium" },
 ];
 
 export default function ShopPage() {
@@ -25,25 +25,24 @@ export default function ShopPage() {
     <>
       <section className="container-px mx-auto max-w-7xl pt-14 pb-6 text-center lg:pt-20">
         <Reveal>
-          <p className="eyebrow">The shop</p>
+          <p className="eyebrow">De shop</p>
         </Reveal>
         <Reveal delay={1}>
           <h1 className="mx-auto mt-4 max-w-3xl text-balance text-5xl leading-[1.02] sm:text-6xl">
-            Find your{" "}
-            <span className="italic text-orange-deep">balance.</span>
+            Vind jouw <span className="italic text-orange-deep">balans.</span>
           </h1>
         </Reveal>
         <Reveal delay={2}>
           <p className="mx-auto mt-5 max-w-xl text-pretty text-lg text-ink">
-            Every flavour shares the same promise: real fruit, functional
-            minerals and almost no sugar. Choose a single flavour, or start with
-            the Discovery Pack.
+            Elke smaak deelt dezelfde belofte: echte vruchten, functionele
+            mineralen en amper suiker. Kies één smaak, of begin met het
+            Proefpakket.
           </p>
         </Reveal>
         <Reveal delay={3}>
           <div className="mt-6 flex items-center justify-center gap-3">
             <Stars rating={5} />
-            <span className="text-sm text-ink">4.9/5 · 1,300+ reviews</span>
+            <span className="text-sm text-ink">4,9/5 · 1.300+ beoordelingen</span>
           </div>
         </Reveal>
       </section>

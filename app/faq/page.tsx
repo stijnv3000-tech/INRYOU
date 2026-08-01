@@ -7,58 +7,58 @@ import { ArrowRight } from "@/components/ui/icons";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Everything you need to know about INRYOU — ingredients, nutrition, subscriptions, delivery and returns.",
+    "Alles wat je moet weten over INRYOU — ingrediënten, voeding, abonnementen, levering en retour.",
 };
 
 const groups = [
   {
-    title: "Product & ingredients",
+    title: "Product & ingrediënten",
     items: [
       {
-        q: "What exactly is INRYOU?",
-        a: "INRYOU is a premium functional sparkling beverage — lightly carbonated spring water with real fruit, functional minerals like magnesium and potassium, and almost no sugar. Think of it as a calmer, cleaner alternative to soda.",
+        q: "Wat is INRYOU precies?",
+        a: "INRYOU is een premium functionele bruisdrank — licht bruisend bronwater met echt fruit, functionele mineralen zoals magnesium en kalium, en zo goed als geen suiker. Zie het als een rustiger, zuiverder alternatief voor frisdrank.",
       },
       {
-        q: "How much sugar and how many calories?",
-        a: "Under 2g of sugar and roughly 12–18 kcal per 250ml can, depending on the flavour. Sweetness comes from real fruit and a touch of stevia leaf — never refined sugar or artificial sweeteners.",
+        q: "Hoeveel suiker en hoeveel calorieën?",
+        a: "Minder dan 2 g suiker en ongeveer 12–18 kcal per blikje van 250 ml, afhankelijk van de smaak. De zoetheid komt van echt fruit en een vleugje steviablad — nooit van geraffineerde suiker of kunstmatige zoetstoffen.",
       },
       {
-        q: "Is it suitable for vegans?",
-        a: "Yes. All INRYOU flavours are 100% plant-based and contain no animal-derived ingredients.",
+        q: "Is het geschikt voor veganisten?",
+        a: "Ja. Alle smaken van INRYOU zijn 100% plantaardig en bevatten geen ingrediënten van dierlijke oorsprong.",
       },
       {
-        q: "Does it contain caffeine?",
-        a: "No. INRYOU is caffeine-free by design. The gentle lift comes from hydration, minerals and natural brightness — not stimulants.",
+        q: "Bevat het cafeïne?",
+        a: "Nee. INRYOU is bewust cafeïnevrij. De zachte boost komt van hydratatie, mineralen en natuurlijke frisheid — niet van stimulerende middelen.",
       },
     ],
   },
   {
-    title: "Subscriptions",
+    title: "Abonnementen",
     items: [
       {
-        q: "How does Subscribe & Save work?",
-        a: "Choose a subscription on any product to save 15% and get free delivery on every order, sent every four weeks. You can pause, skip, swap flavours or cancel anytime from your account — no lock-in, no awkward phone calls.",
+        q: "Hoe werkt Abonneer & bespaar?",
+        a: "Kies een abonnement bij eender welk product om 15% te besparen en gratis levering te krijgen bij elke bestelling, elke vier weken verstuurd. Je kan op elk moment pauzeren, overslaan, smaken wisselen of opzeggen via je account — geen verplichtingen, geen ongemakkelijke telefoontjes.",
       },
       {
-        q: "Can I change my flavours each delivery?",
-        a: "Absolutely. Your subscription is fully flexible — switch flavours or quantities before each delivery whenever you like.",
+        q: "Kan ik mijn smaken bij elke levering aanpassen?",
+        a: "Absoluut. Je abonnement is volledig flexibel — wissel smaken of aantallen voor elke levering wanneer je maar wil.",
       },
     ],
   },
   {
-    title: "Delivery & returns",
+    title: "Levering & retour",
     items: [
       {
-        q: "How much is delivery?",
-        a: "Delivery is a flat €3.95, and free on all orders over €35 and on every subscription order. We ship carbon-neutral.",
+        q: "Hoeveel kost de levering?",
+        a: "Levering kost een vast bedrag van €3,95, en is gratis bij alle bestellingen boven €35 en bij elke abonnementsbestelling. We verzenden CO₂-neutraal.",
       },
       {
-        q: "How quickly will my order arrive?",
-        a: "Most orders are delivered within 2–4 working days. You'll receive tracking as soon as your cans leave us.",
+        q: "Hoe snel komt mijn bestelling aan?",
+        a: "De meeste bestellingen worden binnen 2–4 werkdagen geleverd. Je ontvangt een track & trace zodra je blikjes bij ons vertrekken.",
       },
       {
-        q: "What's your returns policy?",
-        a: "We offer a 30-day happiness guarantee. If you're not delighted, get in touch and we'll make it right — refund or replacement, your choice.",
+        q: "Wat is jullie retourbeleid?",
+        a: "We bieden een 30 dagen tevredenheidsgarantie. Ben je niet tevreden, neem dan contact op en we lossen het op — terugbetaling of vervanging, jij kiest.",
       },
     ],
   },
@@ -69,16 +69,16 @@ export default function FaqPage() {
     <>
       <section className="container-px mx-auto max-w-3xl py-16 text-center lg:py-20">
         <Reveal>
-          <p className="eyebrow">Help centre</p>
+          <p className="eyebrow">Helpcentrum</p>
         </Reveal>
         <Reveal delay={1}>
           <h1 className="mt-4 text-balance text-5xl leading-[1.02] sm:text-6xl">
-            Questions, answered.
+            Vragen, beantwoord.
           </h1>
         </Reveal>
         <Reveal delay={2}>
           <p className="mx-auto mt-5 max-w-lg text-pretty text-lg text-ink">
-            Can't find what you're looking for? We're always happy to help.
+            Vind je niet wat je zoekt? We helpen je graag verder.
           </p>
         </Reveal>
       </section>
@@ -94,13 +94,13 @@ export default function FaqPage() {
 
       <section className="container-px mx-auto max-w-7xl pb-20 lg:pb-28">
         <div className="rounded-[2rem] bg-cream-deep px-8 py-14 text-center">
-          <h2 className="text-3xl sm:text-4xl">Still curious?</h2>
+          <h2 className="text-3xl sm:text-4xl">Nog nieuwsgierig?</h2>
           <p className="mx-auto mt-3 max-w-md text-pretty text-ink">
-            Our team is real, human and quick to reply. Drop us a line.
+            Ons team is echt, menselijk en snel met antwoorden. Stuur ons gerust een bericht.
           </p>
           <div className="mt-7 flex justify-center">
             <ButtonLink href="/contact">
-              Contact us
+              Contacteer ons
               <ArrowRight className="h-4 w-4" />
             </ButtonLink>
           </div>

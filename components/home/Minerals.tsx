@@ -8,22 +8,22 @@ import { asset } from "@/lib/asset";
 const left = [
   {
     title: "Magnesium",
-    text: "75mg of highly absorbable magnesium citrate to support normal muscle and nerve function.",
+    text: "75mg goed opneembaar magnesiumcitraat ter ondersteuning van een normale spier- en zenuwfunctie.",
   },
   {
-    title: "Potassium",
-    text: "120mg to help maintain everyday fluid balance and gentle, genuine hydration.",
+    title: "Kalium",
+    text: "120mg om je dagelijkse vochtbalans en zachte, echte hydratatie te helpen behouden.",
   },
 ];
 
 const right = [
   {
-    title: "Real fruit",
-    text: "Pressed fruit juice and natural flavour for brightness — never concentrate alone.",
+    title: "Echte vruchten",
+    text: "Geperst vruchtensap en natuurlijk aroma voor helderheid — nooit enkel concentraat.",
   },
   {
-    title: "Stevia leaf",
-    text: "A whisper of natural sweetness from the stevia plant. No sugar spikes, no aftertaste.",
+    title: "Steviablad",
+    text: "Een vleugje natuurlijke zoetheid uit de steviaplant. Geen suikerpieken, geen nasmaak.",
   },
 ];
 
@@ -32,10 +32,10 @@ export function Minerals() {
     <section className="relative overflow-hidden bg-cream-deep">
       <div className="container-px mx-auto max-w-6xl py-20 lg:py-28">
         <Reveal>
-          <p className="eyebrow text-center">What's inside</p>
+          <p className="eyebrow text-center">Wat erin zit</p>
           <h2 className="mx-auto mt-4 max-w-2xl text-balance text-center text-4xl leading-[1.05] sm:text-5xl">
-            Functional by design, not by{" "}
-            <span className="italic text-sage-deep">accident.</span>
+            Functioneel door ontwerp, niet door{" "}
+            <span className="italic text-sage-deep">toeval.</span>
           </h2>
         </Reveal>
 
@@ -67,7 +67,7 @@ export function Minerals() {
             />
             <Image
               src={asset("/images/can-ginger-citrus.png")}
-              alt="INRYOU can detail"
+              alt="Detail van een INRYOU blik"
               width={240}
               height={520}
               className="animate-float-slow relative h-full w-auto object-contain drop-shadow-[0_34px_40px_rgba(32,29,26,0.22)]"

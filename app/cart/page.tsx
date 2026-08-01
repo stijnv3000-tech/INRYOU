@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { CartPage } from "@/components/cart/CartPage";
 
 export const metadata: Metadata = {
-  title: "Your cart",
-  description: "Review your INRYOU order and check out.",
+  title: "Winkelmandje",
+  description: "Bekijk je INRYOU-bestelling en reken af.",
   robots: { index: false, follow: true },
 };
 

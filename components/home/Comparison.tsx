@@ -1,72 +1,69 @@
 import { Reveal } from "@/components/ui/Reveal";
-import { Check, Close } from "@/components/ui/icons";
+import { Wave } from "@/components/ui/Wave";
 
 const rows = [
-  { label: "Sugar per serving", inryou: "Under 2g", soda: "35–40g" },
-  { label: "Sweetened with", inryou: "Stevia leaf & real fruit", soda: "Refined sugar / syrup" },
-  { label: "Functional minerals", inryou: "Magnesium & potassium", soda: "None" },
-  { label: "Artificial additives", inryou: "None", soda: "Colours, preservatives" },
-  { label: "The after-feeling", inryou: "Clean, balanced", soda: "Sugar crash" },
-  { label: "Calories", inryou: "12–18 kcal", soda: "140+ kcal" },
+  { label: "Suiker", inryou: "Minder dan 2g per blik", soda: "Vaak 25g+ per blik" },
+  { label: "Functionele mineralen", inryou: "Ja", soda: "Geen" },
+  { label: "Kunstmatige kleurstoffen", inryou: "Geen", soda: "Vaak wel" },
+  { label: "Smaak", inryou: "Natuurlijk & verfrissend", soda: "Zoet & overheersend" },
+  { label: "Calorieën", inryou: "12–18 kcal", soda: "140+ kcal" },
+  { label: "Gevoel achteraf", inryou: "Rustige energie", soda: "Suikercrash" },
 ];
 
 export function Comparison() {
   return (
-    <section className="bg-charcoal text-cream">
-      <div className="container-px mx-auto max-w-6xl py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-wine text-cream">
+      <Wave position="top" fill="var(--color-cream)" />
+
+      <div className="container-px mx-auto max-w-5xl py-24 lg:py-32">
         <Reveal>
-          <p className="eyebrow text-orange">The difference</p>
-          <h2 className="mt-4 max-w-2xl text-balance text-4xl leading-[1.05] text-cream sm:text-5xl">
-            We make the difference{" "}
-            <span className="italic text-orange">you can taste.</span>
+          <p className="eyebrow text-center text-orange">Wij maken</p>
+          <h2 className="mt-3 text-center text-4xl leading-[1.05] text-cream sm:text-5xl lg:text-6xl">
+            Het <span className="italic">verschil.</span>
           </h2>
-          <p className="mt-5 max-w-xl text-pretty text-lg text-cream/70">
-            Side by side with a traditional soft drink, the choice gets a lot
-            simpler.
-          </p>
         </Reveal>
 
         <Reveal delay={1}>
-          <div className="mt-12 overflow-hidden rounded-3xl ring-1 ring-cream/15">
-            <div className="grid grid-cols-[1.4fr_1fr_1fr] bg-cream/5">
-              <div className="px-5 py-5 text-sm font-medium uppercase tracking-[0.14em] text-cream/45 sm:px-8">
-                &nbsp;
-              </div>
-              <div className="border-l border-cream/10 px-4 py-5 text-center sm:px-6">
-                <span className="font-sans text-base font-semibold tracking-[0.06em] text-cream">
+          <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-3xl border border-cream/12">
+            {/* Header */}
+            <div className="grid grid-cols-[1.3fr_1fr_1fr] bg-cream/[0.04]">
+              <div className="px-5 py-5 sm:px-7">&nbsp;</div>
+              <div className="border-l border-cream/10 px-4 py-5 sm:px-6">
+                <span className="font-sans text-sm font-semibold tracking-[0.08em] text-orange">
                   INRYOU
                 </span>
               </div>
-              <div className="border-l border-cream/10 px-4 py-5 text-center text-sm font-medium uppercase tracking-[0.12em] text-cream/45 sm:px-6">
-                Regular soda
+              <div className="border-l border-cream/10 px-4 py-5 text-sm text-cream/45 sm:px-6">
+                Klassieke frisdrank
               </div>
             </div>
 
             {rows.map((row, i) => (
               <div
                 key={row.label}
-                className={`grid grid-cols-[1.4fr_1fr_1fr] items-center ${
-                  i % 2 === 0 ? "bg-transparent" : "bg-cream/[0.03]"
+                className={`grid grid-cols-[1.3fr_1fr_1fr] items-center border-t border-cream/10 ${
+                  i % 2 ? "bg-cream/[0.02]" : ""
                 }`}
               >
-                <div className="px-5 py-5 text-sm text-cream/80 sm:px-8 sm:text-base">
+                <div className="px-5 py-5 text-sm font-medium text-cream sm:px-7 sm:text-base">
                   {row.label}
                 </div>
-                <div className="flex items-center justify-center gap-2 border-l border-cream/10 px-4 py-5 text-center sm:px-6">
-                  <Check className="h-4 w-4 shrink-0 text-sage" />
+                <div className="flex items-center gap-2.5 border-l border-cream/10 px-4 py-5 sm:px-6">
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-orange ring-4 ring-orange/15" />
                   <span className="text-sm font-medium text-cream sm:text-base">
                     {row.inryou}
                   </span>
                 </div>
-                <div className="flex items-center justify-center gap-2 border-l border-cream/10 px-4 py-5 text-center text-cream/45 sm:px-6">
-                  <Close className="h-4 w-4 shrink-0 text-cranberry" />
-                  <span className="text-sm sm:text-base">{row.soda}</span>
+                <div className="border-l border-cream/10 px-4 py-5 text-sm text-cream/45 sm:px-6 sm:text-base">
+                  {row.soda}
                 </div>
               </div>
             ))}
           </div>
         </Reveal>
       </div>
+
+      <Wave position="bottom" fill="var(--color-cream-deep)" />
     </section>
   );
 }

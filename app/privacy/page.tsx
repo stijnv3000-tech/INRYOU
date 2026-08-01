@@ -2,47 +2,48 @@ import type { Metadata } from "next";
 import { ProsePage } from "@/components/ui/ProsePage";
 
 export const metadata: Metadata = {
-  title: "Privacy policy",
-  description: "How INRYOU collects, uses and protects your personal data.",
+  title: "Privacybeleid",
+  description:
+    "Hoe INRYOU je persoonsgegevens verzamelt, gebruikt en beschermt.",
   robots: { index: false, follow: true },
 };
 
 export default function PrivacyPage() {
   return (
     <ProsePage
-      eyebrow="Legal"
-      title="Privacy policy"
-      intro="Your trust matters to us. This policy explains, in plain language, what data we collect and how we use it. This is a template and should be reviewed by legal counsel before launch."
+      eyebrow="Juridisch"
+      title="Privacybeleid"
+      intro="Je vertrouwen is belangrijk voor ons. Dit beleid legt in klare taal uit welke gegevens we verzamelen en hoe we ze gebruiken. Dit is een sjabloon en moet vóór de lancering door een juridisch adviseur worden nagekeken."
       sections={[
         {
-          heading: "What we collect",
+          heading: "Wat we verzamelen",
           paragraphs: [
-            "When you place an order or sign up to our list, we collect the information you provide — such as your name, email address, delivery address and order details — along with basic, anonymised analytics about how our site is used.",
+            "Wanneer je een bestelling plaatst of je inschrijft voor onze nieuwsbrief, verzamelen we de gegevens die je opgeeft — zoals je naam, e-mailadres, leveringsadres en bestelgegevens — samen met basale, geanonimiseerde analytics over hoe onze site gebruikt wordt.",
           ],
         },
         {
-          heading: "How we use it",
+          heading: "Hoe we het gebruiken",
           list: [
-            "To process and deliver your orders",
-            "To manage subscriptions and customer care",
-            "To send updates and offers, if you've opted in",
-            "To improve our website and products",
+            "Om je bestellingen te verwerken en te leveren",
+            "Om abonnementen en klantendienst te beheren",
+            "Om updates en aanbiedingen te sturen, als je je hebt aangemeld",
+            "Om onze website en producten te verbeteren",
           ],
         },
         {
-          heading: "Your rights",
+          heading: "Je rechten",
           paragraphs: [
-            "You can access, correct or delete your personal data, and unsubscribe from marketing at any time. To exercise any of these rights, contact hello@inryou.com.",
+            "Je kan je persoonsgegevens inkijken, corrigeren of verwijderen, en je op elk moment uitschrijven voor marketing. Om een van deze rechten uit te oefenen, neem je contact op via hello@inryou.com.",
           ],
         },
         {
           heading: "Cookies",
           paragraphs: [
-            "We use essential cookies to run the store and optional analytics cookies to understand usage. You can control non-essential cookies through your browser settings.",
+            "We gebruiken essentiële cookies om de webshop te laten werken en optionele analytics-cookies om het gebruik te begrijpen. Je kan niet-essentiële cookies beheren via de instellingen van je browser.",
           ],
         },
       ]}
-      footnote="Last updated: this is placeholder content for demonstration purposes."
+      footnote="Laatst bijgewerkt: dit is voorbeeldinhoud voor demonstratiedoeleinden."
     />
   );
 }

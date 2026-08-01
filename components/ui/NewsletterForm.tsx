@@ -27,7 +27,7 @@ export function NewsletterForm({
         }`}
       >
         <Check className="h-4 w-4" />
-        You're in. Check your inbox for your code.
+        Je bent erbij. Check je inbox voor je kortingscode.
       </p>
     );
   }
@@ -46,15 +46,15 @@ export function NewsletterForm({
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        placeholder="Your email address"
-        aria-label="Email address"
+        placeholder="Je e-mailadres"
+        aria-label="E-mailadres"
         className={`min-w-0 flex-1 bg-transparent px-4 py-2 text-sm outline-none placeholder:text-current/50 ${
           dark ? "text-cream placeholder:text-cream/40" : "text-charcoal"
         }`}
       />
       <button
         type="submit"
-        aria-label="Subscribe"
+        aria-label="Inschrijven"
         className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange text-white transition hover:bg-orange-deep"
       >
         <ArrowRight className="h-5 w-5" />

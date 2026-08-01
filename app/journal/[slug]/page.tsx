@@ -21,7 +21,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
-  if (!post) return { title: "Not found" };
+  if (!post) return { title: "Niet gevonden" };
   return {
     title: post.title,
     description: post.excerpt,
@@ -125,14 +125,14 @@ export default async function PostPage({
           <div className="mt-2">{post.body.map(renderBlock)}</div>
 
           <div className="mt-14 rounded-3xl bg-cream-deep p-8 text-center">
-            <h2 className="text-2xl">Ready to taste the balance?</h2>
+            <h2 className="text-2xl">Klaar om de balans te proeven?</h2>
             <p className="mx-auto mt-2 max-w-md text-pretty text-ink">
-              Real fruit, functional minerals, almost no sugar. Find your
-              flavour.
+              Echt fruit, functionele mineralen, bijna geen suiker. Vind jouw
+              smaak.
             </p>
             <div className="mt-6 flex justify-center">
               <ButtonLink href="/shop">
-                Shop the range
+                Ontdek het assortiment
                 <ArrowRight className="h-4 w-4" />
               </ButtonLink>
             </div>
@@ -143,7 +143,7 @@ export default async function PostPage({
       {/* More */}
       <section className="border-t border-charcoal/10">
         <div className="container-px mx-auto max-w-7xl py-16 lg:py-20">
-          <h2 className="text-3xl sm:text-4xl">Keep reading</h2>
+          <h2 className="text-3xl sm:text-4xl">Verder lezen</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {more.map((p) => (
               <Link
@@ -161,7 +161,7 @@ export default async function PostPage({
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-balance text-xl leading-snug">{p.title}</h3>
                   <span className="mt-auto inline-flex items-center gap-2 pt-4 text-sm font-medium text-charcoal">
-                    Read more
+                    Lees meer
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
                 </div>
@@ -170,9 +170,9 @@ export default async function PostPage({
           </div>
 
           <div className="mx-auto mt-16 max-w-md text-center">
-            <h3 className="text-2xl">Join the list</h3>
+            <h3 className="text-2xl">Schrijf je in</h3>
             <p className="mt-2 text-sm text-ink">
-              15% off your first order, and the occasional good idea.
+              15% korting op je eerste bestelling, en af en toe een goed idee.
             </p>
             <div className="mt-5">
               <NewsletterForm />

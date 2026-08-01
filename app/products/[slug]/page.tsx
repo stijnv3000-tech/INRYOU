@@ -11,8 +11,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { productSchema } from "@/lib/seo";
 import { Check, Leaf, Drop, Sparkle } from "@/components/ui/icons";
 import { getProduct, products } from "@/lib/products";
-import { asset } from "@/lib/asset";
 import { reviews } from "@/lib/reviews";
+import { asset } from "@/lib/asset";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -25,34 +25,34 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const product = getProduct(slug);
-  if (!product) return { title: "Not found" };
+  if (!product) return { title: "Niet gevonden" };
   return {
     title: `${product.name} — ${product.tagline}`,
     description: product.shortDescription,
     openGraph: {
       title: `INRYOU ${product.name}`,
       description: product.shortDescription,
-      images: [{ url: product.image }],
+      images: product.image ? [{ url: product.image }] : undefined,
     },
   };
 }
 
 const faqs = [
   {
-    q: "How much sugar is in a can?",
-    a: "Under 2g per can — a fraction of the 35–40g in a typical soft drink. The sweetness comes from real fruit and a touch of stevia leaf, never refined sugar or artificial sweeteners.",
+    q: "Hoeveel suiker zit er in een blik?",
+    a: "Minder dan 2g per blik — een fractie van de 25–40g in een klassieke frisdrank. De zoetheid komt van echt fruit en een vleugje steviablad, nooit van geraffineerde suiker of kunstmatige zoetstoffen.",
   },
   {
-    q: "What are the functional minerals for?",
-    a: "Every can carries a measured dose of magnesium and potassium — electrolytes that support normal muscle and nerve function and everyday hydration. We use citrate forms for better absorption.",
+    q: "Waarvoor dienen de functionele mineralen?",
+    a: "Elk blik bevat een afgemeten dosis magnesium en kalium — elektrolyten die een normale spier- en zenuwfunctie en je dagelijkse hydratatie ondersteunen. We gebruiken citraatvormen voor een betere opname.",
   },
   {
-    q: "Is it suitable for daily drinking?",
-    a: "Absolutely — that's exactly what it's made for. It's a clean, low-sugar, low-calorie drink designed to replace soda in your daily routine without any compromise on taste.",
+    q: "Is het geschikt om dagelijks te drinken?",
+    a: "Absoluut — daar is het net voor gemaakt. Het is een zuivere, suikerarme, caloriearme drank die frisdrank in je dagelijkse routine vervangt zonder in te boeten op smaak.",
   },
   {
-    q: "How does the subscription work?",
-    a: "Choose Subscribe & Save to get 15% off and free delivery on every order, sent every four weeks. You're always in control — pause, skip a delivery, change your flavour or cancel anytime, no questions asked.",
+    q: "Hoe werkt het abonnement?",
+    a: "Kies voor Abonneer & bespaar en krijg 15% korting en gratis levering bij elke bestelling, elke vier weken bezorgd. Jij houdt de controle — pauzeer, sla een levering over, wissel van smaak of annuleer wanneer je wil.",
   },
 ];
 
@@ -104,20 +104,31 @@ export default async function ProductPage({
                 className="absolute left-1/2 top-1/2 h-3/4 w-3/4 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
                 style={{ background: product.accent, opacity: 0.18 }}
               />
-              <Image
-                src={asset(product.image)}
-                alt={`INRYOU ${product.name} can`}
-                width={420}
-                height={760}
-                priority
-                className="animate-float-slow relative h-[82%] w-auto object-contain drop-shadow-[0_36px_44px_rgba(32,29,26,0.26)]"
-              />
+              {product.image ? (
+                <Image
+                  src={asset(product.image)}
+                  alt={`INRYOU ${product.name} blik`}
+                  width={420}
+                  height={760}
+                  priority
+                  className="animate-float-slow relative h-[82%] w-auto object-contain drop-shadow-[0_36px_44px_rgba(32,29,26,0.26)]"
+                />
+              ) : (
+                <div className="relative flex h-[70%] w-[42%] flex-col items-center justify-center rounded-[2.5rem] bg-sage-deep/25 ring-1 ring-charcoal/10">
+                  <span className="font-sans text-2xl font-semibold tracking-[0.12em] text-charcoal/70">
+                    INRYOU
+                  </span>
+                  <span className="mt-1 text-xs uppercase tracking-[0.22em] text-charcoal/40">
+                    binnenkort
+                  </span>
+                </div>
+              )}
             </div>
             <div className="mt-4 grid grid-cols-3 gap-3">
               {[
-                { label: "Sugar", value: product.sugar },
-                { label: "Calories", value: `${product.calories} kcal` },
-                { label: "Per pack", value: `${product.packSize} cans` },
+                { label: "Suiker", value: product.sugar },
+                { label: "Calorieën", value: `${product.calories} kcal` },
+                { label: "Per pack", value: `${product.packSize} blikken` },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -140,7 +151,7 @@ export default async function ProductPage({
       <section className="bg-cream-deep">
         <div className="container-px mx-auto max-w-7xl py-16 lg:py-20">
           <Reveal>
-            <p className="eyebrow">Why you'll love it</p>
+            <p className="eyebrow">Waarom je het lekker vindt</p>
             <h2 className="mt-3 max-w-xl text-balance text-3xl sm:text-4xl">
               {product.tagline}
             </h2>
@@ -169,11 +180,11 @@ export default async function ProductPage({
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
             <Reveal>
-              <p className="eyebrow">Full transparency</p>
-              <h2 className="mt-3 text-3xl sm:text-4xl">What's inside</h2>
+              <p className="eyebrow">Volledige transparantie</p>
+              <h2 className="mt-3 text-3xl sm:text-4xl">Wat erin zit</h2>
               <p className="mt-4 max-w-md text-pretty text-ink">
-                A short, honest ingredient list. If you can't pronounce it, it's
-                probably not in here.
+                Een korte, eerlijke ingrediëntenlijst. Als je het niet kunt
+                uitspreken, zit het er waarschijnlijk niet in.
               </p>
             </Reveal>
             <Reveal delay={1}>
@@ -193,8 +204,8 @@ export default async function ProductPage({
 
           <div>
             <Reveal>
-              <p className="eyebrow">Functional profile</p>
-              <h2 className="mt-3 text-3xl sm:text-4xl">Per 250ml can</h2>
+              <p className="eyebrow">Functioneel profiel</p>
+              <h2 className="mt-3 text-3xl sm:text-4xl">Per blik van 250ml</h2>
             </Reveal>
             <Reveal delay={1}>
               <div className="mt-7 space-y-4">
@@ -209,7 +220,7 @@ export default async function ProductPage({
                 ))}
               </div>
               <p className="mt-6 rounded-2xl bg-sage-soft/60 px-6 py-4 text-sm text-charcoal-soft">
-                <span className="font-medium">Pairs well with:</span>{" "}
+                <span className="font-medium">Past goed bij:</span>{" "}
                 {product.pairings}
               </p>
             </Reveal>
@@ -223,15 +234,14 @@ export default async function ProductPage({
           <Reveal>
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
-                <p className="eyebrow">Loved by drinkers</p>
-                <h2 className="mt-3 text-3xl sm:text-4xl">
-                  What people are saying
-                </h2>
+                <p className="eyebrow">Geliefd bij drinkers</p>
+                <h2 className="mt-3 text-3xl sm:text-4xl">Wat mensen zeggen</h2>
               </div>
               <div className="flex items-center gap-3">
                 <Stars rating={product.rating} />
                 <span className="text-sm text-ink">
-                  {product.rating} from {product.reviewCount} reviews
+                  {product.rating.toString().replace(".", ",")} uit{" "}
+                  {product.reviewCount} beoordelingen
                 </span>
               </div>
             </div>
@@ -259,9 +269,9 @@ export default async function ProductPage({
       {/* FAQ */}
       <section className="container-px mx-auto max-w-3xl py-16 lg:py-24">
         <Reveal>
-          <p className="eyebrow text-center">Good to know</p>
+          <p className="eyebrow text-center">Goed om te weten</p>
           <h2 className="mt-3 text-center text-3xl sm:text-4xl">
-            Questions, answered
+            Vragen, beantwoord
           </h2>
         </Reveal>
         <Reveal delay={1}>
@@ -274,7 +284,7 @@ export default async function ProductPage({
       {/* Cross-sell */}
       <section className="container-px mx-auto max-w-7xl pb-20 lg:pb-28">
         <Reveal>
-          <h2 className="text-3xl sm:text-4xl">Complete your range</h2>
+          <h2 className="text-3xl sm:text-4xl">Vervolledig je assortiment</h2>
         </Reveal>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           {related.map((p) => (

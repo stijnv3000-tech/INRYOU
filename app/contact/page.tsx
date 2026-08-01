@@ -5,13 +5,13 @@ import { ContactForm } from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with the INRYOU team. We're real, human and quick to reply — questions, wholesale, press and everything in between.",
+    "Neem contact op met het INRYOU-team. We zijn echt, menselijk en snel met antwoorden — vragen, groothandel, pers en alles daartussenin.",
 };
 
 const channels = [
-  { label: "Customer care", value: "hello@inryou.com" },
-  { label: "Wholesale & stockists", value: "trade@inryou.com" },
-  { label: "Press & partnerships", value: "press@inryou.com" },
+  { label: "Klantendienst", value: "hello@inryou.com" },
+  { label: "Groothandel & verkooppunten", value: "trade@inryou.com" },
+  { label: "Pers & partnerships", value: "press@inryou.com" },
 ];
 
 export default function ContactPage() {
@@ -24,14 +24,14 @@ export default function ContactPage() {
           </Reveal>
           <Reveal delay={1}>
             <h1 className="mt-4 text-balance text-5xl leading-[1.02] sm:text-6xl">
-              Let's talk{" "}
-              <span className="italic text-orange-deep">balance.</span>
+              Laten we praten over{" "}
+              <span className="italic text-orange-deep">balans.</span>
             </h1>
           </Reveal>
           <Reveal delay={2}>
             <p className="mt-5 max-w-md text-pretty text-lg text-ink">
-              Whether it's a question about an order, an idea for a flavour, or a
-              shop that wants to stock us — we'd love to hear from you.
+              Of het nu gaat om een vraag over een bestelling, een idee voor een
+              smaak, of een winkel die ons wil verkopen — we horen graag van je.
             </p>
           </Reveal>
           <Reveal delay={3}>
@@ -53,16 +53,16 @@ export default function ContactPage() {
           </Reveal>
           <Reveal delay={4}>
             <p className="mt-10 text-sm text-muted">
-              INRYOU · The Low Countries · We reply within one working day.
+              INRYOU · De Lage Landen · We antwoorden binnen één werkdag.
             </p>
           </Reveal>
         </div>
 
         <Reveal delay={2} as="div">
           <div className="rounded-[2rem] bg-cream-deep p-7 sm:p-10">
-            <h2 className="text-2xl">Send a message</h2>
+            <h2 className="text-2xl">Stuur een bericht</h2>
             <p className="mt-1 text-sm text-ink">
-              Fill in the form and we'll get right back to you.
+              Vul het formulier in en we komen snel bij je terug.
             </p>
             <div className="mt-6">
               <ContactForm />

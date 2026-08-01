@@ -9,21 +9,21 @@ export function Testimonials() {
       <div className="container-px mx-auto max-w-7xl py-20 lg:py-28">
         <div className="flex flex-col items-center text-center">
           <Reveal>
-            <p className="eyebrow">Tasted. Loved.</p>
+            <p className="eyebrow">Geproefd. Geliefd.</p>
           </Reveal>
           <Reveal delay={1}>
             <h2 className="mt-4 max-w-2xl text-balance text-4xl leading-[1.05] sm:text-5xl">
-              Quietly winning people{" "}
-              <span className="italic text-orange-deep">over.</span>
+              Wint mensen stilletjes{" "}
+              <span className="italic text-orange-deep">voor zich.</span>
             </h2>
           </Reveal>
           <Reveal delay={2}>
             <div className="mt-5 flex items-center gap-3">
               <Stars rating={5} />
               <span className="text-sm text-ink">
-                4.9 average from{" "}
-                <span className="font-semibold text-charcoal">1,300+</span>{" "}
-                verified reviews
+                4,9 gemiddeld uit{" "}
+                <span className="font-semibold text-charcoal">1.300+</span>{" "}
+                geverifieerde beoordelingen
               </span>
             </div>
           </Reveal>
