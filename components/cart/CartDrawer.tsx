@@ -37,12 +37,12 @@ export function CartDrawer() {
           >
             <div className="flex items-center justify-between border-b border-charcoal/10 px-6 py-5">
               <h2 className="font-display text-xl">
-                Your cart{" "}
+                Winkelmandje{" "}
                 <span className="text-muted">({count})</span>
               </h2>
               <button
                 onClick={closeCart}
-                aria-label="Close cart"
+                aria-label="Mandje sluiten"
                 className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-charcoal/5"
               >
                 <Close className="h-5 w-5" />
@@ -56,16 +56,16 @@ export function CartDrawer() {
                   {remaining > 0 ? (
                     <>
                       <Truck className="h-4 w-4 text-orange" />
-                      You're{" "}
+                      Nog{" "}
                       <span className="font-semibold text-charcoal">
-                        €{remaining.toFixed(2)}
+                        €{remaining.toFixed(2).replace(".", ",")}
                       </span>{" "}
-                      away from free delivery
+                      tot gratis levering
                     </>
                   ) : (
                     <>
                       <Check className="h-4 w-4 text-sage-deep" />
-                      You've unlocked free carbon-neutral delivery
+                      Je hebt gratis CO₂-neutrale levering ontgrendeld
                     </>
                   )}
                 </p>
@@ -83,17 +83,17 @@ export function CartDrawer() {
               {items.length === 0 ? (
                 <div className="flex h-full flex-col items-center justify-center text-center">
                   <p className="font-display text-2xl text-charcoal">
-                    Your cart is calm and empty
+                    Je mandje is rustig en leeg
                   </p>
                   <p className="mt-2 max-w-xs text-sm text-muted">
-                    Add a little balance to your day — explore the range.
+                    Voeg wat balans toe aan je dag — ontdek het assortiment.
                   </p>
                   <Link
                     href="/shop"
                     onClick={closeCart}
                     className="mt-6 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-cream transition hover:bg-charcoal-soft"
                   >
-                    Shop the range
+                    Ontdek het assortiment
                   </Link>
                 </div>
               ) : (
@@ -123,14 +123,14 @@ export function CartDrawer() {
                             </p>
                           </div>
                           <p className="font-medium">
-                            €{(item.price * item.qty).toFixed(2)}
+                            €{(item.price * item.qty).toFixed(2).replace(".", ",")}
                           </p>
                         </div>
                         <div className="mt-auto flex items-center justify-between pt-3">
                           <div className="flex items-center gap-3 rounded-full border border-charcoal/15 px-2 py-1">
                             <button
                               onClick={() => setQty(item.slug, item.qty - 1)}
-                              aria-label="Decrease quantity"
+                              aria-label="Aantal verlagen"
                               className="text-charcoal/70 hover:text-charcoal"
                             >
                               <Minus className="h-4 w-4" />
@@ -140,7 +140,7 @@ export function CartDrawer() {
                             </span>
                             <button
                               onClick={() => setQty(item.slug, item.qty + 1)}
-                              aria-label="Increase quantity"
+                              aria-label="Aantal verhogen"
                               className="text-charcoal/70 hover:text-charcoal"
                             >
                               <Plus className="h-4 w-4" />
@@ -150,7 +150,7 @@ export function CartDrawer() {
                             onClick={() => remove(item.slug)}
                             className="text-xs text-muted underline-offset-2 hover:text-cranberry hover:underline"
                           >
-                            Remove
+                            Verwijderen
                           </button>
                         </div>
                       </div>
@@ -163,26 +163,27 @@ export function CartDrawer() {
             {items.length > 0 && (
               <div className="border-t border-charcoal/10 px-6 py-5">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-ink">Subtotal</span>
+                  <span className="text-sm text-ink">Subtotaal</span>
                   <span className="font-display text-2xl">
-                    €{subtotal.toFixed(2)}
+                    €{subtotal.toFixed(2).replace(".", ",")}
                   </span>
                 </div>
                 <p className="mt-1 text-xs text-muted">
-                  Taxes and any shipping calculated at checkout.
+                  Btw en eventuele verzendkosten worden berekend bij het
+                  afrekenen.
                 </p>
                 <Link
                   href="/cart"
                   onClick={closeCart}
                   className="mt-4 flex w-full items-center justify-center rounded-full bg-orange px-6 py-4 font-medium text-white transition hover:bg-orange-deep"
                 >
-                  Checkout
+                  Afrekenen
                 </Link>
                 <button
                   onClick={closeCart}
                   className="mt-2 w-full py-2 text-center text-sm text-ink hover:text-charcoal"
                 >
-                  Continue shopping
+                  Verder winkelen
                 </button>
               </div>
             )}

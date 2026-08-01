@@ -7,9 +7,9 @@ import { posts } from "@/lib/blog";
 import { themeBg, themeText } from "@/lib/themeStyles";
 
 export const metadata: Metadata = {
-  title: "The Journal",
+  title: "Journal",
   description:
-    "Ideas on wellbeing, healthy alternatives to soda, functional ingredients and the art of everyday balance — from the team behind INRYOU.",
+    "Ideeën over welzijn, gezonde alternatieven voor frisdrank, functionele ingrediënten en de kunst van dagelijkse balans — van het team achter INRYOU.",
 };
 
 export default function JournalPage() {
@@ -19,18 +19,18 @@ export default function JournalPage() {
     <>
       <section className="container-px mx-auto max-w-7xl py-16 text-center lg:py-20">
         <Reveal>
-          <p className="eyebrow">The Journal</p>
+          <p className="eyebrow">Journal</p>
         </Reveal>
         <Reveal delay={1}>
           <h1 className="mx-auto mt-4 max-w-3xl text-balance text-5xl leading-[1.02] sm:text-6xl">
-            Notes on balance, wellbeing &{" "}
-            <span className="italic text-orange-deep">better choices.</span>
+            Notities over balans, welzijn &{" "}
+            <span className="italic text-orange-deep">betere keuzes.</span>
           </h1>
         </Reveal>
         <Reveal delay={2}>
           <p className="mx-auto mt-5 max-w-xl text-pretty text-lg text-ink">
-            Honest, useful reading on healthier alternatives to soda, functional
-            ingredients, and living a little more in balance.
+            Eerlijke, bruikbare lectuur over gezondere alternatieven voor
+            frisdrank, functionele ingrediënten en een leven met wat meer balans.
           </p>
         </Reveal>
       </section>
@@ -48,7 +48,7 @@ export default function JournalPage() {
               <span
                 className={`text-xs font-semibold uppercase tracking-[0.16em] ${themeText[featured.theme]}`}
               >
-                Featured · {featured.category}
+                Uitgelicht · {featured.category}
               </span>
               <div>
                 <span className="font-display text-7xl text-charcoal/10">
@@ -65,7 +65,7 @@ export default function JournalPage() {
               </h2>
               <p className="mt-4 text-pretty text-ink">{featured.excerpt}</p>
               <span className="mt-6 inline-flex items-center gap-2 font-medium text-orange-deep">
-                Read article
+                Lees artikel
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </span>
             </div>
@@ -102,7 +102,7 @@ export default function JournalPage() {
                     {post.excerpt}
                   </p>
                   <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-medium text-charcoal">
-                    Read more
+                    Lees meer
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
                 </div>
@@ -116,10 +116,11 @@ export default function JournalPage() {
       <section className="container-px mx-auto max-w-7xl pb-20 lg:pb-28">
         <div className="rounded-[2rem] bg-charcoal px-8 py-14 text-center text-cream lg:px-16">
           <h2 className="mx-auto max-w-xl text-balance text-3xl text-cream sm:text-4xl">
-            Balance, delivered to your inbox.
+            Balans, bezorgd in je inbox.
           </h2>
           <p className="mx-auto mt-3 max-w-md text-cream/70">
-            New articles, occasional offers, and 15% off your first order.
+            Nieuwe artikels, af en toe een aanbieding, en 15% korting op je
+            eerste bestelling.
           </p>
           <div className="mx-auto mt-7 max-w-md">
             <NewsletterForm variant="dark" />

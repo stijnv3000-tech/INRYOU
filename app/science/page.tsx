@@ -5,68 +5,68 @@ import { Accordion } from "@/components/ui/Accordion";
 import { Check, Close, ArrowRight } from "@/components/ui/icons";
 
 export const metadata: Metadata = {
-  title: "The science",
+  title: "De wetenschap",
   description:
-    "How INRYOU works: functional minerals like magnesium and potassium, real fruit, natural sweetness from stevia leaf, and almost no sugar. The science of a calmer soda alternative.",
+    "Hoe INRYOU werkt: functionele mineralen zoals magnesium en kalium, echt fruit, natuurlijke zoetheid uit steviablad en bijna geen suiker. De wetenschap achter een rustiger alternatief voor frisdrank.",
 };
 
 const minerals = [
   {
-    name: "Magnesium citrate",
-    dose: "75mg per can",
-    text: "Involved in over 300 enzyme reactions, from energy production to muscle and nerve function. We use the citrate form for superior absorption.",
+    name: "Magnesiumcitraat",
+    dose: "75mg per blikje",
+    text: "Betrokken bij meer dan 300 enzymreacties, van energieproductie tot spier- en zenuwfunctie. Wij kiezen voor de citraatvorm omdat je die beter opneemt.",
   },
   {
-    name: "Potassium citrate",
-    dose: "120mg per can",
-    text: "Works with sodium to maintain fluid balance and normal blood pressure — part of why a well-formulated sparkling drink can be genuinely hydrating.",
+    name: "Kaliumcitraat",
+    dose: "120mg per blikje",
+    text: "Werkt samen met natrium om je vochtbalans en een normale bloeddruk te bewaren — mede daarom kan een goed samengestelde bruisdrank je echt hydrateren.",
   },
   {
-    name: "B-vitamins & L-theanine",
-    dose: "Flavour-dependent",
-    text: "Selected flavours add B-vitamins for energy metabolism, or L-theanine for relaxed focus — calm energy without caffeine or sugar.",
+    name: "B-vitamines & L-theanine",
+    dose: "Afhankelijk van de smaak",
+    text: "Bepaalde smaken bevatten B-vitamines voor je energiestofwisseling of L-theanine voor ontspannen focus — kalme energie zonder cafeïne of suiker.",
   },
 ];
 
 const principles = [
   {
-    title: "Dose honestly",
-    text: "Minerals only matter at meaningful, absorbable amounts. We tell you exactly how much is in every can — no fairy dust.",
+    title: "Eerlijk doseren",
+    text: "Mineralen tellen pas mee in zinvolle, opneembare hoeveelheden. Wij vertellen je precies hoeveel er in elk blikje zit — geen loze beloftes.",
   },
   {
-    title: "Sweeten naturally",
-    text: "Sweetness comes from real fruit and a touch of stevia leaf. No refined sugar, no aspartame, no sucralose.",
+    title: "Natuurlijk zoeten",
+    text: "De zoetheid komt van echt fruit en een vleugje steviablad. Geen geraffineerde suiker, geen aspartaam, geen sucralose.",
   },
   {
-    title: "Keep it short",
-    text: "If an ingredient isn't doing real work — for your body or the taste — it doesn't make the recipe.",
+    title: "Kort houden",
+    text: "Als een ingrediënt geen echt werk verzet — voor je lichaam of voor de smaak — komt het niet in het recept.",
   },
 ];
 
 const compare = [
-  { label: "Sugar", inryou: "Under 2g", soda: "35–40g" },
-  { label: "Sweetener", inryou: "Stevia leaf", soda: "Sugar / HFCS" },
-  { label: "Minerals", inryou: "Mg + K", soda: "None" },
-  { label: "Calories", inryou: "12–18 kcal", soda: "140+ kcal" },
-  { label: "Additives", inryou: "None", soda: "Colours, etc." },
+  { label: "Suiker", inryou: "Minder dan 2g", soda: "35–40g" },
+  { label: "Zoetstof", inryou: "Steviablad", soda: "Suiker / HFCS" },
+  { label: "Mineralen", inryou: "Mg + K", soda: "Geen" },
+  { label: "Calorieën", inryou: "12–18 kcal", soda: "140+ kcal" },
+  { label: "Additieven", inryou: "Geen", soda: "Kleurstoffen, enz." },
 ];
 
 const faqs = [
   {
-    q: "Are stevia and steviol glycosides safe?",
-    a: "Yes. Steviol glycosides are extracted from the leaf of the stevia plant and are approved as a sweetener across the EU and beyond. They provide clean sweetness with no calories and no impact on blood sugar.",
+    q: "Zijn stevia en steviolglycosiden veilig?",
+    a: "Ja. Steviolglycosiden worden gewonnen uit het blad van de steviaplant en zijn als zoetstof goedgekeurd in de hele EU en daarbuiten. Ze zorgen voor zuivere zoetheid zonder calorieën en zonder invloed op je bloedsuiker.",
   },
   {
-    q: "Will the minerals actually do anything?",
-    a: "Our doses are set at levels that contribute meaningfully to your daily intake — 75mg magnesium and 120mg potassium per can — in highly absorbable citrate forms. They support normal muscle, nerve and hydration function as part of a balanced diet.",
+    q: "Doen die mineralen echt iets?",
+    a: "Onze doseringen zitten op een niveau dat zinvol bijdraagt aan je dagelijkse inname — 75mg magnesium en 120mg kalium per blikje — in goed opneembare citraatvormen. Ze ondersteunen een normale spier-, zenuw- en hydratatiefunctie als onderdeel van een evenwichtig voedingspatroon.",
   },
   {
-    q: "Is INRYOU hydrating?",
-    a: "Yes. It's sparkling spring water at its base, with added electrolytes that help your body hold on to fluid. It's a genuinely hydrating way to enjoy a flavoured, fizzy drink.",
+    q: "Werkt INRYOU hydraterend?",
+    a: "Ja. De basis is bruisend bronwater met toegevoegde elektrolyten die je lichaam helpen vocht vast te houden. Zo geniet je op een echt hydraterende manier van een fruitige, bruisende drank.",
   },
   {
-    q: "Is it suitable for a low-sugar or keto lifestyle?",
-    a: "With under 2g of sugar and 12–18 kcal per can, INRYOU fits comfortably into low-sugar and low-calorie ways of eating. As always, check the full label against your specific needs.",
+    q: "Past het bij een suikerarme of keto-levensstijl?",
+    a: "Met minder dan 2g suiker en 12–18 kcal per blikje past INRYOU moeiteloos in een suikerarm en caloriearm eetpatroon. Check zoals altijd het volledige etiket voor jouw specifieke behoeften.",
   },
 ];
 
@@ -75,18 +75,19 @@ export default function SciencePage() {
     <>
       <section className="container-px mx-auto max-w-3xl py-20 text-center lg:py-24">
         <Reveal>
-          <p className="eyebrow">The science</p>
+          <p className="eyebrow">De wetenschap</p>
         </Reveal>
         <Reveal delay={1}>
           <h1 className="mt-4 text-balance text-5xl leading-[1.02] sm:text-6xl">
-            Functional, not{" "}
-            <span className="italic text-sage-deep">fanciful.</span>
+            Functioneel, niet{" "}
+            <span className="italic text-sage-deep">gebakken lucht.</span>
           </h1>
         </Reveal>
         <Reveal delay={2}>
           <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-ink">
-            We're allergic to wellness theatre. Here's exactly what goes into
-            every INRYOU can, why it's there, and the thinking behind it.
+            Wij houden niet van wellness-theater. Hier lees je precies wat er in
+            elk INRYOU-blikje zit, waarom het er zit en welke gedachte erachter
+            steekt.
           </p>
         </Reveal>
       </section>
@@ -111,9 +112,9 @@ export default function SciencePage() {
       {/* Principles */}
       <section className="container-px mx-auto max-w-7xl py-16 lg:py-24">
         <Reveal>
-          <p className="eyebrow">How we formulate</p>
+          <p className="eyebrow">Hoe we samenstellen</p>
           <h2 className="mt-3 max-w-xl text-balance text-4xl sm:text-5xl">
-            Three rules we won't break.
+            Drie regels waar we niet van afwijken.
           </h2>
         </Reveal>
         <div className="mt-12 grid gap-10 sm:grid-cols-3">
@@ -134,21 +135,21 @@ export default function SciencePage() {
         <div className="container-px mx-auto max-w-4xl py-20 lg:py-24">
           <Reveal>
             <h2 className="text-balance text-4xl text-cream sm:text-5xl">
-              The numbers don't lie.
+              De cijfers liegen niet.
             </h2>
             <p className="mt-4 text-cream/70">
-              A typical 250ml serving, side by side.
+              Een typische portie van 250ml, naast elkaar.
             </p>
           </Reveal>
           <Reveal delay={1}>
             <div className="mt-10 overflow-hidden rounded-3xl ring-1 ring-cream/15">
               <div className="grid grid-cols-3 bg-cream/5 text-sm font-medium uppercase tracking-[0.12em]">
-                <div className="px-5 py-4 text-cream/45 sm:px-7">Metric</div>
+                <div className="px-5 py-4 text-cream/45 sm:px-7">Waarde</div>
                 <div className="border-l border-cream/10 px-5 py-4 text-center text-cream sm:px-7">
                   INRYOU
                 </div>
                 <div className="border-l border-cream/10 px-5 py-4 text-center text-cream/45 sm:px-7">
-                  Soda
+                  Frisdrank
                 </div>
               </div>
               {compare.map((row, i) => (
@@ -179,7 +180,7 @@ export default function SciencePage() {
       {/* FAQ */}
       <section className="container-px mx-auto max-w-3xl py-16 lg:py-24">
         <Reveal>
-          <h2 className="text-center text-3xl sm:text-4xl">The fine print</h2>
+          <h2 className="text-center text-3xl sm:text-4xl">De kleine lettertjes</h2>
         </Reveal>
         <Reveal delay={1}>
           <div className="mt-10">
@@ -189,7 +190,7 @@ export default function SciencePage() {
         <Reveal delay={2}>
           <div className="mt-12 text-center">
             <ButtonLink href="/shop" size="lg">
-              Taste the difference
+              Proef het verschil
               <ArrowRight className="h-5 w-5" />
             </ButtonLink>
           </div>

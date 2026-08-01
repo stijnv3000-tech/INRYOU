@@ -2,44 +2,45 @@ import type { Metadata } from "next";
 import { ProsePage } from "@/components/ui/ProsePage";
 
 export const metadata: Metadata = {
-  title: "Terms of service",
-  description: "The terms that govern your use of the INRYOU website and store.",
+  title: "Algemene voorwaarden",
+  description:
+    "De voorwaarden voor het gebruik van de INRYOU-website en -webshop.",
   robots: { index: false, follow: true },
 };
 
 export default function TermsPage() {
   return (
     <ProsePage
-      eyebrow="Legal"
-      title="Terms of service"
-      intro="These terms govern your use of the INRYOU website and the purchase of our products. This is a template and should be reviewed by legal counsel before launch."
+      eyebrow="Juridisch"
+      title="Algemene voorwaarden"
+      intro="Deze voorwaarden gelden voor je gebruik van de INRYOU-website en de aankoop van onze producten. Dit is een sjabloon en moet vóór de lancering door een juridisch adviseur worden nagekeken."
       sections={[
         {
-          heading: "Orders",
+          heading: "Bestellingen",
           paragraphs: [
-            "All orders are subject to acceptance and availability. Prices are shown in euros and include applicable taxes unless stated otherwise.",
+            "Alle bestellingen zijn onderworpen aan aanvaarding en beschikbaarheid. Prijzen worden weergegeven in euro en zijn inclusief toepasselijke belastingen, tenzij anders vermeld.",
           ],
         },
         {
-          heading: "Subscriptions",
+          heading: "Abonnementen",
           paragraphs: [
-            "Subscription orders renew automatically at the interval you select until paused or cancelled. You can manage, pause or cancel your subscription at any time from your account.",
+            "Abonnementsbestellingen worden automatisch verlengd volgens het door jou gekozen interval tot ze gepauzeerd of opgezegd worden. Je kan je abonnement op elk moment beheren, pauzeren of opzeggen via je account.",
           ],
         },
         {
-          heading: "Returns & refunds",
+          heading: "Retour & terugbetaling",
           paragraphs: [
-            "Our 30-day happiness guarantee applies as described on our Shipping & Returns page. Statutory consumer rights are unaffected.",
+            "Onze 30 dagen tevredenheidsgarantie geldt zoals beschreven op onze pagina Verzending & retour. Je wettelijke consumentenrechten blijven onverminderd van kracht.",
           ],
         },
         {
-          heading: "Liability",
+          heading: "Aansprakelijkheid",
           paragraphs: [
-            "INRYOU is a food product and not a medicine. Nutritional and functional statements are provided for information and are not intended to diagnose, treat or prevent any condition. Always read the label.",
+            "INRYOU is een voedingsmiddel en geen geneesmiddel. Voedings- en functionele beweringen worden ter informatie verstrekt en zijn niet bedoeld om een aandoening vast te stellen, te behandelen of te voorkomen. Lees steeds het etiket.",
           ],
         },
       ]}
-      footnote="Last updated: this is placeholder content for demonstration purposes."
+      footnote="Laatst bijgewerkt: dit is voorbeeldinhoud voor demonstratiedoeleinden."
     />
   );
 }

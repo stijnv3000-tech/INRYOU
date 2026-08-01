@@ -10,9 +10,10 @@ import { useCart } from "@/components/cart/CartProvider";
 
 const nav = [
   { href: "/shop", label: "Shop" },
-  { href: "/our-story", label: "Our Story" },
-  { href: "/science", label: "The Science" },
+  { href: "/our-story", label: "Ons verhaal" },
+  { href: "/science", label: "De wetenschap" },
   { href: "/journal", label: "Journal" },
+  { href: "/waar-te-koop", label: "Waar te koop" },
   { href: "/faq", label: "FAQ" },
 ];
 
@@ -46,7 +47,7 @@ export function Header() {
           <button
             onClick={() => setMenuOpen(true)}
             className="-ml-1 flex h-9 w-9 items-center justify-center rounded-full text-charcoal transition hover:bg-charcoal/5 lg:hidden"
-            aria-label="Open menu"
+            aria-label="Menu openen"
           >
             <span className="flex flex-col gap-[5px]">
               <span className="block h-[1.5px] w-5 bg-current" />
@@ -78,11 +79,11 @@ export function Header() {
             href="/shop"
             className="hidden rounded-full bg-charcoal px-5 py-2.5 text-sm font-medium text-cream transition hover:bg-charcoal-soft sm:inline-flex"
           >
-            Shop now
+            Shop nu
           </Link>
           <button
             onClick={openCart}
-            aria-label={`Open cart, ${count} items`}
+            aria-label={`Open winkelmandje, ${count} artikelen`}
             className="relative flex h-10 w-10 items-center justify-center rounded-full text-charcoal transition hover:bg-charcoal/5"
           >
             <CartIcon className="h-5 w-5" />
@@ -125,7 +126,7 @@ export function Header() {
                 <Logo />
                 <button
                   onClick={() => setMenuOpen(false)}
-                  aria-label="Close menu"
+                  aria-label="Menu sluiten"
                   className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-charcoal/5"
                 >
                   <Close className="h-5 w-5" />
@@ -153,7 +154,7 @@ export function Header() {
                   href="/shop"
                   className="flex w-full items-center justify-center rounded-full bg-orange px-6 py-4 font-medium text-white"
                 >
-                  Shop the range
+                  Ontdek het assortiment
                 </Link>
               </div>
             </motion.div>

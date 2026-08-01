@@ -1,7 +1,7 @@
 const messages = [
-  "Free carbon-neutral delivery over €35",
-  "Subscribe & save 15% — pause or cancel anytime",
-  "Under 2g sugar · Functional minerals · Naturally sweetened",
+  "Gratis CO₂-neutrale levering vanaf €35",
+  "Abonneer & bespaar 15% — pauzeer of annuleer wanneer je wil",
+  "Minder dan 2g suiker · Functionele mineralen · Natuurlijk gezoet",
 ];
 
 export function AnnouncementBar() {

@@ -1,17 +1,17 @@
 const items = [
-  "Under 2g sugar",
-  "Functional minerals",
-  "Real fruit",
-  "No artificial sweeteners",
-  "Naturally sweetened",
-  "12 kcal–18 kcal per can",
-  "Carbon-neutral delivery",
-  "Recyclable aluminium",
+  "Minder dan 2g suiker",
+  "Functionele mineralen",
+  "Echte vruchten",
+  "Geen kunstmatige zoetstoffen",
+  "Natuurlijk gezoet",
+  "12–18 kcal per blik",
+  "CO₂-neutrale levering",
+  "Recycleerbaar aluminium",
 ];
 
 export function Marquee() {
   return (
-    <div className="overflow-hidden border-y border-charcoal/10 bg-cream-deep py-4">
+    <div className="overflow-hidden bg-charcoal py-4">
       <div className="flex w-max animate-marquee">
         {[0, 1].map((dup) => (
           <ul
@@ -22,7 +22,7 @@ export function Marquee() {
             {items.map((item) => (
               <li
                 key={item}
-                className="flex items-center gap-10 text-sm font-medium tracking-wide text-ink"
+                className="flex items-center gap-10 text-sm font-medium tracking-wide text-cream/80"
               >
                 {item}
                 <span className="text-orange">✦</span>

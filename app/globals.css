@@ -21,6 +21,11 @@
   --color-cranberry-deep: #93303e;
   --color-cranberry-soft: #ecc9cc;
 
+  /* Deep bordeaux / wine — warm dark backdrop for brand sections */
+  --color-wine: #3b171b;
+  --color-wine-deep: #2b1013;
+  --color-wine-soft: #4d2327;
+
   --color-sage: #9aae93;
   --color-sage-deep: #76896f;
   --color-sage-soft: #d9e1d2;
