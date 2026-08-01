@@ -8,10 +8,11 @@
   --color-beige: #e7dbc6;
   --color-beige-deep: #d9c9ad;
 
-  --color-charcoal: #201d1a;
-  --color-charcoal-soft: #353029;
-  --color-ink: #514a40;
-  --color-muted: #8a8073;
+  /* Single dark family — deep bordeaux, used for text AND all dark surfaces */
+  --color-charcoal: #38161a;
+  --color-charcoal-soft: #4c2226;
+  --color-ink: #5f3a3c;
+  --color-muted: #7c5c5d;
 
   --color-orange: #e07c3a;
   --color-orange-deep: #c6612a;
@@ -21,10 +22,10 @@
   --color-cranberry-deep: #93303e;
   --color-cranberry-soft: #ecc9cc;
 
-  /* Deep bordeaux / wine — warm dark backdrop for brand sections */
-  --color-wine: #3b171b;
-  --color-wine-deep: #2b1013;
-  --color-wine-soft: #4d2327;
+  /* Wine == the dark family (kept for existing bg-wine usages, matches charcoal) */
+  --color-wine: #38161a;
+  --color-wine-deep: #260d10;
+  --color-wine-soft: #4c2226;
 
   --color-sage: #9aae93;
   --color-sage-deep: #76896f;
