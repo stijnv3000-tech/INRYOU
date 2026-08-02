@@ -3,7 +3,6 @@ import { Marquee } from "@/components/ui/Marquee";
 import { Rooted } from "@/components/home/Rooted";
 import { ShopPreview } from "@/components/home/ShopPreview";
 import { Comparison } from "@/components/home/Comparison";
-import { Minerals } from "@/components/home/Minerals";
 import { Lifestyle } from "@/components/home/Lifestyle";
 import { Testimonials } from "@/components/home/Testimonials";
 import { WhereToBuy } from "@/components/home/WhereToBuy";
@@ -21,7 +20,6 @@ export default function HomePage() {
       <Rooted />
       <ShopPreview />
       <Comparison />
-      <Minerals />
       <Lifestyle />
       <Testimonials />
       <WhereToBuy />

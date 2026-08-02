@@ -1,12 +1,12 @@
 const items = [
+  "Magnesium & kalium in elk blik",
   "Minder dan 2g suiker",
-  "Functionele mineralen",
-  "Echte vruchten",
+  "Echt fruit, geen concentraatsmaak",
   "Geen kunstmatige zoetstoffen",
-  "Natuurlijk gezoet",
-  "12–18 kcal per blik",
-  "CO₂-neutrale levering",
-  "Recycleerbaar aluminium",
+  "Rustige energie, geen suikercrash",
+  "Belgisch gebrouwen",
+  "4,9/5 uit 1.300+ beoordelingen",
+  "CO₂-neutraal geleverd",
 ];
 
 export function Marquee() {
