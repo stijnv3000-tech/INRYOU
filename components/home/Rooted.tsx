@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Reveal } from "@/components/ui/Reveal";
-import { Wave } from "@/components/ui/Wave";
 import { Heart, Check, Drop, Recycle, Globe, Sparkle } from "@/components/ui/icons";
 import { asset } from "@/lib/asset";
 
@@ -15,14 +14,14 @@ type Feature = {
 };
 
 const left: Feature[] = [
-  { icon: Heart, title: "Natuurlijk", text: "Echte ingrediënten", chip: "bg-sage text-wine" },
+  { icon: Heart, title: "Natuurlijk", text: "Echte ingrediënten", chip: "bg-sage-deep text-white" },
   { icon: Check, title: "Minder suiker", text: "Minder dan 2g per blik", chip: "bg-orange text-white" },
   { icon: Drop, title: "Functioneel", text: "Mineralenbalans", chip: "bg-cranberry text-white" },
 ];
 
 const right: Feature[] = [
-  { icon: Recycle, title: "Recycleerbaar", text: "Volledig recycleerbaar blik", chip: "bg-orange text-white" },
-  { icon: Globe, title: "Belgisch", text: "Lokaal gebrouwen", chip: "bg-cream text-wine" },
+  { icon: Recycle, title: "Recycleerbaar", text: "Volledig recycleerbaar blik", chip: "bg-sage-deep text-white" },
+  { icon: Globe, title: "Belgisch", text: "Lokaal gebrouwen", chip: "bg-charcoal text-cream" },
   { icon: Sparkle, title: "Geen onzin", text: "Niets kunstmatigs", chip: "bg-orange text-white" },
 ];
 
@@ -30,18 +29,20 @@ function Card({ f, align }: { f: Feature; align: "left" | "right" }) {
   return (
     <Reveal as="div">
       <div
-        className={`flex items-center gap-4 rounded-2xl border border-cream/15 bg-cream/[0.07] px-5 py-5 ${
+        className={`flex items-center gap-4 rounded-2xl bg-white/80 px-5 py-5 ring-1 ring-charcoal/10 ${
           align === "left" ? "flex-row-reverse text-right" : "flex-row text-left"
         }`}
       >
         <span
-          className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl shadow-[0_8px_20px_-8px_rgba(0,0,0,0.55)] ${f.chip}`}
+          className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl shadow-[0_10px_20px_-8px_rgba(56,22,26,0.4)] ${f.chip}`}
         >
           <f.icon className="h-7 w-7" strokeWidth={1.8} />
         </span>
         <div className="min-w-0">
-          <p className="font-display text-xl leading-tight text-cream">{f.title}</p>
-          <p className="text-sm text-cream/65">{f.text}</p>
+          <p className="font-display text-xl leading-tight text-charcoal">
+            {f.title}
+          </p>
+          <p className="text-sm text-muted">{f.text}</p>
         </div>
       </div>
     </Reveal>
@@ -50,12 +51,12 @@ function Card({ f, align }: { f: Feature; align: "left" | "right" }) {
 
 export function Rooted() {
   return (
-    <section className="relative overflow-hidden bg-wine text-cream">
+    <section className="relative overflow-hidden bg-blush">
       <div className="container-px mx-auto max-w-7xl py-20 lg:py-28">
         <Reveal>
-          <h2 className="text-center text-4xl font-normal uppercase tracking-[0.04em] sm:text-5xl lg:text-6xl">
-            <span className="text-cream">Geworteld in </span>
-            <span className="mt-2 inline-block rounded-xl border-2 border-orange px-4 py-1 italic text-orange">
+          <h2 className="text-center text-4xl font-normal uppercase tracking-[0.04em] text-charcoal sm:text-5xl lg:text-6xl">
+            <span>Geworteld in </span>
+            <span className="accent mt-2 inline-block rounded-xl border-2 border-orange px-4 py-1 text-orange">
               betekenis
             </span>
           </h2>
@@ -86,7 +87,7 @@ export function Rooted() {
                 maskImage: "linear-gradient(to bottom, black 60%, transparent 60%)",
                 WebkitMaskImage:
                   "linear-gradient(to bottom, black 60%, transparent 60%)",
-                opacity: 0.85,
+                opacity: 0.55,
               }}
             />
             <Image
@@ -94,7 +95,7 @@ export function Rooted() {
               alt="INRYOU Cranberry blik"
               width={260}
               height={560}
-              className="animate-float-slow relative h-full w-auto object-contain drop-shadow-[0_34px_44px_rgba(0,0,0,0.5)]"
+              className="animate-float-slow relative h-full w-auto object-contain drop-shadow-[0_30px_40px_rgba(56,22,26,0.28)]"
             />
           </motion.div>
 
@@ -107,13 +108,11 @@ export function Rooted() {
         </div>
 
         <Reveal delay={1}>
-          <p className="mt-14 text-center text-cream/55">
+          <p className="mt-14 text-center text-muted">
             Met intentie gemaakt — beter voor jou en de planeet.
           </p>
         </Reveal>
       </div>
-
-      <Wave position="bottom" fill="var(--color-cream)" />
     </section>
   );
 }

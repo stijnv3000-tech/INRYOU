@@ -1,26 +1,32 @@
 const messages = [
-  "Gratis CO₂-neutrale levering vanaf €35",
-  "Abonneer & bespaar 15% — pauzeer of annuleer wanneer je wil",
-  "Minder dan 2g suiker · Functionele mineralen · Natuurlijk gezoet",
+  "Abonneer & bespaar 15%",
+  "Gratis verzending vanaf €35",
 ];
 
 export function AnnouncementBar() {
+  // Repeat enough times to fill a seamless scrolling track
+  const track = Array.from({ length: 6 }).flatMap(() => messages);
+
   return (
-    <div className="bg-charcoal text-cream">
-      <div className="container-px mx-auto flex h-9 max-w-7xl items-center justify-center overflow-hidden">
-        <div className="flex items-center gap-2 text-center text-[0.72rem] font-medium tracking-[0.12em] uppercase">
-          <span className="hidden items-center gap-6 sm:flex">
-            {messages.map((m, i) => (
-              <span key={m} className="flex items-center gap-6">
+    <div className="overflow-hidden bg-charcoal text-cream">
+      <div className="flex w-max animate-marquee">
+        {[0, 1].map((dup) => (
+          <ul
+            key={dup}
+            className="flex shrink-0 items-center"
+            aria-hidden={dup === 1}
+          >
+            {track.map((m, i) => (
+              <li
+                key={`${dup}-${i}`}
+                className="flex items-center gap-8 whitespace-nowrap px-8 py-2.5 text-[0.72rem] font-medium uppercase tracking-[0.16em]"
+              >
                 {m}
-                {i < messages.length - 1 && (
-                  <span className="text-orange">·</span>
-                )}
-              </span>
+                <span className="text-orange">✦</span>
+              </li>
             ))}
-          </span>
-          <span className="sm:hidden">{messages[0]}</span>
-        </div>
+          </ul>
+        ))}
       </div>
     </div>
   );
