@@ -13,7 +13,7 @@ export function ShopPreview() {
         </Reveal>
         <Reveal delay={1}>
           <h2 className="mt-3 text-balance text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
-            Kies je <span className="italic text-orange-deep">balans.</span>
+            Kies je <span className="accent text-orange-deep">balans.</span>
           </h2>
         </Reveal>
         <Reveal delay={2}>

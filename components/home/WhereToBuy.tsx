@@ -6,7 +6,7 @@ import { retailerCount, cityCount } from "@/lib/retailers";
 
 export function WhereToBuy() {
   return (
-    <section className="bg-cream-deep">
+    <section className="bg-cream">
       <div className="container-px mx-auto max-w-7xl py-20 lg:py-28">
         <div className="flex flex-col items-center text-center">
           <Reveal>
@@ -17,7 +17,7 @@ export function WhereToBuy() {
           </Reveal>
           <Reveal delay={1}>
             <h2 className="mt-5 text-balance text-4xl leading-[1.05] sm:text-5xl">
-              Ook <span className="italic text-orange-deep">bij jou</span> in de buurt.
+              Ook <span className="accent text-orange-deep">bij jou</span> in de buurt.
             </h2>
           </Reveal>
           <Reveal delay={2}>

@@ -30,18 +30,18 @@ function Card({ f, align }: { f: Feature; align: "left" | "right" }) {
   return (
     <Reveal as="div">
       <div
-        className={`flex items-center gap-4 rounded-2xl border border-cream/10 bg-cream/[0.04] px-5 py-4 ${
+        className={`flex items-center gap-4 rounded-2xl border border-cream/15 bg-cream/[0.07] px-5 py-5 ${
           align === "left" ? "flex-row-reverse text-right" : "flex-row text-left"
         }`}
       >
         <span
-          className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${f.chip}`}
+          className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl shadow-[0_8px_20px_-8px_rgba(0,0,0,0.55)] ${f.chip}`}
         >
-          <f.icon className="h-5 w-5" />
+          <f.icon className="h-7 w-7" strokeWidth={1.8} />
         </span>
         <div className="min-w-0">
-          <p className="font-display text-lg leading-tight text-cream">{f.title}</p>
-          <p className="text-sm text-cream/55">{f.text}</p>
+          <p className="font-display text-xl leading-tight text-cream">{f.title}</p>
+          <p className="text-sm text-cream/65">{f.text}</p>
         </div>
       </div>
     </Reveal>

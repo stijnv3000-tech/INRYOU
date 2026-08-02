@@ -55,7 +55,7 @@ export function Hero() {
           >
             Natuurlijke balans,
             <br />
-            <span className="italic text-orange-deep">moeiteloos.</span>
+            <span className="accent text-orange-deep">moeiteloos.</span>
           </motion.h1>
 
           <motion.p

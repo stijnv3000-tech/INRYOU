@@ -91,7 +91,7 @@ export function CartDrawer() {
                   <Link
                     href="/shop"
                     onClick={closeCart}
-                    className="mt-6 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-cream transition hover:bg-charcoal-soft"
+                    className="mt-6 rounded-full bg-orange px-6 py-3 text-sm font-medium text-white transition hover:bg-orange-deep"
                   >
                     Ontdek het assortiment
                   </Link>
