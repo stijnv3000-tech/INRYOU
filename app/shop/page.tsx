@@ -29,7 +29,7 @@ export default function ShopPage() {
         </Reveal>
         <Reveal delay={1}>
           <h1 className="mx-auto mt-4 max-w-3xl text-balance text-5xl leading-[1.02] sm:text-6xl">
-            Vind jouw <span className="italic text-orange-deep">balans.</span>
+            Vind jouw <span className="accent text-orange-deep">balans.</span>
           </h1>
         </Reveal>
         <Reveal delay={2}>

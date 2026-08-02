@@ -14,11 +14,11 @@ export function Lifestyle() {
         <Reveal delay={1}>
           <h2 className="mt-4 text-balance text-4xl leading-[1.05] sm:text-5xl">
             Balans, waar het leven je ook{" "}
-            <span className="italic text-cranberry">brengt.</span>
+            <span className="accent text-cranberry">brengt.</span>
           </h2>
         </Reveal>
         <Reveal delay={2}>
-          <p className="mt-5 text-pretty text-lg text-ink">
+          <p className="measure mt-5 text-pretty text-lg text-ink">
             INRYOU is geen detox of ontbering. Het is een kleine, dagelijkse
             upgrade — de rustige keuze die past in een vol, modern leven in
             plaats van je te vragen eruit te stappen.

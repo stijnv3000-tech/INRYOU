@@ -31,7 +31,7 @@ export function CartPage() {
         </p>
         <Link
           href="/shop"
-          className="mt-8 rounded-full bg-charcoal px-7 py-3.5 font-medium text-cream transition hover:bg-charcoal-soft"
+          className="mt-8 rounded-full bg-orange px-7 py-3.5 font-medium text-white transition hover:bg-orange-deep"
         >
           Verder winkelen
         </Link>

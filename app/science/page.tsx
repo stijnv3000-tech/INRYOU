@@ -80,7 +80,7 @@ export default function SciencePage() {
         <Reveal delay={1}>
           <h1 className="mt-4 text-balance text-5xl leading-[1.02] sm:text-6xl">
             Functioneel, niet{" "}
-            <span className="italic text-sage-deep">gebakken lucht.</span>
+            <span className="accent text-sage-deep">gebakken lucht.</span>
           </h1>
         </Reveal>
         <Reveal delay={2}>

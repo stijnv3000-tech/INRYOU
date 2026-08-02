@@ -20,7 +20,7 @@ export default function WhereToBuyPage() {
         </Reveal>
         <Reveal delay={1}>
           <h1 className="mt-4 text-balance text-5xl leading-[1.02] sm:text-6xl">
-            Vind INRYOU <span className="italic text-orange-deep">in je buurt.</span>
+            Vind INRYOU <span className="accent text-orange-deep">in je buurt.</span>
           </h1>
         </Reveal>
         <Reveal delay={2}>

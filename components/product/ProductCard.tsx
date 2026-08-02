@@ -40,13 +40,20 @@ export function ProductCard({ product }: { product: Product }) {
       )}
 
       {product.image ? (
-        <Image
-          src={asset(product.image)}
-          alt={`INRYOU ${product.name} blik`}
-          width={320}
-          height={420}
-          className="relative h-[80%] w-auto object-contain drop-shadow-[0_22px_28px_rgba(32,29,26,0.22)] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2 group-hover:scale-[1.04]"
-        />
+        <>
+          {/* Uniform ground shadow so every can sits consistently in-frame */}
+          <span
+            aria-hidden
+            className="absolute bottom-[13%] left-1/2 h-4 w-[46%] -translate-x-1/2 rounded-[100%] bg-charcoal/25 blur-md"
+          />
+          <Image
+            src={asset(product.image)}
+            alt={`INRYOU ${product.name} blik`}
+            width={320}
+            height={640}
+            className="relative z-[1] h-[84%] w-auto object-contain object-bottom drop-shadow-[0_18px_22px_rgba(56,22,26,0.28)] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2 group-hover:scale-[1.03]"
+          />
+        </>
       ) : (
         // Coming-soon placeholder — a calm can silhouette
         <div className="relative flex h-[80%] w-[46%] flex-col items-center justify-center rounded-[2rem] bg-sage-deep/25 ring-1 ring-charcoal/10">
@@ -107,7 +114,7 @@ export function ProductCard({ product }: { product: Product }) {
                   accentSoft: product.accentSoft,
                 })
               }
-              className="inline-flex items-center gap-1.5 rounded-full bg-cranberry px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:bg-cranberry-deep"
+              className="inline-flex items-center gap-1.5 rounded-full bg-orange px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:bg-orange-deep"
             >
               <Plus className="h-4 w-4" />
               In mandje

@@ -35,7 +35,7 @@ export function Minerals() {
           <p className="eyebrow text-center">Wat erin zit</p>
           <h2 className="mx-auto mt-4 max-w-2xl text-balance text-center text-4xl leading-[1.05] sm:text-5xl">
             Functioneel door ontwerp, niet door{" "}
-            <span className="italic text-sage-deep">toeval.</span>
+            <span className="accent text-sage-deep">toeval.</span>
           </h2>
         </Reveal>
 

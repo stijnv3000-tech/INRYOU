@@ -24,7 +24,7 @@ export default function JournalPage() {
         <Reveal delay={1}>
           <h1 className="mx-auto mt-4 max-w-3xl text-balance text-5xl leading-[1.02] sm:text-6xl">
             Notities over balans, welzijn &{" "}
-            <span className="italic text-orange-deep">betere keuzes.</span>
+            <span className="accent text-orange-deep">betere keuzes.</span>
           </h1>
         </Reveal>
         <Reveal delay={2}>

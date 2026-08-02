@@ -14,7 +14,7 @@ export function Testimonials() {
           <Reveal delay={1}>
             <h2 className="mt-4 max-w-2xl text-balance text-4xl leading-[1.05] sm:text-5xl">
               Wint mensen stilletjes{" "}
-              <span className="italic text-orange-deep">voor zich.</span>
+              <span className="accent text-orange-deep">voor zich.</span>
             </h2>
           </Reveal>
           <Reveal delay={2}>

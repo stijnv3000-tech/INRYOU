@@ -25,7 +25,7 @@ export default function ContactPage() {
           <Reveal delay={1}>
             <h1 className="mt-4 text-balance text-5xl leading-[1.02] sm:text-6xl">
               Laten we praten over{" "}
-              <span className="italic text-orange-deep">balans.</span>
+              <span className="accent text-orange-deep">balans.</span>
             </h1>
           </Reveal>
           <Reveal delay={2}>

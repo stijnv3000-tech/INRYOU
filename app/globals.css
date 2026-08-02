@@ -31,6 +31,9 @@
   --color-sage-deep: #76896f;
   --color-sage-soft: #d9e1d2;
 
+  /* Warm blush — a mid light tone between cream and the accents */
+  --color-blush: #f3e2d8;
+
   /* Typography */
   --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -110,6 +113,23 @@
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--color-orange-deep);
+  }
+
+  /* Consistent italic display accent — always a fixed ratio to the headline */
+  .accent {
+    font-style: italic;
+    font-size: 1.06em;
+    line-height: inherit;
+  }
+
+  /* Cap body-copy measure for readability (~62 characters) */
+  .measure {
+    max-width: 34rem;
+  }
+  .measure-center {
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .link-underline {
